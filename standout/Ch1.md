@@ -16,8 +16,8 @@
 
 $$
 \begin{aligned}
-\nabla^{2}\Phi&=0\quad&&\text{\left(无质量区域, 拉普拉斯方程\right)},\\
-\nabla^{2}\Phi&=-4\pi G\rho\quad&&\text{\left(有质量密度, 泊松方程\right)}.
+\nabla^{2}\Phi&=0\quad&&\left(\text{无质量区域, 拉普拉斯方程}\right),\\
+\nabla^{2}\Phi&=-4\pi G\rho\quad&&\left(\text{有质量密度, 泊松方程}\right).
 \end{aligned}
 $$
 
