@@ -15,10 +15,7 @@
 物体产生的引力场 $F$ 是势函数 $u$ 的负梯度 $F=-\nabla u$, 其中 $u\left(x\right)=G\int\frac{\rho\left(y\right)}{\left|x-y\right|}\,\mathrm dy$. 于是
 
 $$
-\begin{aligned}
-\nabla^{2}\Phi&=0\ \ &&\left(\text{无质量区域, 拉普拉斯方程}\right),\\
-\nabla^{2}\Phi&=-4\pi G\rho\ \ &&\left(\text{有质量密度, 泊松方程}\right).
-\end{aligned}
+\nabla^{2}\Phi=0\ \ \left(\text{无质量区域, 拉普拉斯方程}\right),;\nabla^{2}\Phi=-4\pi G\rho\ \ \left(\text{有质量密度, 泊松方程}\right).
 $$
 
 关键概念: **拉普拉斯算子 = 梯度的散度**, 即 $\Delta u=\mathrm{div}\left(\nabla u\right)=\sum_{i=1}^{n}\frac{\partial^{2}u}{\partial x_i^{2}}$, 是整门课的"主角算子".
