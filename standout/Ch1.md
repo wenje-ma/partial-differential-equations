@@ -12,33 +12,33 @@
 
 **例 2.1 (拉普拉斯方程, 引力势)**:
 
-物体产生的引力场 $F$ 是势函数 $u$ 的负梯度 $F=-\nabla u$, 其中 $u\left(x\right)=G\int\frac{\rho\left(y\right)}{\left|x-y\right|}\,\mathrm dy$. 于是
+物体产生的引力场 $F$ 是势函数 $u$ 的负梯度 $F=-\nabla{u}$, 其中 $u\left(x\right)=G\int\frac{\rho\left(y\right)}{\left|x-y\right|}\,\mathrm{d}y$. 于是
 
 $$
-\nabla^{2}\Phi=0\ \ \left(\text{无质量区域, 拉普拉斯方程}\right),;\nabla^{2}\Phi=-4\pi G\rho\ \ \left(\text{有质量密度, 泊松方程}\right).
+\nabla^{2}\Phi=0\,\,\left(\text{无质量区域,~拉普拉斯方程}\right),;\nabla^{2}\Phi=-4\pi{G}\rho\,\,\left(\text{有质量密度,~泊松方程}\right).
 $$
 
-关键概念: **拉普拉斯算子 = 梯度的散度**, 即 $\Delta u=\mathrm{div}\left(\nabla u\right)=\sum_{i=1}^{n}\frac{\partial^{2}u}{\partial x_i^{2}}$, 是整门课的"主角算子".
+关键概念: **拉普拉斯算子 = 梯度的散度**, 即 $\Delta{u}=\mathrm{div}\left(\nabla{u}\right)=\sum_{i=1}^{n}\frac{\partial^{2}u}{\partial{x}_i^{2}}$, 是整门课的"主角算子".
 
 **例 2.2 (热传导方程)**:
 
-微元法 + 傅里叶热传导定律: 热流速矢量 $q=-k\nabla u$ (与温度梯度成正比), 得
+微元法 + 傅里叶热传导定律: 热流速矢量 $q=-k\nabla{u}$ (与温度梯度成正比), 得
 
 $$
-u_t-a^{2}\Delta u=f.
+u_t-a^{2}\Delta{u}=f.
 $$
 
-**注 2.A (核心物理直觉, 后面反复用)**: $u$ 在一点的值与该点**球形邻域平均值**之差, 决定该点温度升降趋势; $\Delta u\left(x,t\right)$ 反映 $u\left(x,t\right)$ 与球邻域平均值的相对大小 → 决定温度升降. 无源热方程的稳态解是**调和函数** (不一定是常数)——"热平衡了 $\neq$ 温度处处相等".
+**注 2.A (核心物理直觉, 后面反复用)**: $u$ 在一点的值与该点**球形邻域平均值**之差, 决定该点温度升降趋势; $\Delta{u}\left(x,t\right)$ 反映 $u\left(x,t\right)$ 与球邻域平均值的相对大小 → 决定温度升降. 无源热方程的稳态解是**调和函数** (不一定是常数)——"热平衡了 $\neq$ 温度处处相等".
 
 **例 2.3 (弦振动方程)**:
 
-微元法 + 微小振动假设 (泰勒展开, 忽略高阶小量), 得 $T u_{xx}+F=\rho u_{tt}$, 即
+微元法 + 微小振动假设 (泰勒展开, 忽略高阶小量), 得 $Tu_{xx}+F=\rho{u}_{tt}$, 即
 
 $$
 u_{tt}-a^{2}u_{xx}=f.
 $$
 
-同上: $\Delta u$ 与邻域均值的比较也适用于弦振动.
+同上: $\Delta{u}$ 与邻域均值的比较也适用于弦振动.
 
 ## 3. 适定性
 
@@ -66,7 +66,7 @@ $$
 - **无实根 → 椭圆型**;
 - **介于两者之间 → 抛物型** (教材未给严格定义, 只说"介于椭圆与双曲之间", 典型形式为热方程那类).
 
-**例 4.2 (判定实例)**: 波动方程 $u_{tt}=a^{2}\Delta u$ 有两个实根 $s_n=\pm a\left|\xi\right|$, 故为**双曲型**.
+**例 4.2 (判定实例)**: 波动方程 $u_{tt}=a^{2}\Delta{u}$ 有两个实根 $s_n=\pm{a}\left|\xi\right|$, 故为**双曲型**.
 
 **例 4.3 (典型方程一览)**:
 
@@ -89,8 +89,8 @@ $$
 
 1. **高斯电场定律**: $\mathrm{div}\,E\propto\rho$ (电通量与电荷密度成正比);
 2. **高斯磁场定律**: $\mathrm{div}\,B=0$ (磁感线无源);
-3. **法拉第定律**: $\nabla\times E=-\partial_t B$ (磁通量变化感生电场, 负号 = 楞次定律, 能量守恒);
-4. **安培-麦克斯韦定律**: $\nabla\times B=\mu_0 J+\mu_0\varepsilon_0\,\partial_t E$ (电流 + 变化电场都生磁场).
+3. **法拉第定律**: $\nabla\times{E}=-\partial_tB$ (磁通量变化感生电场, 负号 = 楞次定律, 能量守恒);
+4. **安培-麦克斯韦定律**: $\nabla\times{B}=\mu_0J+\mu_0\varepsilon_0\,\partial_tE$ (电流 + 变化电场都生磁场).
 
 > 散度直觉: 散度度量某点"流量发散的倾向", 为正叫**源**, 为负叫**汇**.
 
