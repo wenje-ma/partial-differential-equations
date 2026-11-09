@@ -274,7 +274,7 @@ $$
 
 第八步: 补充定义 $u\left(0\right)=U\left(0\right)$. 则 $u$ 在 $B_{\rho_0}$ 内处处等于调和函数 $U$, 从而 $u$ 在 $a$ 点调和, 且其在该点的值唯一确定为 $U\left(0\right)$.
 
-## 习题 2.22 (二维 Dirichlet 外问题的适定性)
+## 习题 2.22 (二维 Dirichlet 外问题的良定义性)
 
 设 $\Omega$ 是 $\mathbb{R}^{2}$ 的一个有界区域, 且满足内圆条件, $\varphi\in{C}^{0}\left(\partial\Omega\right)$. 试证 Dirichlet 外问题
 
