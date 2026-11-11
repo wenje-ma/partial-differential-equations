@@ -22,7 +22,7 @@
 
 > **定义 3.4.3 (Fourier 变换)**
 > 
-> 设 $f$ 在 $\left(-\infty,+\infty\right)$ 上绝对可积, 定义 $f$ 的 Fourier 变换为 $\mathcal{F}[f](y)=\int_{-\infty}^{+\infty}f\left(x\right)\mathrm{e}^{-\mathrm{i}xy}\,\mathrm{d}x$, 并定义 $g$ 的 Fourier 逆变换为 $\mathcal{F}^{-1}[g](x)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}g\left(y\right)\mathrm{e}^{\mathrm{i}xy}\,\mathrm{d}y$.
+> 设 $f$ 在 $\left(-\infty,+\infty\right)$ 上绝对可积, 定义 $f$ 的 Fourier 变换为 $\mathcal{F}\left[f\right]\left(y\right)=\int_{-\infty}^{+\infty}f\left(x\right)\mathrm{e}^{-\mathrm{i}xy}\,\mathrm{d}x$, 并定义 $g$ 的 Fourier 逆变换为 $\mathcal{F}^{-1}\left[g\right]\left(x\right)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}g\left(y\right)\mathrm{e}^{\mathrm{i}xy}\,\mathrm{d}y$.
 
 ## 习题 3.1 (含零阶项热方程的最大模估计)
 
@@ -257,7 +257,7 @@ $$
 第一步: 对空间变量取 Fourier 变换. 由**定义 3.4.3 (Fourier 变换)**, 记
 
 $$
-\hat{u}\left(\xi,t\right)=\mathcal{F}[u(\cdot,t)](\xi)=\int_{-\infty}^{+\infty}u\left(x,t\right)\mathrm{e}^{-\mathrm{i}x\xi}\,\mathrm{d}x,\tag{A}
+\hat{u}\left(\xi,t\right)=\mathcal{F}\left[u\left(\cdot,t\right)\right]\left(\xi\right)=\int_{-\infty}^{+\infty}u\left(x,t\right)\mathrm{e}^{-\mathrm{i}x\xi}\,\mathrm{d}x,\tag{A}
 $$
 
 同样记 $\hat{f},\hat{\varphi}$. 设 $u$ 及其导数在 $x\to\pm\infty$ 时衰减, 由分部积分
@@ -302,7 +302,7 @@ $$
 \mathcal{F}^{-1}\left[\mathrm{e}^{-a^{2}\xi^{2}t+\mathrm{i}b\xi{t}}\hat{\varphi}\right]\left(x\right)=\int_{-\infty}^{+\infty}G\left(x+bt-y,t\right)\varphi\left(y\right)\,\mathrm{d}y,\tag{G}
 $$
 
-这里用了 (E) 与卷积形式 $\mathcal{F}^{-1}[\hat{G}\hat{\varphi}](x)=\int{G}\left(x-y,t\right)\varphi\left(y\right)\mathrm{d}y$ 以及 (F).
+这里用了 (E) 与卷积形式 $\mathcal{F}^{-1}\left[\hat{G}\hat{\varphi}\right]\left(x\right)=\int{G}\left(x-y,t\right)\varphi\left(y\right)\mathrm{d}y$ 以及 (F).
 
 第五步: 反演初值部分的项. 由 (D)(G),
 

@@ -79,7 +79,7 @@ $$
 求解 $\mathbb{R}^{2}_{+}=\left\{\left(x_1,x_2\right)\in\mathbb{R}^{2}\,\middle|\,x_2>0\right\}$ 上 Laplace 方程 Dirichlet 问题
 
 $$
-\Delta{u}=0,\quad{x}_2>0;\qquad{u}\big|_{x_2=0}=\frac{1}{1+x_1^{2}}.
+\Delta{u}=0,\quad{x}_2>0;\qquad\left.{u}\right|_{x_2=0}=\frac{1}{1+x_1^{2}}.
 $$
 
 ### 解答 2.14

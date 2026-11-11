@@ -120,7 +120,7 @@ $$
 第十步: 验证初值. 在 $t=0$ 时 $D=0$, $P=0$, 对数项为零, 故 $u\left(x,0\right)=0$. 关于 $t$ 求导后令 $t=0$: 由 (C), $u_1$ 的贡献为 $\frac{1}{2a}\left(a\frac{1}{1+x^{2}}+a\frac{1}{1+x^{2}}\right)=\frac{1}{1+x^{2}}$; 由 (M), $P$ 与 $D$ 在 $t=0$ 处为零而 $P_t$, $D_t$ 项自动消失, 对数项的贡献为
 
 $$
-\frac{1}{8a^{3}}\left(\frac{2a\left(x+at\right)}{1+\left(x+at\right)^{2}}+\frac{2a\left(x-at\right)}{1+\left(x-at\right)^{2}}\right)\bigg|_{t=0}=\frac{x}{2a^{2}\left(1+x^{2}\right)},
+\frac{1}{8a^{3}}\left.\left(\frac{2a\left(x+at\right)}{1+\left(x+at\right)^{2}}+\frac{2a\left(x-at\right)}{1+\left(x-at\right)^{2}}\right)\right|_{t=0}=\frac{x}{2a^{2}\left(1+x^{2}\right)},
 $$
 
 而 $-\frac{xD}{4a^{3}}$ 的导数在 $t=0$ 处为 $-\frac{x}{4a^{3}}\cdot{2a}\cdot\frac{1}{1+x^{2}}=-\frac{x}{2a^{2}\left(1+x^{2}\right)}$, 两项相消. 故 $u_t\left(x,0\right)=\frac{1}{1+x^{2}}$, 与题设相符.

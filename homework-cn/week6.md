@@ -98,7 +98,7 @@ $$
 \varepsilon\delta^{2-n}>{}M.\tag{A}
 $$
 
-记区域 $\Omega_\delta=\Omega\cap\left\{x\,\middle|\,|x-x_0|>\delta\right\}$, 它在 $\overline{\Omega}$ 内的边界由 $\partial\Omega\setminus\left\{x_0\right\}$ 的一部分与球面 $\left\{\left|x-x_0\right|=\delta\right\}$ 的一部分组成, 是有界区域.
+记区域 $\Omega_\delta=\Omega\cap\left\{x\,\middle|\,\left|x-x_0\right|>\delta\right\}$, 它在 $\overline{\Omega}$ 内的边界由 $\partial\Omega\setminus\left\{x_0\right\}$ 的一部分与球面 $\left\{\left|x-x_0\right|=\delta\right\}$ 的一部分组成, 是有界区域.
 
 第四步: 构造比较函数 $z\left(x\right)=u\left(x\right)-\varepsilon\left|x-x_0\right|^{2-n}$. 由第二步, $\Delta{z}=0$ 于 $\Omega_\delta$ 内. 在 $\partial\Omega\setminus\left\{x_0\right\}$ 上 $u=0$, 故
 
@@ -256,7 +256,7 @@ $$
 
 由 (E)(F), $u$ 在 $B_{\rho_0}\setminus\left\{0\right\}$ 内有界, 记 $\left|u\right|\le{M}$.
 
-第六步: 由**定理 2.5.7 (Poisson 积分公式)**, 取 $\varphi=u\big|_{\partial{B}_{\rho_0}}$ (它在圆周上连续), 得函数 $U\in{C}^{\infty}\left(B_{\rho_0}\right)\cap{C}^{0}\left(\overline{B}_{\rho_0}\right)$, $\Delta{U}=0$ 于 $B_{\rho_0}$, 且 $U=u$ 于 $\left|x\right|=\rho_0$.
+第六步: 由**定理 2.5.7 (Poisson 积分公式)**, 取 $\varphi=\left.u\right|_{\partial{B}_{\rho_0}}$ (它在圆周上连续), 得函数 $U\in{C}^{\infty}\left(B_{\rho_0}\right)\cap{C}^{0}\left(\overline{B}_{\rho_0}\right)$, $\Delta{U}=0$ 于 $B_{\rho_0}$, 且 $U=u$ 于 $\left|x\right|=\rho_0$.
 
 第七步: 证 $u\equiv{U}$. 记 $w=u-U$, 则 $w$ 在 $B_{\rho_0}\setminus\left\{0\right\}$ 内调和, $w=0$ 于 $\left|x\right|=\rho_0$, 且由第五步与 $U$ 的极值原理估计 $\left|w\right|\le2M$. 对 $\varepsilon\in\left(0,\rho_0\right)$ 在环域 $\left\{\varepsilon<\left|x\right|<\rho_0\right\}$ 上取
 
@@ -290,7 +290,7 @@ $$
 
 第一步: 设 $u_1,u_2$ 是两个解, 记 $w=u_1-u_2$. 则 $w$ 在 $\mathbb{R}^{2}\setminus\overline{\Omega}$ 内调和, $w=0$ 于 $\partial\Omega$, 且 $\left|w\right|\le{M}$ ($M>0$ 由两解的有界性给出).
 
-第二步: 取 $r_0$ 使 $\overline{\Omega}\subset{B}_{r_0}\left(0\right)$, 并对 $R>{}r_0$ 记 $\Omega_R=\left\{x\in\mathbb{R}^{2}\setminus\overline{\Omega}\,\middle|\,|x|<{}R\right\}$. 在 $\Omega_R$ 上取比较函数
+第二步: 取 $r_0$ 使 $\overline{\Omega}\subset{B}_{r_0}\left(0\right)$, 并对 $R>{}r_0$ 记 $\Omega_R=\left\{x\in\mathbb{R}^{2}\setminus\overline{\Omega}\,\middle|\,\left|x\right|<{}R\right\}$. 在 $\Omega_R$ 上取比较函数
 
 $$
 h\left(x\right)=M\frac{\ln\left(\left|x\right|/r_0\right)}{\ln\left(R/r_0\right)}.

@@ -212,7 +212,7 @@ $$
 K_{\varepsilon}\left(x\right):=\begin{cases}\frac{\varepsilon^{2}-\left|x\right|^{2}}{4\pi\varepsilon^{2}}+K\left(\varepsilon\right),&\left|x\right|\le\varepsilon,\K\left(x\right),&\left|x\right|>\varepsilon.\end{cases}\tag{B}
 $$
 
-在 $\left|x\right|=\varepsilon$ 处两式为 $\frac{0}{4\pi\varepsilon^{2}}+K\left(\varepsilon\right)=K\left(\varepsilon\right)$, 一阶偏导数为 $\frac{-x_i}{2\pi\varepsilon^{2}}$ 与 $-\frac{1}{2\pi}\frac{x_i}{\left|x\right|^{2}}\big|_{\left|x\right|=\varepsilon}=-\frac{x_i}{2\pi\varepsilon^{2}}$, 两侧相等, 故 $K_\varepsilon\in{C}^{1}\left(\mathbb{R}^{2}\right)$ 且
+在 $\left|x\right|=\varepsilon$ 处两式为 $\frac{0}{4\pi\varepsilon^{2}}+K\left(\varepsilon\right)=K\left(\varepsilon\right)$, 一阶偏导数为 $\frac{-x_i}{2\pi\varepsilon^{2}}$ 与 $-\frac{1}{2\pi}\left.\frac{x_i}{\left|x\right|^{2}}\right|_{\left|x\right|=\varepsilon}=-\frac{x_i}{2\pi\varepsilon^{2}}$, 两侧相等, 故 $K_\varepsilon\in{C}^{1}\left(\mathbb{R}^{2}\right)$ 且
 
 $$
 \partial_{x_i}K_{\varepsilon}\left(x\right)=\begin{cases}-\frac{x_i}{2\pi\varepsilon^{2}},&\left|x\right|\le\varepsilon,\\-\frac{1}{2\pi}\frac{x_i}{\left|x\right|^{2}},&\left|x\right|>\varepsilon.\end{cases}\tag{A}

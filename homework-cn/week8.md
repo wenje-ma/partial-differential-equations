@@ -10,7 +10,7 @@
 
 > **定义 3.4.3 (Fourier 变换)**
 > 
-> 设 $f$ 在 $\left(-\infty,+\infty\right)$ 上绝对可积, 定义 $f$ 的 Fourier 变换为 $\mathcal{F}[f](y)=\int_{-\infty}^{+\infty}f\left(x\right)\mathrm{e}^{-\mathrm{i}xy}\,\mathrm{d}x$, 并定义 $g$ 的 Fourier 逆变换为 $\mathcal{F}^{-1}[g](x)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}g\left(y\right)\mathrm{e}^{\mathrm{i}xy}\,\mathrm{d}y$.
+> 设 $f$ 在 $\left(-\infty,+\infty\right)$ 上绝对可积, 定义 $f$ 的 Fourier 变换为 $\mathcal{F}\left[f\right]\left(y\right)=\int_{-\infty}^{+\infty}f\left(x\right)\mathrm{e}^{-\mathrm{i}xy}\,\mathrm{d}x$, 并定义 $g$ 的 Fourier 逆变换为 $\mathcal{F}^{-1}\left[g\right]\left(x\right)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}g\left(y\right)\mathrm{e}^{\mathrm{i}xy}\,\mathrm{d}y$.
 
 ## 习题 3.7 (时间导数的最大模估计)
 
@@ -220,7 +220,7 @@ $$
 G_t\left(x-y\right)\le\frac{1}{2\sqrt{\pi{t}}}\mathrm{e}^{-\frac{\delta^{2}}{4t}},
 $$
 
-且 $\big|f\left(y\right)-f\left(x\right)\big|\le2\left\|f\right\|_{\infty}$, 故
+且 $\left|f\left(y\right)-f\left(x\right)\right|\le2\left\|f\right\|_{\infty}$, 故
 
 $$
 \left|\int_{\left|y-x\right|\ge\delta}G_t\left(f\left(y\right)-f\left(x\right)\right)\mathrm{d}y\right|\le\frac{2\left\|f\right\|_{\infty}}{2\sqrt{\pi{t}}}\mathrm{e}^{-\frac{\delta^{2}}{4t}}\int_{\mathbb{R}}\mathrm{d}y,\tag{D}
@@ -290,7 +290,7 @@ $$
 \mathcal{F}\left[\cos{ax^{2}}\right]\left(\xi\right)=\sqrt{\frac{\pi}{2\left|a\right|}}\left(\cos\frac{\xi^{2}}{4\left|a\right|}-\sin\frac{\xi^{2}}{4\left|a\right|}\right),\qquad{a}<0.\tag{E}
 $$
 
-第六步: 比较图像. 变换前 $f\left(x\right)=\cos{ax^{2}}$ 是"调频"振荡: 零点间隔随 $\left|x\right|$ 增大而减小, 频率在 $\left|x\right|$ 大处越来越密. 变换后 (D) 表明 $\mathcal{F}[f](\xi)$ 仍是同类型的调频振荡, 只是把自变量换成 $\xi$, 把参数 $a$ 换成 $\frac{1}{4a}$: 在 $\xi$ 大处振荡也越来越密. 这就是调频信号的"自对偶"性质 (Fourier 变换把 chirp 仍映为 chirp); 同时振幅 $\sqrt{\frac{\pi}{2\left|a\right|}}$ 与频率参数成反比, 与测不准关系的直观一致.
+第六步: 比较图像. 变换前 $f\left(x\right)=\cos{ax^{2}}$ 是"调频"振荡: 零点间隔随 $\left|x\right|$ 增大而减小, 频率在 $\left|x\right|$ 大处越来越密. 变换后 (D) 表明 $\mathcal{F}\left[f\right]\left(\xi\right)$ 仍是同类型的调频振荡, 只是把自变量换成 $\xi$, 把参数 $a$ 换成 $\frac{1}{4a}$: 在 $\xi$ 大处振荡也越来越密. 这就是调频信号的"自对偶"性质 (Fourier 变换把 chirp 仍映为 chirp); 同时振幅 $\sqrt{\frac{\pi}{2\left|a\right|}}$ 与频率参数成反比, 与测不准关系的直观一致.
 
 ## 习题 3.12 ($\mathrm{e}^{-b\left|y\right|}$ 的 Fourier 逆变换)
 
@@ -301,7 +301,7 @@ $$
 第一步: 写出逆变换的定义. 由**定义 3.4.3 (Fourier 变换)**,
 
 $$
-\mathcal{F}^{-1}[g](x)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-b\left|y\right|}\mathrm{e}^{\mathrm{i}xy}\,\mathrm{d}y.\tag{A}
+\mathcal{F}^{-1}\left[g\right]\left(x\right)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-b\left|y\right|}\mathrm{e}^{\mathrm{i}xy}\,\mathrm{d}y.\tag{A}
 $$
 
 第二步: 把积分按 $y$ 的正负拆开. 由 $\left|y\right|=y$ ($y>0$) 与 $\left|y\right|=-y$ ($y<0$),

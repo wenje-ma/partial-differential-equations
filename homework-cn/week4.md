@@ -142,7 +142,7 @@ $$
 
 ## 习题 2.10 (球内解的球心值公式)
 
-设 $B_r\equiv\left\{x\in\mathbb{R}^{n}\,\middle|\,|x|<{}r\right\}$, $f\in{C}^{0}\left(\overline{B}_r\right)$, $\varphi\in{C}^{0}\left(\partial{B}_r\right)$, $u\in{C}^{2}\left(B_r\right)\cap{C}^{0}\left(\overline{B}_r\right)$ 是 Dirichlet 问题
+设 $B_r\equiv\left\{x\in\mathbb{R}^{n}\,\middle|\,\left|x\right|<{}r\right\}$, $f\in{C}^{0}\left(\overline{B}_r\right)$, $\varphi\in{C}^{0}\left(\partial{B}_r\right)$, $u\in{C}^{2}\left(B_r\right)\cap{C}^{0}\left(\overline{B}_r\right)$ 是 Dirichlet 问题
 
 $$
 \begin{cases}\Delta{u}=f\left(x\right),&x\in{B}_r,\\u=\varphi\left(x\right),&x\in\partial{B}_r\end{cases}

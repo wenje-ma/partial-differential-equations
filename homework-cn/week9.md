@@ -209,13 +209,13 @@ $$
 第五步: 合并. 把 (D) 代入 (B),
 
 $$
-\frac{\mathrm{d}E}{\mathrm{d}t}=-a\left(u_t^{2}+a^{2}u_x^{2}\right)\Big|_{y_2-at}-a\left(u_t^{2}+a^{2}u_x^{2}\right)\Big|_{y_1+at}+2a^{2}\left(u_tu_x\right)\Big|_{y_2-at}-2a^{2}\left(u_tu_x\right)\Big|_{y_1+at}.\tag{E}
+\frac{\mathrm{d}E}{\mathrm{d}t}=-\left.a\left(u_t^{2}+a^{2}u_x^{2}\right)\right|_{y_2-at}-\left.a\left(u_t^{2}+a^{2}u_x^{2}\right)\right|_{y_1+at}+2a^{2}\left.\left(u_tu_x\right)\right|_{y_2-at}-2a^{2}\left.\left(u_tu_x\right)\right|_{y_1+at}.\tag{E}
 $$
 
 第六步: 配方成完全平方. 把 (E) 按端点归并,
 
 $$
-\frac{\mathrm{d}E}{\mathrm{d}t}=-a\left(u_t-au_x\right)^{2}\Big|_{y_2-at}-a\left(u_t+au_x\right)^{2}\Big|_{y_1+at}\le0,\tag{F}
+\frac{\mathrm{d}E}{\mathrm{d}t}=-\left.a\left(u_t-au_x\right)^{2}\right|_{y_2-at}-\left.a\left(u_t+au_x\right)^{2}\right|_{y_1+at}\le0,\tag{F}
 $$
 
 这里用到 $-a\left(u_t^{2}+a^{2}u_x^{2}\right)+2a^{2}u_tu_x=-a\left(u_t-au_x\right)^{2}$ 与 $-a\left(u_t^{2}+a^{2}u_x^{2}\right)-2a^{2}u_tu_x=-a\left(u_t+au_x\right)^{2}$.
@@ -223,7 +223,7 @@ $$
 第七步: 得到单调性. 由 (F), $E$ 在使 (A) 有意义的 $t$ 上单调不增, 故
 
 $$
-E\left(t\right)\le{E}\left(0\right)=\int_{y_1}^{y_2}\left(u_t^{2}+a^{2}u_x^{2}\right)\Big|_{t=0}\mathrm{d}x=\int_{y_1}^{y_2}\left(\psi^{2}+a^{2}\varphi'^{2}\right)\mathrm{d}x.\tag{G}
+E\left(t\right)\le{E}\left(0\right)=\int_{y_1}^{y_2}\left.\left(u_t^{2}+a^{2}u_x^{2}\right)\right|_{t=0}\mathrm{d}x=\int_{y_1}^{y_2}\left(\psi^{2}+a^{2}\varphi'^{2}\right)\mathrm{d}x.\tag{G}
 $$
 
 第八步: 把活动区间取成依赖区间. 在 (A) 中取 $y_1=x_1-at$, $y_2=x_2+at$, 则
@@ -246,7 +246,7 @@ $$
 求解古尔萨 (Goursat) 问题
 
 $$
-\begin{cases}u_{tt}-a^{2}u_{xx}=0,&-\infty<{}x<+\infty,t>0,\\u\big|_{x=at}=\varphi\left(t\right),\quad{u}\big|_{x=-at}=\psi\left(t\right),&-\infty<{}t<+\infty,\end{cases}
+\begin{cases}u_{tt}-a^{2}u_{xx}=0,&-\infty<{}x<+\infty,t>0,\\\left.u\right|_{x=at}=\varphi\left(t\right),\quad\left.{u}\right|_{x=-at}=\psi\left(t\right),&-\infty<{}t<+\infty,\end{cases}
 $$
 
 其中 $\varphi\left(0\right)=\psi\left(0\right)$.
