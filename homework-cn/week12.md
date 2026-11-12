@@ -1,13 +1,13 @@
 # week12
 
+> **定义 3.4.3 (Fourier 变换)**
+> 
+> 对 $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$, 记 $\hat{f}\left(\xi\right)=\int_{\mathbb{R}^{n}}f\left(x\right)\mathrm{e}^{-\mathrm{i}\xi\cdot{x}}\,\mathrm{d}x$; 若 $\hat{f}\in{L}^{1}\left(\mathbb{R}^{n}\right)$, 则 $f\left(x\right)=\frac{1}{\left(2\pi\right)^{n}}\int_{\mathbb{R}^{n}}\hat{f}\left(\xi\right)\mathrm{e}^{\mathrm{i}\xi\cdot{x}}\,\mathrm{d}\xi$.
+
 > **定理 4.2.6 (三维波动方程的 Poisson 公式)**
 > 
 > 若 $\varphi\in{C}^{2}\left(\mathbb{R}^{3}\right)$, $\psi\in{C}^{1}\left(\mathbb{R}^{3}\right)$, 则三维波动方程 Cauchy 问题 $u_{tt}-a^{2}\Delta{u}=0$, $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=\psi\left(x\right)$ 的解为
 > $u\left(x,t\right)=\frac{1}{4\pi{a}^{2}}\left[\frac{\partial}{\partial{t}}\int_{S_{at}\left(x\right)}\frac{\varphi\left(y\right)}{t}\,\mathrm{d}S_y+\int_{S_{at}\left(x\right)}\frac{\psi\left(y\right)}{t}\,\mathrm{d}S_y\right]$, 即公式 (4.2.15), 其中 $S_{at}\left(x\right)=\left\{y\in\mathbb{R}^{3}:\left|y-x\right|=at\right\}$.
-
-> **定义 3.4.3 (Fourier 变换)**
-> 
-> 对 $f\in{L}^{1}\left(\mathbb{R}^{n}\right)$, 记 $\hat{f}\left(\xi\right)=\int_{\mathbb{R}^{n}}f\left(x\right)\mathrm{e}^{-\mathrm{i}\xi\cdot{x}}\,\mathrm{d}x$; 若 $\hat{f}\in{L}^{1}\left(\mathbb{R}^{n}\right)$, 则 $f\left(x\right)=\frac{1}{\left(2\pi\right)^{n}}\int_{\mathbb{R}^{n}}\hat{f}\left(\xi\right)\mathrm{e}^{\mathrm{i}\xi\cdot{x}}\,\mathrm{d}\xi$.
 
 > **定理 6.2.3 (奇点可去性)**
 > 

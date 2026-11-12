@@ -6,6 +6,12 @@
 > $\int_{\Omega}\left(\varphi^{2}\left(x\right)+\psi^{2}\left(x\right)+a^{2}\left|D\varphi\left(x\right)\right|^{2}\right)\mathrm{d}x<\delta^{2}$, $\int_0^{T}\int_{\Omega}f^{2}\left(x,t\right)\mathrm{d}x\mathrm{d}t<\delta^{2}$
 > 时, 对任意 $t\in\left[0,T\right]$ 有 $\int_{\Omega}\left(u^{2}\left(x,t\right)+u_t^{2}\left(x,t\right)+a^{2}\left|\nabla{u}\left(x,t\right)\right|^{2}\right)\mathrm{d}x<\varepsilon^{2}$.
 
+> **定理 4.4.2 (Cauchy 问题的唯一性和稳定性)**
+> 
+> Cauchy 问题 (4.4.5) 的解在 $C^{2}\left(\mathbb{R}^{n}\times\left[0,+\infty\right)\right)$ 中是唯一的, 且在以下意义下稳定: 给定 $T>0$, 对任意 $\varepsilon>0$, 存在 $\delta=\delta\left(\varepsilon,T\right)>0$, 使得当
+> $\int_{\mathbb{R}^{n}}\left(\varphi^{2}\left(x\right)+\psi^{2}\left(x\right)+a^{2}\left|D\varphi\left(x\right)\right|^{2}\right)\mathrm{d}x<\delta^{2}$, $\int_0^{T}\mathrm{d}t\int_{\Omega_t}f^{2}\left(x,t\right)\mathrm{d}x<\delta^{2}$
+> 时, 对任意 $t\in\left[0,T\right]$ 有 $\int_{\Omega_t}\left(u^{2}\left(x,t\right)+u_t^{2}\left(x,t\right)+a^{2}\left|\nabla{u}\left(x,t\right)\right|^{2}\right)\mathrm{d}x<\varepsilon^{2}$.
+
 > **公式 (4.4.3) (能量不等式)**
 > 
 > $E\left(t\right)\le{E}\left(0\right)\mathrm{e}^{t}+\int_0^{t}\mathrm{e}^{t-s}\int_{\Omega}f^{2}\left(x,s\right)\,\mathrm{d}x\,\mathrm{d}s$, 其中 $E\left(t\right)=\frac{1}{2}\int_{\Omega}\left(u_t^{2}+a^{2}\left|\nabla{u}\right|^{2}\right)\mathrm{d}x$, $E\left(0\right)=\frac{1}{2}\int_{\Omega}\left(\psi^{2}+a^{2}\left|D\varphi\right|^{2}\right)\mathrm{d}x$.
@@ -21,12 +27,6 @@
 > **公式 (4.4.7) (Cauchy 问题的能量不等式)**
 > 
 > $E_0\left(t\right)\le\left(E_0\left(0\right)+tE\left(0\right)\right)\mathrm{e}^{t}+\int_0^{t}\mathrm{d}s\int_{\Omega_s}\left(t-s\right)\mathrm{e}^{t-s}f^{2}\left(x,s\right)\,\mathrm{d}x$, 其中 $E_0\left(t\right)=\int_{\Omega_t}u^{2}\left(x,t\right)\,\mathrm{d}x$.
-
-> **定理 4.4.2 (Cauchy 问题的唯一性和稳定性)**
-> 
-> Cauchy 问题 (4.4.5) 的解在 $C^{2}\left(\mathbb{R}^{n}\times\left[0,+\infty\right)\right)$ 中是唯一的, 且在以下意义下稳定: 给定 $T>0$, 对任意 $\varepsilon>0$, 存在 $\delta=\delta\left(\varepsilon,T\right)>0$, 使得当
-> $\int_{\mathbb{R}^{n}}\left(\varphi^{2}\left(x\right)+\psi^{2}\left(x\right)+a^{2}\left|D\varphi\left(x\right)\right|^{2}\right)\mathrm{d}x<\delta^{2}$, $\int_0^{T}\mathrm{d}t\int_{\Omega_t}f^{2}\left(x,t\right)\mathrm{d}x<\delta^{2}$
-> 时, 对任意 $t\in\left[0,T\right]$ 有 $\int_{\Omega_t}\left(u^{2}\left(x,t\right)+u_t^{2}\left(x,t\right)+a^{2}\left|\nabla{u}\left(x,t\right)\right|^{2}\right)\mathrm{d}x<\varepsilon^{2}$.
 
 ## 习题 4.1 (带耗散项的波动方程的能量单调性)
 

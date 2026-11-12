@@ -1,20 +1,20 @@
 # week5
 
+> **定理 2.3.1 (弱极值原理)**
+> 
+> 设 $u\in{C}^{2}\left(\Omega\right)\cap{C}^{0}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内满足 $\Delta{u}\ge0$ (或 $\Delta{u}\le0$), 则 $u$ 在 $\overline{\Omega}$ 上的最大值 (最小值) 在 $\partial\Omega$ 上达到.
+
 > **定义 2.4.1 (基本解)**
 > 
 > $\Gamma\left(x\right)=\frac{1}{2\pi}\ln\frac{1}{\left|x\right|}$ ($n=2$), $\Gamma\left(x\right)=\frac{1}{\left(n-2\right)\omega_n}\left|x\right|^{2-n}$ ($n\ge3$); 且 $\partial_{x_i}\Gamma\left(x\right)=-\frac{x_i}{\omega_n\left|x\right|^{n}}$.
-
-> **定义 2.5.3 (Green 函数)**
-> 
-> 设 $\Phi\left(x,\cdot\right)\in{C}^{1}\left(\overline{\Omega}\right)\cap{C}^{2}\left(\Omega\right)$ 是 $\Delta_y\Phi\left(x,y\right)=0$ ($y\in\Omega$), $\Phi\left(x,y\right)=-\Gamma\left(x,y\right)$ ($y\in\partial\Omega$) 的解, 则 $G\left(x,y\right):=\Gamma\left(x,y\right)+\Phi\left(x,y\right)$ 称为区域 $\Omega$ 上的 Green 函数; 且当 $\Delta{u}=0$ 时, $u\left(x\right)=-\int_{\partial\Omega}\varphi\left(y\right)\frac{\partial{G}}{\partial\nu}\left(x,y\right)\,\mathrm{d}S$.
 
 > **公式 2.5.2 (Green 第二恒等式)**
 > 
 > $\int_{\Omega}\left(v\Delta{u}-u\Delta{v}\right)\mathrm{d}x=\int_{\partial\Omega}\left(v\frac{\partial{u}}{\partial\nu}-u\frac{\partial{v}}{\partial\nu}\right)\mathrm{d}S$, $\nu$ 为 $\partial\Omega$ 的单位外法向.
 
-> **定理 2.3.1 (弱极值原理)**
+> **定义 2.5.3 (Green 函数)**
 > 
-> 设 $u\in{C}^{2}\left(\Omega\right)\cap{C}^{0}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内满足 $\Delta{u}\ge0$ (或 $\Delta{u}\le0$), 则 $u$ 在 $\overline{\Omega}$ 上的最大值 (最小值) 在 $\partial\Omega$ 上达到.
+> 设 $\Phi\left(x,\cdot\right)\in{C}^{1}\left(\overline{\Omega}\right)\cap{C}^{2}\left(\Omega\right)$ 是 $\Delta_y\Phi\left(x,y\right)=0$ ($y\in\Omega$), $\Phi\left(x,y\right)=-\Gamma\left(x,y\right)$ ($y\in\partial\Omega$) 的解, 则 $G\left(x,y\right):=\Gamma\left(x,y\right)+\Phi\left(x,y\right)$ 称为区域 $\Omega$ 上的 Green 函数; 且当 $\Delta{u}=0$ 时, $u\left(x\right)=-\int_{\partial\Omega}\varphi\left(y\right)\frac{\partial{G}}{\partial\nu}\left(x,y\right)\,\mathrm{d}S$.
 
 > **定义 2.7.1 (内球条件)**
 > 

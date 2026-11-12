@@ -20,10 +20,6 @@
 > 
 > $P\left(x,y\right)=\frac{2x_n}{\omega_n\left|x-y\right|^{n}}$, $x\in\mathbb{R}^{n}_{+}$, $y\in\partial\mathbb{R}^{n}_{+}$, 称为上半空间 $\mathbb{R}^{n}_{+}$ 上的 Poisson 核.
 
-> **公式 2.5.9 (上半空间的 Poisson 公式)**
-> 
-> 对 $\varphi\in{C}^{0}\left(\mathbb{R}^{n-1}\right)$, $u\left(x\right)=\frac{2x_n}{\omega_n}\int_{\mathbb{R}^{n-1}}\frac{\varphi\left(y'\right)}{\left(\left|x'-y'\right|^{2}+x_n^{2}\right)^{\frac{n}{2}}}\,\mathrm{d}y'$.
-
 > **定义 2.5.6 (球上的 Poisson 核)**
 > 
 > $K\left(x,y\right):=\frac{\partial{G}}{\partial\nu}\left(x,y\right)=\frac{1}{\omega_nR}\frac{R^{2}-\left|x\right|^{2}}{\left|x-y\right|^{n}}$, $x\in{B}_R\left(0\right)$, $y\in\partial{B}_R\left(0\right)$.
@@ -31,6 +27,10 @@
 > **定理 2.5.7 (Poisson 积分公式)**
 > 
 > 设 $\varphi\in{C}^{0}\left(\partial{B}_R\left(0\right)\right)$, 则由 (2.5.10) 定义的 $u$ 属于 $C\left(\overline{\Omega}\right)\cap{C}^{\infty}\left(\Omega\right)$, 且是 $\Delta{u}=0$ (于 $B_R\left(0\right)$), $u=\varphi$ (于 $\partial{B}_R\left(0\right)$) 的解; 且 $\int_{\partial{B}_R\left(0\right)}K\left(x,y\right)\,\mathrm{d}S=1$.
+
+> **公式 2.5.9 (上半空间的 Poisson 公式)**
+> 
+> 对 $\varphi\in{C}^{0}\left(\mathbb{R}^{n-1}\right)$, $u\left(x\right)=\frac{2x_n}{\omega_n}\int_{\mathbb{R}^{n-1}}\frac{\varphi\left(y'\right)}{\left(\left|x'-y'\right|^{2}+x_n^{2}\right)^{\frac{n}{2}}}\,\mathrm{d}y'$.
 
 ## 习题 2.8 (调和函数在球心处的梯度估计)
 
