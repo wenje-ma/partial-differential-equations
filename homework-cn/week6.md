@@ -54,9 +54,9 @@ $$
 v\left(x_0\right)\ge2m-M.\tag{A}
 $$
 
-若 $v\left(x_0\right)\le{M}$, 则 (A) 给出 $2m\le{v}\left(x_0\right)+M\le2M$, 即 $m\le{M}$, 结论已得. 以下设 $v\left(x_0\right)>{}M$.
+若 $v\left(x_0\right)\le{M}$, 则 (A) 给出 $2m\le{v}\left(x_0\right)+M\le2M$, 即 $m\le{M}$, 结论已得. 以下设 $v\left(x_0\right)>M$.
 
-第五步: 由 $v\left(x_0\right)>{}M\ge\max_{\partial\Omega}\left|v\right|=0$, 点 $x_0$ 也是 $v$ 在 $\Omega$ 内取到正的最大值的点, 故 $-\Delta{v}\left(x_0\right)\ge0$, 于是由第二个方程
+第五步: 由 $v\left(x_0\right)>M\ge\max_{\partial\Omega}\left|v\right|=0$, 点 $x_0$ 也是 $v$ 在 $\Omega$ 内取到正的最大值的点, 故 $-\Delta{v}\left(x_0\right)\ge0$, 于是由第二个方程
 
 $$
 -\Delta{v}\left(x_0\right)=g\left(x_0\right)-2v\left(x_0\right)+u\left(x_0\right)\ge0,\tag{B}
@@ -95,7 +95,7 @@ $$
 第三步: 对任意 $\varepsilon>0$, 取 $\delta>0$ 使
 
 $$
-\varepsilon\delta^{2-n}>{}M.\tag{A}
+\varepsilon\delta^{2-n}>M.\tag{A}
 $$
 
 记区域 $\Omega_\delta=\Omega\cap\left\{x\,\middle|\,\left|x-x_0\right|>\delta\right\}$, 它在 $\overline{\Omega}$ 内的边界由 $\partial\Omega\setminus\left\{x_0\right\}$ 的一部分与球面 $\left\{\left|x-x_0\right|=\delta\right\}$ 的一部分组成, 是有界区域.
@@ -290,7 +290,7 @@ $$
 
 第一步: 设 $u_1,u_2$ 是两个解, 记 $w=u_1-u_2$. 则 $w$ 在 $\mathbb{R}^{2}\setminus\overline{\Omega}$ 内调和, $w=0$ 于 $\partial\Omega$, 且 $\left|w\right|\le{M}$ ($M>0$ 由两解的有界性给出).
 
-第二步: 取 $r_0$ 使 $\overline{\Omega}\subset{B}_{r_0}\left(0\right)$, 并对 $R>{}r_0$ 记 $\Omega_R=\left\{x\in\mathbb{R}^{2}\setminus\overline{\Omega}\,\middle|\,\left|x\right|<{}R\right\}$. 在 $\Omega_R$ 上取比较函数
+第二步: 取 $r_0$ 使 $\overline{\Omega}\subset{B}_{r_0}\left(0\right)$, 并对 $R>r_0$ 记 $\Omega_R=\left\{x\in\mathbb{R}^{2}\setminus\overline{\Omega}\,\middle|\,\left|x\right|<{}R\right\}$. 在 $\Omega_R$ 上取比较函数
 
 $$
 h\left(x\right)=M\frac{\ln\left(\left|x\right|/r_0\right)}{\ln\left(R/r_0\right)}.

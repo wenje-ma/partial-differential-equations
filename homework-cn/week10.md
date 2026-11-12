@@ -136,7 +136,7 @@ $$
 的解为
 
 $$
-u\left(r,t\right)=\begin{cases}\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)+\left(r-at\right)\varphi\left(r-at\right)\right)+\frac{1}{2ar}\int_{r-at}^{r+at}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,&r>{}at,\\\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,&r<{}at,\end{cases}
+u\left(r,t\right)=\begin{cases}\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)+\left(r-at\right)\varphi\left(r-at\right)\right)+\frac{1}{2ar}\int_{r-at}^{r+at}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,&r>at,\\\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,&r<{}at,\end{cases}
 $$
 
 其中 $r=\left|x\right|$.
@@ -175,7 +175,7 @@ $$
 v\left(r,t\right)=\frac{1}{2}\left(\Phi\left(r+at\right)+\Phi\left(r-at\right)\right)+\frac{1}{2a}\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{r}\ge0.\tag{E}
 $$
 
-第六步: 情形 $r>{}at$. 此时 $r\pm{a}t>0$, 由 (D),
+第六步: 情形 $r>at$. 此时 $r\pm{a}t>0$, 由 (D),
 
 $$
 \Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\qquad\Phi\left(r-at\right)=\left(r-at\right)\varphi\left(r-at\right);

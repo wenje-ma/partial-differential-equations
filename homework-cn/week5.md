@@ -22,7 +22,7 @@
 
 > **引理 2.7.2 (霍普夫引理)**
 > 
-> 设 $\Omega\subset\mathbb{R}^{n}$ 为一个区域, $\nu$ 是 $\partial\Omega$ 的单位外法向量, $x_0\in\partial\Omega$, 且 $\partial\Omega$ 在 $x_0$ 点满足内球条件. 设函数 $u\in{C}^{2}\left(\Omega\right)\cap{C}^{1}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内下调和, 在 $x_0$ 点连续, 并且对任意 $x\in\Omega$ 有 $u\left(x_0\right)>{}u\left(x\right)$, 则其在边界点 $x_0$ 处的法向导数满足 $\frac{\partial{u}}{\partial\nu}\left(x_0\right)>0$.
+> 设 $\Omega\subset\mathbb{R}^{n}$ 为一个区域, $\nu$ 是 $\partial\Omega$ 的单位外法向量, $x_0\in\partial\Omega$, 且 $\partial\Omega$ 在 $x_0$ 点满足内球条件. 设函数 $u\in{C}^{2}\left(\Omega\right)\cap{C}^{1}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内下调和, 在 $x_0$ 点连续, 并且对任意 $x\in\Omega$ 有 $u\left(x_0\right)>u\left(x\right)$, 则其在边界点 $x_0$ 处的法向导数满足 $\frac{\partial{u}}{\partial\nu}\left(x_0\right)>0$.
 
 ## 习题 2.13 (上半空间的 Poisson 公式)
 
@@ -242,7 +242,7 @@ $$
 
 第二步: 最大值不在 $\Omega$ 内部达到. 由 $\Delta{u}=0$ 于 $\Omega$ 与**定理 2.3.1 (弱极值原理)** (对 $u$ 与 $-u$ 同时使用), $u$ 的最大值与最小值都在 $\partial\Omega$ 上达到.
 
-第三步: 设最大值在 $\Gamma_1$ 上某点 $p=\left(x,y\right)$ 达到. 椭圆 $\Gamma_1$ 是光滑闭曲线, 区域 $\Omega$ 在 $p$ 处满足**定义 2.7.1 (内球条件)**: 取以 $p$ 为切点的内切圆盘, 它整个含于 $\Omega$ 且与 $\overline{\Omega}$ 只交于 $p$, 法向重合. 又 $u$ 在 $\Omega$ 内调和 (从而下调和), 且 $u\left(p\right)=M>{}u\left(x\right)$ 对一切 $x\in\Omega$ 成立 (由第二步, $p$ 是整体最大点). 于是由**引理 2.7.2 (霍普夫引理)**,
+第三步: 设最大值在 $\Gamma_1$ 上某点 $p=\left(x,y\right)$ 达到. 椭圆 $\Gamma_1$ 是光滑闭曲线, 区域 $\Omega$ 在 $p$ 处满足**定义 2.7.1 (内球条件)**: 取以 $p$ 为切点的内切圆盘, 它整个含于 $\Omega$ 且与 $\overline{\Omega}$ 只交于 $p$, 法向重合. 又 $u$ 在 $\Omega$ 内调和 (从而下调和), 且 $u\left(p\right)=M>u\left(x\right)$ 对一切 $x\in\Omega$ 成立 (由第二步, $p$ 是整体最大点). 于是由**引理 2.7.2 (霍普夫引理)**,
 
 $$
 \frac{\partial{u}}{\partial\nu}\left(p\right)>0,\tag{C}

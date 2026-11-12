@@ -147,7 +147,7 @@ $$
 设 $h>0$, $u\left(x,t;h\right)$ 是 Cauchy 问题
 
 $$
-\begin{cases}u_t-a^{2}u_{xx}=0,&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=\begin{cases}\frac{1}{h},&\left|x\right|\le{h},\\0,&\left|x\right|>{}h\end{cases}\end{cases}
+\begin{cases}u_t-a^{2}u_{xx}=0,&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=\begin{cases}\frac{1}{h},&\left|x\right|\le{h},\\0,&\left|x\right|>h\end{cases}\end{cases}
 $$
 
 由 Poisson 公式给出的形式解. 证明:

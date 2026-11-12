@@ -244,7 +244,7 @@ $$
 其中 $\partial_{at}I_{\varphi}$ 表示对半径求导后的取值, 即 $\partial_{at}I_{\varphi}=\int_{\left|n\right|=1}\nabla\varphi\left(x+at\,n\right)\cdot{n}\,\mathrm{d}S_n$; 这一步只是把 $\frac{\partial}{\partial{t}}$ 作用在 $t^{-1}\int_{S_{at}}\varphi$ 上并整理.
 
 第四步: 分三种情形估计. 
-情形一: 球面与 $K$ 不相交, 即 $\left|x\right|-at>{}R$ 或 $at-\left|x\right|>{}R$. 此时 $\varphi,\psi$ 及其导数在 $S_{at}\left(x\right)$ 上为零, 故
+情形一: 球面与 $K$ 不相交, 即 $\left|x\right|-at>R$ 或 $at-\left|x\right|>R$. 此时 $\varphi,\psi$ 及其导数在 $S_{at}\left(x\right)$ 上为零, 故
 
 $$
 u\left(x,t\right)=0.\tag{E}
