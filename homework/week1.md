@@ -6,9 +6,9 @@
 
 ### 解答 1.1
 
-第一步: 设 $u$ 径向对称, 即存在一元函数 $U$ 使 $u\left(x\right)=U\left(r\right)$, $r=\left|x\right|$. 径向对称解只可能在 $u$ 的值只依赖 $r$ 时取得, 故不妨设此形式, 再将其代入方程.
+先设 $u$ 径向对称, 即存在一元函数 $U$ 使 $u\left(x\right)=U\left(r\right)$, $r=\left|x\right|$. 径向对称解只可能在 $u$ 的值只依赖 $r$ 时取得, 故不妨设此形式, 再将其代入方程.
 
-第二步: 记 $\partial_{x_i}r=\frac{x_i}{r}$, 由链式法则
+再记 $\partial_{x_i}r=\frac{x_i}{r}$, 由链式法则
 
 $$
 \partial_{x_i}u=U'\left(r\right)\frac{x_i}{r}.
@@ -20,7 +20,7 @@ $$
 \frac{\partial^{2}u}{\partial{x_i}^{2}}=U''\left(r\right)\left(\frac{x_i}{r}\right)^{2}+U'\left(r\right)\left(\frac{1}{r}-\frac{x_i^{2}}{r^{3}}\right)=\left(\frac{U''\left(r\right)}{r^{2}}-\frac{U'\left(r\right)}{r^{3}}\right)x_i^{2}+\frac{U'\left(r\right)}{r}.
 $$
 
-第三步: 对 $i$ 求和, 用 $\sum_{i=1}^{n}x_i^{2}=r^{2}$,
+接着对 $i$ 求和, 用 $\sum_{i=1}^{n}x_i^{2}=r^{2}$,
 
 $$
 \Delta{u}=\left(\frac{U''\left(r\right)}{r^{2}}-\frac{U'\left(r\right)}{r^{3}}\right)r^{2}+\frac{nU'\left(r\right)}{r}=U''\left(r\right)+\frac{n-1}{r}U'\left(r\right).
@@ -32,7 +32,7 @@ $$
 rU''\left(r\right)+\left(n-1\right)U'\left(r\right)=0.\tag{A}
 $$
 
-第四步: 以 $r^{n-1}$ 乘 (A) 的两端, 左端恰为一个全导数
+然后证以 $r^{n-1}$ 乘 (A) 的两端, 左端恰为一个全导数
 
 $$
 r^{n-1}U''\left(r\right)+\left(n-1\right)r^{n-2}U'\left(r\right)=\left(r^{n-1}U'\left(r\right)\right)'=0.
@@ -40,7 +40,7 @@ $$
 
 故 $r^{n-1}U'\left(r\right)=C$, 即 $U'\left(r\right)=Cr^{1-n}$.
 
-第五步: 分两种情形积分. 当 $n=2$ 时, $U'\left(r\right)=\frac{C}{r}$, 故 $U=C_1\ln{r}+C_2$; 当 $n\ge3$ 时, $U'\left(r\right)=Cr^{1-n}$, 故 $U=\frac{C}{2-n}r^{2-n}+C_2$. 把 $\frac{C}{2-n}$ 仍记作 $C_1$, 并换回 $r=\left|x\right|$, 得所求的全部径向对称解
+分两种情形积分. 当 $n=2$ 时, $U'\left(r\right)=\frac{C}{r}$, 故 $U=C_1\ln{r}+C_2$; 当 $n\ge3$ 时, $U'\left(r\right)=Cr^{1-n}$, 故 $U=\frac{C}{2-n}r^{2-n}+C_2$. 把 $\frac{C}{2-n}$ 仍记作 $C_1$, 并换回 $r=\left|x\right|$, 得所求的全部径向对称解
 
 $$
 u\left(x\right)=\begin{cases}C_1\ln\left|x\right|+C_2,&n=2,\\C_1\left|x\right|^{2-n}+C_2,&n\ge3,\end{cases}
@@ -160,7 +160,7 @@ $$
 
 ### 解答 1.3
 
-第一步: 作自变量替换
+先作自变量替换
 
 $$
 y=\frac{x}{t},\qquad{s}=-\frac{1}{t},
@@ -178,13 +178,13 @@ $$
 \frac{\partial{y}}{\partial{t}}=-\frac{x}{t^{2}}=-\frac{y}{t},\qquad\frac{\partial{s}}{\partial{t}}=\frac{1}{t^{2}},\qquad\frac{\partial{y}}{\partial{x}}=\frac{1}{t},\qquad\frac{\partial^{2}y}{\partial{x}^{2}}=0.
 $$
 
-第二步: 先算 $a$ 的一阶偏导数
+先算 $a$ 的一阶偏导数
 
 $$
 a_t=a\left(-\frac{1}{2t}+\frac{x^{2}}{4t^{2}}\right),\qquad{a}_x=a\left(-\frac{x}{2t}\right).
 $$
 
-第三步: 对 $x$ 求导两次,
+接着对 $x$ 求导两次,
 
 $$
 v_x=a_xu+au_y\frac{1}{t}=a\left(-\frac{xu}{2t}+\frac{u_y}{t}\right),
@@ -194,13 +194,13 @@ $$
 v_{xx}=a\left[-\frac{x}{2t}\left(-\frac{xu}{2t}+\frac{u_y}{t}\right)-\frac{u}{2t}-\frac{xu_y}{2t^{2}}+\frac{u_{yy}}{t^{2}}\right]=a\left[\frac{x^{2}u}{4t^{2}}-\frac{xu_y}{t^{2}}-\frac{u}{2t}+\frac{u_{yy}}{t^{2}}\right].\tag{A}
 $$
 
-第四步: 对 $t$ 求导一次, 用 $\partial_t{u}=u_y\left(-\frac{x}{t^{2}}\right)+u_s\frac{1}{t^{2}}$,
+然后对 $t$ 求导一次, 用 $\partial_t{u}=u_y\left(-\frac{x}{t^{2}}\right)+u_s\frac{1}{t^{2}}$,
 
 $$
 v_t=a\left[\left(-\frac{1}{2t}+\frac{x^{2}}{4t^{2}}\right)u-\frac{xu_y}{t^{2}}+\frac{u_s}{t^{2}}\right].\tag{B}
 $$
 
-第五步: 将 (A) 与 (B) 相减, 并代入 $u_s=u_{yy}$,
+最后将 (A) 与 (B) 相减, 并代入 $u_s=u_{yy}$,
 
 $$
 v_t-v_{xx}=a\left[\left(-\frac{1}{2t}+\frac{x^{2}}{4t^{2}}-\frac{x^{2}}{4t^{2}}+\frac{1}{2t}\right)u+\left(-\frac{x}{t^{2}}+\frac{x}{t^{2}}\right)u_y+\frac{u_s-u_{yy}}{t^{2}}\right]=0.
@@ -226,7 +226,7 @@ $$
 
 ### 解答 1.4
 
-第一步: 记自相似变量
+先记自相似变量
 
 $$
 \xi=\frac{x}{2a\sqrt{t}},
@@ -238,13 +238,13 @@ $$
 u\left(x,t\right)=t^{-\frac{1}{2}}f\left(\xi\right).
 $$
 
-第二步: 算 $u_t$. 由乘积法则与链式法则,
+再算 $u_t$. 由乘积法则与链式法则,
 
 $$
 u_t=-\frac{1}{2}t^{-\frac{3}{2}}f+t^{-\frac{1}{2}}f'\left(\xi\right)\left(-\frac{\xi}{2t}\right)=t^{-\frac{3}{2}}\left(-\frac{1}{2}f-\frac{1}{2}\xi{f}'\right).\tag{A}
 $$
 
-第三步: 算 $u_{xx}$. 先有一阶导数
+接着算 $u_{xx}$. 先有一阶导数
 
 $$
 u_x=t^{-\frac{1}{2}}f'\left(\xi\right)\frac{1}{2a\sqrt{t}}=\frac{f'\left(\xi\right)}{2at},
@@ -256,7 +256,7 @@ $$
 u_{xx}=\frac{f''\left(\xi\right)}{2at}\cdot\frac{1}{2a\sqrt{t}}=\frac{f''\left(\xi\right)}{4a^{2}t^{\frac{3}{2}}}.\tag{B}
 $$
 
-第四步: 把 (A) 与 (B) 代入方程 $u_t=a^{2}u_{xx}$, 得
+然后把 (A) 与 (B) 代入方程 $u_t=a^{2}u_{xx}$, 得
 
 $$
 t^{-\frac{3}{2}}\left(-\frac{1}{2}f-\frac{1}{2}\xi{f}'\right)=\frac{f''\left(\xi\right)}{4t^{\frac{3}{2}}}.
@@ -268,7 +268,7 @@ $$
 f''\left(\xi\right)+2\xi{f}'\left(\xi\right)+2f\left(\xi\right)=0.\tag{C}
 $$
 
-第五步: 解 (C). 注意 $f''+2\xi{f}'+2f=\left(f'+2\xi{f}\right)'$, 故 (C) 等价于
+然后解 (C). 注意 $f''+2\xi{f}'+2f=\left(f'+2\xi{f}\right)'$, 故 (C) 等价于
 
 $$
 f'\left(\xi\right)+2\xi{f}\left(\xi\right)=C_1,
@@ -288,7 +288,7 @@ $$
 
 其中 $C_2$ 是另一常数.
 
-第六步: 换回 $x,t$. 所求的全部解为
+最后换回 $x,t$. 所求的全部解为
 
 $$
 u\left(x,t\right)=\frac{1}{\sqrt{t}}\mathrm{e}^{-\frac{x^{2}}{4a^{2}t}}\left(C_1\int_0^{\frac{x}{2a\sqrt{t}}}\mathrm{e}^{s^{2}}\,\mathrm{d}s+C_2\right).
