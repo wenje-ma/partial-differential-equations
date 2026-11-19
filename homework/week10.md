@@ -30,7 +30,7 @@ $$
 
 ### 解答 4.5
 
-第一步: 用叠加原理分解问题. 令 $u=u_1+u_2$, 其中 $u_1$ 是齐次方程的 Cauchy 问题
+先用叠加原理分解问题. 令 $u=u_1+u_2$, 其中 $u_1$ 是齐次方程的 Cauchy 问题
 
 $$
 \begin{cases}\left(u_1\right)_{tt}-a^{2}\left(u_1\right)_{xx}=0,\\u_1\left(x,0\right)=0,\quad\left(u_1\right)_t\left(x,0\right)=\frac{1}{1+x^{2}}\end{cases}\tag{A}
@@ -44,31 +44,31 @@ $$
 
 的解. 由线性, $u_1+u_2$ 就是原问题的解.
 
-第二步: 用**定理 4.2.2 (d'Alembert 公式)** 求 $u_1$. 此时 $\varphi=0$, $\psi\left(s\right)=\frac{1}{1+s^{2}}$,
+再用**定理 4.2.2 (d'Alembert 公式)** 求 $u_1$. 此时 $\varphi=0$, $\psi\left(s\right)=\frac{1}{1+s^{2}}$,
 
 $$
 u_1\left(x,t\right)=\frac{1}{2a}\int_{x-at}^{x+at}\frac{\mathrm{d}s}{1+s^{2}}=\frac{1}{2a}\left(\arctan\left(x+at\right)-\arctan\left(x-at\right)\right).\tag{C}
 $$
 
-第三步: 对 (B) 用齐次化原理. 齐次化原理给出
+接着对 (B) 用齐次化原理. 齐次化原理给出
 
 $$
 u_2\left(x,t\right)=\frac{1}{2a}\int_0^{t}\mathrm{d}\tau\int_{x-a\left(t-\tau\right)}^{x+a\left(t-\tau\right)}\frac{s\tau}{\left(1+s^{2}\right)^{2}}\,\mathrm{d}s.\tag{D}
 $$
 
-第四步: 算内层积分. 由 $\frac{\mathrm{d}}{\mathrm{d}s}\left(-\frac{1}{2\left(1+s^{2}\right)}\right)=\frac{s}{\left(1+s^{2}\right)^{2}}$,
+然后算内层积分. 由 $\frac{\mathrm{d}}{\mathrm{d}s}\left(-\frac{1}{2\left(1+s^{2}\right)}\right)=\frac{s}{\left(1+s^{2}\right)^{2}}$,
 
 $$
 \int_{x-a\left(t-\tau\right)}^{x+a\left(t-\tau\right)}\frac{s\,\mathrm{d}s}{\left(1+s^{2}\right)^{2}}=-\frac{1}{2\left(1+\left(x+a\left(t-\tau\right)\right)^{2}\right)}+\frac{1}{2\left(1+\left(x-a\left(t-\tau\right)\right)^{2}\right)}.\tag{E}
 $$
 
-第五步: 代入 (D). 记 $g\left(s\right)=\frac{1}{1+s^{2}}$, 把 (E) 代入 (D),
+然后代入 (D). 记 $g\left(s\right)=\frac{1}{1+s^{2}}$, 把 (E) 代入 (D),
 
 $$
 u_2\left(x,t\right)=\frac{1}{4a}\int_0^{t}\tau\left[g\left(x-a\left(t-\tau\right)\right)-g\left(x+a\left(t-\tau\right)\right)\right]\mathrm{d}\tau.\tag{F}
 $$
 
-第六步: 算两个基本积分. 令 $r=t-\tau$, 则 $\tau=t-r$, $\mathrm{d}\tau=-\mathrm{d}r$, 于是
+然后算两个基本积分. 令 $r=t-\tau$, 则 $\tau=t-r$, $\mathrm{d}\tau=-\mathrm{d}r$, 于是
 
 $$
 \int_0^{t}\tau\,g\left(x\pm{a}\left(t-\tau\right)\right)\mathrm{d}\tau=\int_0^{t}\left(t-r\right)g\left(x\pm{a}r\right)\,\mathrm{d}r.\tag{G}
@@ -86,7 +86,7 @@ $$
 \int_0^{t}\left(t-r\right)g\left(x+ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t+\frac{x}{a}\right)\left(\arctan\left(x+at\right)-\arctan{x}\right)-\frac{1}{2a^{2}}\ln\frac{1+\left(x+at\right)^{2}}{1+x^{2}}.\tag{I}
 $$
 
-第七步: 同样算出 $x-ar$ 那一项. 作 $u=x-ar$,
+同样算出 $x-ar$ 那一项. 作 $u=x-ar$,
 
 $$
 \int_0^{t}\left(t-r\right)\frac{\mathrm{d}r}{1+\left(x-ar\right)^{2}}=\frac{1}{a}\int_{x-at}^{x}\left(t-\frac{x}{a}+\frac{u}{a}\right)\frac{\mathrm{d}u}{1+u^{2}},\tag{J}
@@ -96,7 +96,7 @@ $$
 \int_0^{t}\left(t-r\right)g\left(x-ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t-\frac{x}{a}\right)\left(\arctan{x}-\arctan\left(x-at\right)\right)+\frac{1}{2a^{2}}\ln\frac{1+x^{2}}{1+\left(x-at\right)^{2}}.\tag{K}
 $$
 
-第八步: 代入 (F) 并整理. 记
+然后代入 (F) 并整理. 记
 
 $$
 D=\arctan\left(x+at\right)-\arctan\left(x-at\right),\qquad{P}=2\arctan{x}-\arctan\left(x+at\right)-\arctan\left(x-at\right),\tag{L}
@@ -109,7 +109,7 @@ $$
 u_2\left(x,t\right)=\frac{1}{4a}\left[\frac{tP-\frac{x}{a}D}{a}+\frac{1}{2a}\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}}\right].\tag{M}
 $$
 
-第九步: 合并得解. 由 (C)(M),
+然后合并得解. 由 (C)(M),
 
 $$
 u\left(x,t\right)=\frac{D}{2a}+\frac{tP}{4a^{2}}-\frac{xD}{4a^{3}}+\frac{1}{8a^{3}}\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}},\tag{N}
@@ -117,7 +117,7 @@ $$
 
 其中 $D,P$ 由 (L) 给出.
 
-第十步: 验证初值. 在 $t=0$ 时 $D=0$, $P=0$, 对数项为零, 故 $u\left(x,0\right)=0$. 关于 $t$ 求导后令 $t=0$: 由 (C), $u_1$ 的贡献为 $\frac{1}{2a}\left(a\frac{1}{1+x^{2}}+a\frac{1}{1+x^{2}}\right)=\frac{1}{1+x^{2}}$; 由 (M), $P$ 与 $D$ 在 $t=0$ 处为零而 $P_t$, $D_t$ 项自动消失, 对数项的贡献为
+最后验证初值. 在 $t=0$ 时 $D=0$, $P=0$, 对数项为零, 故 $u\left(x,0\right)=0$. 关于 $t$ 求导后令 $t=0$: 由 (C), $u_1$ 的贡献为 $\frac{1}{2a}\left(a\frac{1}{1+x^{2}}+a\frac{1}{1+x^{2}}\right)=\frac{1}{1+x^{2}}$; 由 (M), $P$ 与 $D$ 在 $t=0$ 处为零而 $P_t$, $D_t$ 项自动消失, 对数项的贡献为
 
 $$
 \frac{1}{8a^{3}}\left.\left(\frac{2a\left(x+at\right)}{1+\left(x+at\right)^{2}}+\frac{2a\left(x-at\right)}{1+\left(x-at\right)^{2}}\right)\right|_{t=0}=\frac{x}{2a^{2}\left(1+x^{2}\right)},
@@ -143,25 +143,25 @@ $$
 
 ### 解答 4.6
 
-第一步: 把三维径向问题化为一维问题. 记 $r=\left|x\right|$, 设 $u=u\left(r,t\right)$. 由径向对称, $\nabla{u}=u_r\frac{x}{r}$, 于是
+先把三维径向问题化为一维问题. 记 $r=\left|x\right|$, 设 $u=u\left(r,t\right)$. 由径向对称, $\nabla{u}=u_r\frac{x}{r}$, 于是
 
 $$
 \Delta{u}=u_{rr}+\frac{2}{r}u_r=\frac{1}{r}\left(\partial_r^{2}\left(ru\right)\right).\tag{A}
 $$
 
-第二步: 引入 $v=ru$. 由 (A),
+再引入 $v=ru$. 由 (A),
 
 $$
 \left(ru\right)_{tt}=r{u}_{tt}=a^{2}r\Delta{u}=a^{2}\partial_r^{2}\left(ru\right),\qquad\text{即}\;\;v_{tt}-a^{2}v_{rr}=0.\tag{B}
 $$
 
-第三步: 写出 $v$ 的初值. 由 $u\left(x,0\right)=\varphi\left(r\right)$, $u_t\left(x,0\right)=\psi\left(r\right)$,
+接着写出 $v$ 的初值. 由 $u\left(x,0\right)=\varphi\left(r\right)$, $u_t\left(x,0\right)=\psi\left(r\right)$,
 
 $$
 v\left(r,0\right)=r\varphi\left(r\right),\qquad{v}_t\left(r,0\right)=r\psi\left(r\right),\qquad{r}>0.\tag{C}
 $$
 
-第四步: 把初值奇延拓到 $r<0$. 定义
+然后把初值奇延拓到 $r<0$. 定义
 
 $$
 \Phi\left(r\right)=\begin{cases}r\varphi\left(r\right),&r>0,\\r\varphi\left(-r\right),&r<0,\end{cases}\qquad\Psi\left(r\right)=\begin{cases}r\psi\left(r\right),&r>0,\\r\psi\left(-r\right),&r<0.\end{cases}\tag{D}
@@ -169,13 +169,13 @@ $$
 
 注意 $r<0$ 时 $r\varphi\left(-r\right)=-\left(-r\right)\varphi\left(-r\right)$, 故 $\Phi,\Psi$ 是奇函数: $\Phi\left(-r\right)=-\Phi\left(r\right)$, $\Psi\left(-r\right)=-\Psi\left(r\right)$, 且由 $\varphi,\psi$ 的光滑性它们在全轴 $C^{2}$, $C^{1}$.
 
-第五步: 对全轴的 $v$ 用 d'Alembert 公式. 把 (B)(C) 的解按 (D) 延拓为全轴问题, 由**定理 4.2.2 (d'Alembert 公式)**,
+然后对全轴的 $v$ 用 d'Alembert 公式. 把 (B)(C) 的解按 (D) 延拓为全轴问题, 由**定理 4.2.2 (d'Alembert 公式)**,
 
 $$
 v\left(r,t\right)=\frac{1}{2}\left(\Phi\left(r+at\right)+\Phi\left(r-at\right)\right)+\frac{1}{2a}\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{r}\ge0.\tag{E}
 $$
 
-第六步: 情形 $r>at$. 此时 $r\pm{a}t>0$, 由 (D),
+情形 $r>at$. 此时 $r\pm{a}t>0$, 由 (D),
 
 $$
 \Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\qquad\Phi\left(r-at\right)=\left(r-at\right)\varphi\left(r-at\right);
@@ -187,13 +187,13 @@ $$
 u\left(r,t\right)=\frac{v\left(r,t\right)}{r}=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)+\left(r-at\right)\varphi\left(r-at\right)\right)+\frac{1}{2ar}\int_{r-at}^{r+at}\rho\psi\left(\rho\right)\,\mathrm{d}\rho.\tag{F}
 $$
 
-第七步: 情形 $r<{}at$. 此时 $r-at<0$, $r+at>0$, 故
+情形 $r<{}at$. 此时 $r-at<0$, $r+at>0$, 故
 
 $$
 \Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\qquad\Phi\left(r-at\right)=r\varphi\left(at-r\right)=-\left(at-r\right)\varphi\left(at-r\right).\tag{G}
 $$
 
-第八步: 算这一情形的积分项. 由 $r<{}at$,
+然后算这一情形的积分项. 由 $r<{}at$,
 
 $$
 \int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho=\int_{r-at}^{0}\Psi\,\mathrm{d}\rho+\int_0^{r+at}\Psi\,\mathrm{d}\rho.\tag{H}
@@ -211,13 +211,13 @@ $$
 \int_{at-r}^{r+at}\rho\psi\left(\rho\right)\,\mathrm{d}\rho=\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho.\tag{J}
 $$
 
-第九步: 合并. 把 (G)(J) 代入 (E) 并除以 $r$,
+然后合并. 把 (G)(J) 代入 (E) 并除以 $r$,
 
 $$
 u\left(r,t\right)=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{r}<{}at.\tag{K}
 $$
 
-第十步: 结论. (F) 与 (K) 正是题目给出的分段表达式, 故球面波问题的解确如题所述.
+收尾. (F) 与 (K) 正是题目给出的分段表达式, 故球面波问题的解确如题所述.
 
 ## 习题 4.7 (三维波动方程的 Cauchy 问题)
 
@@ -229,7 +229,7 @@ $$
 
 ### 解答 4.7
 
-第一步: 写出求解公式. 由**定理 4.2.6 (三维波动方程的 Poisson 公式)**, 取 $\varphi=x_1^{2}+x_2^{2}x_3$, $\psi=0$,
+先写出求解公式. 由**定理 4.2.6 (三维波动方程的 Poisson 公式)**, 取 $\varphi=x_1^{2}+x_2^{2}x_3$, $\psi=0$,
 
 $$
 u\left(x,t\right)=\frac{\partial}{\partial{t}}\left(t\varphi_B\left(x,at\right)\right),\tag{A}
@@ -237,7 +237,7 @@ $$
 
 其中 $\varphi_B$ 是由**定义 4.2.4 (球面平均函数)** 给出的球面平均.
 
-第二步: 准备三条球面积分公式. 记 $S_r\left(x\right)=\left\{y:\left|y-x\right|=r\right\}$. 由球面的旋转对称性, 对 $i,j,k\in\left\{1,2,3\right\}$,
+准备三条球面积分公式. 记 $S_r\left(x\right)=\left\{y:\left|y-x\right|=r\right\}$. 由球面的旋转对称性, 对 $i,j,k\in\left\{1,2,3\right\}$,
 
 $$
 \int_{S_r\left(x\right)}\left(y_i-x_i\right)\mathrm{d}S=0,\qquad\int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\mathrm{d}S=\frac{4\pi{r}^{4}}{3}\delta_{ij},\tag{B}
@@ -249,13 +249,13 @@ $$
 
 (B) 的第二式来自: 三个二阶矩由对称性相等, 而其和等于 $\int_{S_r}\left|y-x\right|^{2}\mathrm{d}S=r^{2}\cdot4\pi{r}^{2}=4\pi{r}^{4}$; (C) 来自关于 $y_k-x_k$ 的奇对称.
 
-第三步: 算 $\varphi$ 的球面平均. 令 $y=x+n$, $\left|n\right|=r$, 则
+接着算 $\varphi$ 的球面平均. 令 $y=x+n$, $\left|n\right|=r$, 则
 
 $$
 \varphi\left(y\right)=y_1^{2}+y_2^{2}y_3=\left(x_1+n_1\right)^{2}+\left(x_2+n_2\right)^{2}\left(x_3+n_3\right).\tag{D}
 $$
 
-第四步: 逐项展开并对球面积分. 由 (B)(C),
+然后逐项展开并对球面积分. 由 (B)(C),
 
 $$
 \int_{S_r}\left(x_1+n_1\right)^{2}\mathrm{d}S=4\pi{r}^{2}x_1^{2}+\int_{S_r}n_1^{2}\mathrm{d}S=4\pi{r}^{2}x_1^{2}+\frac{4\pi{r}^{4}}{3},\tag{E}
@@ -267,19 +267,19 @@ $$
 
 这里其余项含 $n_i$ 的一次或三次因子, 由 (B)(C) 积分为零 (如 $2x_2x_3\int{n}_2\mathrm{d}S=0$, $\int{n}_2^{2}n_3\mathrm{d}S=0$, $2x_2\int{n}_2n_3\mathrm{d}S=0$).
 
-第五步: 写出 $\varphi_B$. 由 (E)(F) 与 $\varphi_B=\frac{1}{4\pi{r}^{2}}\int_{S_r}\varphi\,\mathrm{d}S$,
+然后写出 $\varphi_B$. 由 (E)(F) 与 $\varphi_B=\frac{1}{4\pi{r}^{2}}\int_{S_r}\varphi\,\mathrm{d}S$,
 
 $$
 \varphi_B\left(x,r\right)=x_1^{2}+x_2^{2}x_3+\frac{r^{2}}{3}\left(1+x_3\right)=\varphi\left(x\right)+\frac{r^{2}}{3}\left(1+x_3\right).\tag{G}
 $$
 
-第六步: 代入 (A). 把 $r=at$ 代入,
+然后代入 (A). 把 $r=at$ 代入,
 
 $$
 t\varphi_B\left(x,at\right)=t\left(\varphi\left(x\right)+\frac{a^{2}t^{2}}{3}\left(1+x_3\right)\right).\tag{H}
 $$
 
-第七步: 求导得解. 由 (A)(H),
+然后求导得解. 由 (A)(H),
 
 $$
 u\left(x,t\right)=\frac{\partial}{\partial{t}}\left[t\varphi\left(x\right)+\frac{a^{2}t^{3}}{3}\left(1+x_3\right)\right]=\varphi\left(x\right)+a^{2}t^{2}\left(1+x_3\right),
@@ -291,7 +291,7 @@ $$
 u\left(x,t\right)=x_1^{2}+x_2^{2}x_3+a^{2}t^{2}\left(1+x_3\right).\tag{I}
 $$
 
-第八步: 直接验证. $\partial_t^{2}u=2a^{2}\left(1+x_3\right)$; 又 $\Delta\left(x_1^{2}+x_2^{2}x_3\right)=2+2x_3$ 且 $\Delta\left(a^{2}t^{2}x_3\right)=0$, 故 $a^{2}\Delta{u}=2a^{2}\left(1+x_3\right)=\partial_t^{2}u$, 方程成立; $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=0$ 也成立.
+最后证直接验证. $\partial_t^{2}u=2a^{2}\left(1+x_3\right)$; 又 $\Delta\left(x_1^{2}+x_2^{2}x_3\right)=2+2x_3$ 且 $\Delta\left(a^{2}t^{2}x_3\right)=0$, 故 $a^{2}\Delta{u}=2a^{2}\left(1+x_3\right)=\partial_t^{2}u$, 方程成立; $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=0$ 也成立.
 
 ## 习题 4.8 (三维非齐次波动方程的 Cauchy 问题)
 
@@ -303,13 +303,13 @@ $$
 
 ### 解答 4.8
 
-第一步: 写出求解公式. 取 $f\left(x,t\right)=\left|x\right|^{2}\mathrm{e}^{t}$, 由**公式 (4.2.17) (三维非齐次波动方程 Cauchy 问题的解)**,
+先写出求解公式. 取 $f\left(x,t\right)=\left|x\right|^{2}\mathrm{e}^{t}$, 由**公式 (4.2.17) (三维非齐次波动方程 Cauchy 问题的解)**,
 
 $$
 u\left(x,t\right)=\frac{1}{4\pi{a}^{2}}\int_0^{t}\mathrm{d}\tau\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y.\tag{A}
 $$
 
-第二步: 算被积函数在球面上的积分. 记 $r=a\left(t-\tau\right)$, 令 $y=x+n$, $\left|n\right|=r$. 由
+再算被积函数在球面上的积分. 记 $r=a\left(t-\tau\right)$, 令 $y=x+n$, $\left|n\right|=r$. 由
 
 $$
 \left|y\right|^{2}=\left|x\right|^{2}+2x\cdot{n}+\left|n\right|^{2},\qquad\int_{S_r}n\,\mathrm{d}S=0,\qquad\int_{S_r}\mathrm{d}S=4\pi{r}^{2},\tag{B}
@@ -321,7 +321,7 @@ $$
 \int_{S_r\left(x\right)}\left|y\right|^{2}\,\mathrm{d}S=4\pi{r}^{2}\left(\left|x\right|^{2}+r^{2}\right).\tag{C}
 $$
 
-第三步: 代入 (A) 并化简. 由 (B)(C),
+接着代入 (A) 并化简. 由 (B)(C),
 
 $$
 \frac{1}{4\pi{a}^{2}}\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y=\frac{4\pi{a}^{2}\left(t-\tau\right)^{2}\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}}{4\pi{a}^{2}\left(t-\tau\right)}=\left(t-\tau\right)\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}.\tag{D}
@@ -333,13 +333,13 @@ $$
 u\left(x,t\right)=\int_0^{t}\left(t-\tau\right)\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}\,\mathrm{d}\tau.\tag{E}
 $$
 
-第四步: 换元. 令 $s=t-\tau$, 则 $\tau=t-s$, $\mathrm{d}\tau=-\mathrm{d}s$,
+然后换元. 令 $s=t-\tau$, 则 $\tau=t-s$, $\mathrm{d}\tau=-\mathrm{d}s$,
 
 $$
 u\left(x,t\right)=\mathrm{e}^{t}\int_0^{t}s\left(\left|x\right|^{2}+a^{2}s^{2}\right)\mathrm{e}^{-s}\,\mathrm{d}s=\mathrm{e}^{t}\left[\left|x\right|^{2}\int_0^{t}s\mathrm{e}^{-s}\,\mathrm{d}s+a^{2}\int_0^{t}s^{3}\mathrm{e}^{-s}\,\mathrm{d}s\right].\tag{F}
 $$
 
-第五步: 算两个积分. 由分部积分,
+然后算两个积分. 由分部积分,
 
 $$
 \int_0^{t}s\mathrm{e}^{-s}\,\mathrm{d}s=1-\left(1+t\right)\mathrm{e}^{-t},\tag{G}
@@ -351,13 +351,13 @@ $$
 
 其中 (H) 由三次分部积分得到: $\int_0^{t}s^{3}\mathrm{e}^{-s}\mathrm{d}s=\left[-s^{3}\mathrm{e}^{-s}\right]_0^{t}+3\int_0^{t}s^{2}\mathrm{e}^{-s}\mathrm{d}s$, 逐次降幂并代入 $\int_0^{t}\mathrm{e}^{-s}\mathrm{d}s=1-\mathrm{e}^{-t}$.
 
-第六步: 合并得解. 把 (G)(H) 代入 (F),
+然后合并得解. 把 (G)(H) 代入 (F),
 
 $$
 u\left(x,t\right)=\left|x\right|^{2}\left(\mathrm{e}^{t}-1-t\right)+a^{2}\left(6\mathrm{e}^{t}-t^{3}-3t^{2}-6t-6\right).\tag{I}
 $$
 
-第七步: 直接验证. 由 (I),
+最后证直接验证. 由 (I),
 
 $$
 \partial_t^{2}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6\right),\qquad{a}^{2}\Delta{u}=a^{2}\left(\mathrm{e}^{t}-1-t\right)\Delta\left|x\right|^{2}=6a^{2}\left(\mathrm{e}^{t}-1-t\right),
