@@ -39,25 +39,25 @@ $$
 先消去零阶项. 令
 
 $$
-v\left(x,t\right)=\mathrm{e}^{-ct}u\left(x,t\right),\qquad\left(x,t\right)\in\overline{Q}_T.
+v\left(x,t\right)=\mathrm{e}^{-ct}u\left(x,t\right),\quad\left(x,t\right)\in\overline{Q}_T.
 $$
 
 再验证 $v$ 满足齐次热方程. 直接求导,
 
 $$
-v_t=\mathrm{e}^{-ct}u_t-c\mathrm{e}^{-ct}u,\qquad\Delta{}v=\mathrm{e}^{-ct}\Delta{}u,
+v_t=\mathrm{e}^{-ct}u_t-c\mathrm{e}^{-ct}u,\quad\Delta{}v=\mathrm{e}^{-ct}\Delta{}u,
 $$
 
 故
 
 $$
-v_t-\Delta{}v=\mathrm{e}^{-ct}\left(u_t-\Delta{}u-cu\right)=0,\qquad\left(x,t\right)\in{}Q_T.\tag{A}
+v_t-\Delta{}v=\mathrm{e}^{-ct}\left(u_t-\Delta{}u-cu\right)=0,\quad\left(x,t\right)\in{}Q_T.\tag{A}
 $$
 
 接着验证 $v$ 的抛物边界条件. 由 $u=\varphi$ 于 $\partial_pQ_T$,
 
 $$
-v=\mathrm{e}^{-ct}\varphi,\qquad\left(x,t\right)\in\partial_pQ_T,\qquad\max_{\partial_pQ_T}\left|v\right|\le\max_{\partial_pQ_T}\left|\varphi\right|.\tag{B}
+v=\mathrm{e}^{-ct}\varphi,\quad\left(x,t\right)\in\partial_pQ_T,\quad\max_{\partial_pQ_T}\left|v\right|\le\max_{\partial_pQ_T}\left|\varphi\right|.\tag{B}
 $$
 
 然后对 $v$ 用**定理 3.2.3 (初边值问题的最大模估计)**, 取 $f=0$, 得
@@ -105,7 +105,7 @@ $$
 接着由边界条件 $z_x\left(0,t_0\right)=bz\left(0,t_0\right)$ 与 $b>0$, 由 (A) 得 $z\left(0,t_0\right)\le0$. 于是无论如何
 
 $$
-\max_{\overline{Q}_T}z\le0,\qquad\text{即}\;u\le{}u_0\;\text{于}\;\left[0,l\right]\times\left[0,T\right].
+\max_{\overline{Q}_T}z\le0,\quad\text{即}\;u\le{}u_0\;\text{于}\;\left[0,l\right]\times\left[0,T\right].
 $$
 
 二, 下界 $u\ge0$.
@@ -141,7 +141,7 @@ $$
 (2) 稳定性: 对任意 $\varepsilon>0$, 存在仅依赖于 $\varepsilon$ 与 $T$ 的 $\delta>0$, 使得当
 
 $$
-\sup_{\mathbb{R}_T}\left|f_1-f_2\right|<\delta,\qquad\sup_{\mathbb{R}^{n}}\left|\varphi_1-\varphi_2\right|<\delta
+\sup_{\mathbb{R}_T}\left|f_1-f_2\right|<\delta,\quad\sup_{\mathbb{R}^{n}}\left|\varphi_1-\varphi_2\right|<\delta
 $$
 
 时, 以 $\left(f_1,\varphi_1\right)$, $\left(f_2,\varphi_2\right)$ 为数据的两个有界解 $u_1,u_2$ 满足
@@ -155,7 +155,7 @@ $$
 再证唯一性. 设 $u_1,u_2$ 是 (A) 的两个有界解 ($f,\varphi$ 相同), 记 $w=u_1-u_2$. 由方程的线性, $w$ 有界, 且
 
 $$
-w_t-a^{2}\Delta{}w=0\;\text{于}\;\mathbb{R}_T,\qquad{}w\left(x,0\right)=0\;\text{于}\;\mathbb{R}^{n}.\tag{B}
+w_t-a^{2}\Delta{}w=0\;\text{于}\;\mathbb{R}_T,\quad{}w\left(x,0\right)=0\;\text{于}\;\mathbb{R}^{n}.\tag{B}
 $$
 
 接着对 (B) 用**定理 3.2.5 (Cauchy 问题的最大模估计)**, 取 $f=0$, $\varphi=0$,
@@ -169,7 +169,7 @@ $$
 然后证稳定性. 设 $u_i$ 是数据 $\left(f_i,\varphi_i\right)$ 的有界解, $i=1,2$, 记 $w=u_1-u_2$. 由线性, $w$ 有界且
 
 $$
-w_t-a^{2}\Delta{}w=f_1-f_2\;\text{于}\;\mathbb{R}_T,\qquad{}w\left(x,0\right)=\varphi_1-\varphi_2\;\text{于}\;\mathbb{R}^{n}.
+w_t-a^{2}\Delta{}w=f_1-f_2\;\text{于}\;\mathbb{R}_T,\quad{}w\left(x,0\right)=\varphi_1-\varphi_2\;\text{于}\;\mathbb{R}^{n}.
 $$
 
 然后对 $w$ 用**定理 3.2.5 (Cauchy 问题的最大模估计)**,
@@ -225,7 +225,7 @@ $$
 然后验证 (B) 满足方程. 由 (C), $W$ 关于 $\left(x,t\right)$ 光滑 (设 $f$ 光滑), 故可用含参量积分的求导公式. 注意积分上限 $t$ 出现于上限与被积函数的第二个自变量中,
 
 $$
-u_t\left(x,t\right)=W\left(x,t;t\right)+\int_0^{t}\frac{\partial{}W}{\partial{}t}\left(x,t;\tau\right)\,\mathrm{d}\tau,\qquad{}u_x\left(x,t\right)=\int_0^{t}\frac{\partial{}W}{\partial{}x}\left(x,t;\tau\right)\,\mathrm{d}\tau.
+u_t\left(x,t\right)=W\left(x,t;t\right)+\int_0^{t}\frac{\partial{}W}{\partial{}t}\left(x,t;\tau\right)\,\mathrm{d}\tau,\quad{}u_x\left(x,t\right)=\int_0^{t}\frac{\partial{}W}{\partial{}x}\left(x,t;\tau\right)\,\mathrm{d}\tau.
 $$
 
 然后证相加. 由 (C), $W\left(x,t;t\right)=f\left(x,t\right)$; 又 $W$ 是 (A) 的解, 故 $W_t+W_x=0$ 对 $t>\tau$ 成立. 于是
@@ -263,19 +263,19 @@ $$
 同样记 $\hat{f},\hat{\varphi}$. 设 $u$ 及其导数在 $x\to\pm\infty$ 时衰减, 由分部积分
 
 $$
-\mathcal{F}\left[u_x\right]=-\int_{-\infty}^{+\infty}u\left(x,t\right)\left(-\mathrm{i}\xi\right)\mathrm{e}^{-\mathrm{i}x\xi}\,\mathrm{d}x=\mathrm{i}\xi\hat{u},\qquad\mathcal{F}\left[u_{xx}\right]=\mathrm{i}\xi\cdot\mathrm{i}\xi\hat{u}=-\xi^{2}\hat{u}.\tag{B}
+\mathcal{F}\left[u_x\right]=-\int_{-\infty}^{+\infty}u\left(x,t\right)\left(-\mathrm{i}\xi\right)\mathrm{e}^{-\mathrm{i}x\xi}\,\mathrm{d}x=\mathrm{i}\xi\hat{u},\quad\mathcal{F}\left[u_{xx}\right]=\mathrm{i}\xi\cdot\mathrm{i}\xi\hat{u}=-\xi^{2}\hat{u}.\tag{B}
 $$
 
 再证化为常微分方程. 对题中方程两端取 Fourier 变换, 用 (B),
 
 $$
-\hat{u}_t+a^{2}\xi^{2}\hat{u}-\mathrm{i}b\xi\hat{u}-c\hat{u}=\hat{f}\left(\xi,t\right),\qquad\hat{u}\left(\xi,0\right)=\hat{\varphi}\left(\xi\right),
+\hat{u}_t+a^{2}\xi^{2}\hat{u}-\mathrm{i}b\xi\hat{u}-c\hat{u}=\hat{f}\left(\xi,t\right),\quad\hat{u}\left(\xi,0\right)=\hat{\varphi}\left(\xi\right),
 $$
 
 即
 
 $$
-\hat{u}_t=\left(c-a^{2}\xi^{2}+\mathrm{i}b\xi\right)\hat{u}+\hat{f}\left(\xi,t\right),\qquad\hat{u}\left(\xi,0\right)=\hat{\varphi}\left(\xi\right).\tag{C}
+\hat{u}_t=\left(c-a^{2}\xi^{2}+\mathrm{i}b\xi\right)\hat{u}+\hat{f}\left(\xi,t\right),\quad\hat{u}\left(\xi,0\right)=\hat{\varphi}\left(\xi\right).\tag{C}
 $$
 
 接着解 (C). 这是一阶线性常微分方程, 用积分因子 $\exp\left(-\left(c-a^{2}\xi^{2}+\mathrm{i}b\xi\right)t\right)$,
@@ -337,7 +337,7 @@ $$
 先试取分离变量形式 $u\left(x,t\right)=T\left(t\right)\sin{}x$ (初始数据含 $\sin{}x$, 而 $\sin{}x$ 是 $-\partial_x^{2}$ 的特征函数). 代入方程,
 
 $$
-T'\sin{}x+T\sin{}x=\left(T'+T\right)\sin{}x=0,\qquad\text{故}\;T'+T=0.
+T'\sin{}x+T\sin{}x=\left(T'+T\right)\sin{}x=0,\quad\text{故}\;T'+T=0.
 $$
 
 再解常微分方程得 $T\left(t\right)=A\mathrm{e}^{-t}$, 由初值 $u\left(x,0\right)=\sin{}x$ 定出 $A=1$. 于是

@@ -19,7 +19,7 @@ $$
 再逐次求导. 记 $w=1-r^{2}$, 则 $\varphi=w^{-\beta}$, 且
 
 $$
-\varphi'\left(r\right)=2\beta{}rw^{-\beta-1},\qquad\varphi''\left(r\right)=2\beta{}w^{-\beta-1}+4\beta\left(\beta+1\right)r^{2}w^{-\beta-2}.
+\varphi'\left(r\right)=2\beta{}rw^{-\beta-1},\quad\varphi''\left(r\right)=2\beta{}w^{-\beta-1}+4\beta\left(\beta+1\right)r^{2}w^{-\beta-2}.
 $$
 
 接着代入 (A) 并合并同类项,
@@ -35,13 +35,13 @@ $$
 要求 $\Delta{}u=u^{p}=\alpha^{p}w^{-\beta{}p}$ 在 $B_1\left(0\right)$ 中逐点成立. (B) 的右端含方括号 $n+\left(2\beta+2-n\right)r^{2}$, 它是 $r$ 的非平凡多项式, 而右端 $\alpha^{p}w^{-\beta{}p}$ 只是 $w$ 的纯幂, 故方括号必须不含 $r^{2}$ 项, 即
 
 $$
-2\beta+2-n=0,\qquad\beta=\frac{n-2}{2}.
+2\beta+2-n=0,\quad\beta=\frac{n-2}{2}.
 $$
 
 确定 $\alpha$. 此时 (B) 给出 $\Delta{}u=2\alpha\beta{}nw^{-\beta-2}$, 与 $u^{p}=\alpha^{p}w^{-\beta{}p}$ 比较 $w$ 的幂次与系数, 得
 
 $$
-\beta{}p=\beta+2,\qquad{2\alpha\beta{}n}=\alpha^{p}.
+\beta{}p=\beta+2,\quad{2\alpha\beta{}n}=\alpha^{p}.
 $$
 
 第一式给出 $p=\frac{\beta+2}{\beta}=\frac{n+2}{n-2}$, 与题设一致; 第二式即 $\alpha^{p-1}=2\beta{}n=n\left(n-2\right)$.
@@ -55,7 +55,7 @@ $$
 于是所求的正常数为
 
 $$
-\alpha=\left(n\left(n-2\right)\right)^{\frac{n-2}{4}},\qquad\beta=\frac{n-2}{2}.
+\alpha=\left(n\left(n-2\right)\right)^{\frac{n-2}{4}},\quad\beta=\frac{n-2}{2}.
 $$
 
 ## 习题 1.6 (线性弹性方程解的散度)
@@ -63,7 +63,7 @@ $$
 设 $u=\left(u^{1},u^{2},u^{3}\right)$ 是线性弹力发展方程
 
 $$
-u_{tt}-\mu\Delta{}u-\left(\lambda+\mu\right)\nabla\left(\operatorname{div}u\right)=0,\qquad\left(x,t\right)\in\mathbb{R}^{3}\times\left(0,+\infty\right)
+u_{tt}-\mu\Delta{}u-\left(\lambda+\mu\right)\nabla\left(\operatorname{div}u\right)=0,\quad\left(x,t\right)\in\mathbb{R}^{3}\times\left(0,+\infty\right)
 $$
 
 的解, 其中 $\lambda,\mu$ 是常数. 则对某个常数 $C$, $w:=\operatorname{div}u$ 满足波动方程
@@ -117,7 +117,7 @@ $$
 再算 $\Delta{}u$. 注意 $L=-\ln{}r^{2}$, 故
 
 $$
-\nabla{}L=\frac{-2\left(x,y\right)}{r^{2}},\qquad\nabla{}L^{\frac{1}{2}}=-\frac{\left(x,y\right)}{r^{2}}L^{-\frac{1}{2}},\qquad\Delta{}L^{\frac{1}{2}}=-\frac{L^{-\frac{3}{2}}}{r^{2}}.\tag{A}
+\nabla{}L=\frac{-2\left(x,y\right)}{r^{2}},\quad\nabla{}L^{\frac{1}{2}}=-\frac{\left(x,y\right)}{r^{2}}L^{-\frac{1}{2}},\quad\Delta{}L^{\frac{1}{2}}=-\frac{L^{-\frac{3}{2}}}{r^{2}}.\tag{A}
 $$
 
 其中第三式由前两式直接求散度得到: $\operatorname{div}\left(\frac{\left(x,y\right)}{r^{2}}\right)=0$ 而 $\frac{\left(x,y\right)}{r^{2}}\cdot\nabla{}L^{-\frac{1}{2}}=-\frac{L^{-\frac{3}{2}}}{r^{2}}$.
@@ -137,7 +137,7 @@ $$
 然后由 (A) 的 $\Delta{}L^{\frac{1}{2}}$ 得第三项 $\left(x^{2}-y^{2}\right)\Delta{}L^{\frac{1}{2}}=-\frac{\left(x^{2}-y^{2}\right)L^{-\frac{3}{2}}}{r^{2}}$. 把三项代入 (B),
 
 $$
-\Delta{}u=-\frac{x^{2}-y^{2}}{r^{2}}\left(4L^{-\frac{1}{2}}+L^{-\frac{3}{2}}\right)=f\left(x,y\right),\qquad\left(x,y\right)\in{}B_{1/2}\setminus\left\{0\right\}.\tag{C}
+\Delta{}u=-\frac{x^{2}-y^{2}}{r^{2}}\left(4L^{-\frac{1}{2}}+L^{-\frac{3}{2}}\right)=f\left(x,y\right),\quad\left(x,y\right)\in{}B_{1/2}\setminus\left\{0\right\}.\tag{C}
 $$
 
 然后证 $f\in{}C^{0}\left(\overline{B}_{1/2}\right)$. 在 $B_{1/2}\setminus\left\{0\right\}$ 上 (C) 的表达式是连续函数的复合, 连续. 又 $\left|\frac{x^{2}-y^{2}}{r^{2}}\right|\le1$, 且由 $L\to+\infty$ (当 $r\to0$) 得 $L^{-\frac{1}{2}}\le\left(\ln\frac{1}{r^{2}}\right)^{-\frac{1}{2}}\to0$, 同法 $L^{-\frac{3}{2}}\to0$, 故 $\left|f\right|\le4L^{-\frac{1}{2}}+L^{-\frac{3}{2}}\to0$, 即 $f\left(x,y\right)\to0=f\left(0,0\right)$. 所以 $f$ 在 $\overline{B}_{1/2}$ 上连续.
@@ -145,13 +145,13 @@ $$
 然后证 $u\in{}C^{1}\left(\overline{B}_{1/2}\right)$. 在 $r>0$ 处由 (A),
 
 $$
-u_x=2xL^{\frac{1}{2}}-\frac{x\left(x^{2}-y^{2}\right)L^{-\frac{1}{2}}}{r^{2}},\qquad{}u_y=-2yL^{\frac{1}{2}}-\frac{y\left(x^{2}-y^{2}\right)L^{-\frac{1}{2}}}{r^{2}},
+u_x=2xL^{\frac{1}{2}}-\frac{x\left(x^{2}-y^{2}\right)L^{-\frac{1}{2}}}{r^{2}},\quad{}u_y=-2yL^{\frac{1}{2}}-\frac{y\left(x^{2}-y^{2}\right)L^{-\frac{1}{2}}}{r^{2}},
 $$
 
 它们当 $r>0$ 时连续. 估计 $r\to0$ 时的极限. 因为 $rL^{\frac{1}{2}}=r\left(\ln\frac{1}{r^{2}}\right)^{\frac{1}{2}}\to0$, 所以
 
 $$
-\left|2xL^{\frac{1}{2}}\right|\le2rL^{\frac{1}{2}}\to0,\qquad\left|\frac{x\left(x^{2}-y^{2}\right)L^{-\frac{1}{2}}}{r^{2}}\right|\le\frac{r\cdot{}r^{2}L^{-\frac{1}{2}}}{r^{2}}=rL^{-\frac{1}{2}}\to0.
+\left|2xL^{\frac{1}{2}}\right|\le2rL^{\frac{1}{2}}\to0,\quad\left|\frac{x\left(x^{2}-y^{2}\right)L^{-\frac{1}{2}}}{r^{2}}\right|\le\frac{r\cdot{}r^{2}L^{-\frac{1}{2}}}{r^{2}}=rL^{-\frac{1}{2}}\to0.
 $$
 
 故 $u_x,u_y\to0$ (当 $r\to0$).
@@ -159,7 +159,7 @@ $$
 然后算 $u$ 在原点处的一阶偏导数. 对 $x$ 方向作差商, 注意 $u\left(h,0\right)=h^{2}L\left(h\right)^{\frac{1}{2}}$, 其中 $L\left(h\right)=-\ln{}h^{2}$,
 
 $$
-\frac{u\left(h,0\right)-u\left(0,0\right)}{h}=hL\left(h\right)^{\frac{1}{2}}\to0\qquad\left(h\to0\right),
+\frac{u\left(h,0\right)-u\left(0,0\right)}{h}=hL\left(h\right)^{\frac{1}{2}}\to0\quad\left(h\to0\right),
 $$
 
 故 $u_x\left(0,0\right)=0$; 同理 $u_y\left(0,0\right)=0$. 结合上面的结果, $u_x,u_y$ 在 $\overline{B}_{1/2}$ 上连续, 即 $u\in{}C^{1}\left(\overline{B}_{1/2}\right)$.
@@ -197,7 +197,7 @@ $$
 设 $u\in{}C^{2}\left(\mathbb{R}^{n}\right)$ 是径向对称函数, 其中 $n\ge3$. 作 Emden-Fowler 变换
 
 $$
-v\left(t\right)=r^{\frac{2}{p-1}}u\left(\left|x\right|\right),\qquad{}t=-\ln\left|x\right|,\qquad{}p>1.
+v\left(t\right)=r^{\frac{2}{p-1}}u\left(\left|x\right|\right),\quad{}t=-\ln\left|x\right|,\quad{}p>1.
 $$
 
 试证明: $\Delta{}u=\mathrm{e}^{\frac{2pt}{p-1}}\left(v''+av'-bv\right)$, 其中 $a=\frac{n-2}{p-1}\left(\frac{n+2}{n-2}-p\right)$, $b=\frac{4p}{\left(p-1\right)^{2}}-\frac{2n}{p-1}$.
@@ -207,7 +207,7 @@ $$
 先换回旧变量. 由 $t=-\ln{}r$, $r=\mathrm{e}^{-t}$, 且题设 $v\left(t\right)=r^{\frac{2}{p-1}}u\left(r\right)$ 等价于
 
 $$
-U\left(r\right)=u\left(r\right)=\mathrm{e}^{\frac{2t}{p-1}}v\left(t\right),\qquad{}r=\mathrm{e}^{-t}.\tag{A}
+U\left(r\right)=u\left(r\right)=\mathrm{e}^{\frac{2t}{p-1}}v\left(t\right),\quad{}r=\mathrm{e}^{-t}.\tag{A}
 $$
 
 由**习题 1.1 (径向函数的拉普拉斯算子)**, $\Delta{}u=U''\left(r\right)+\frac{n-1}{r}U'\left(r\right)$. 于是只需把 $U$ 关于 $r$ 的导数换成关于 $t$ 的导数.

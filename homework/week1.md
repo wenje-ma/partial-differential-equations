@@ -163,7 +163,7 @@ $$
 先作自变量替换
 
 $$
-y=\frac{x}{t},\qquad{}s=-\frac{1}{t},
+y=\frac{x}{t},\quad{}s=-\frac{1}{t},
 $$
 
 并记
@@ -175,13 +175,13 @@ $$
 于是 $v\left(x,t\right)=a\left(t,x\right)u\left(y,s\right)$, 其中 $u=u\left(y,s\right)$ 满足 $u_s=u_{yy}$. 由 $y,s$ 的定义,
 
 $$
-\frac{\partial{}y}{\partial{}t}=-\frac{x}{t^{2}}=-\frac{y}{t},\qquad\frac{\partial{}s}{\partial{}t}=\frac{1}{t^{2}},\qquad\frac{\partial{}y}{\partial{}x}=\frac{1}{t},\qquad\frac{\partial^{2}y}{\partial{}x^{2}}=0.
+\frac{\partial{}y}{\partial{}t}=-\frac{x}{t^{2}}=-\frac{y}{t},\quad\frac{\partial{}s}{\partial{}t}=\frac{1}{t^{2}},\quad\frac{\partial{}y}{\partial{}x}=\frac{1}{t},\quad\frac{\partial^{2}y}{\partial{}x^{2}}=0.
 $$
 
 先算 $a$ 的一阶偏导数
 
 $$
-a_t=a\left(-\frac{1}{2t}+\frac{x^{2}}{4t^{2}}\right),\qquad{}a_x=a\left(-\frac{x}{2t}\right).
+a_t=a\left(-\frac{1}{2t}+\frac{x^{2}}{4t^{2}}\right),\quad{}a_x=a\left(-\frac{x}{2t}\right).
 $$
 
 接着对 $x$ 求导两次,

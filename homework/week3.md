@@ -101,7 +101,7 @@ $$
 然后由 $\Delta{}u=0$ 在 $\Omega$ 内成立, 第二项为 $0$, 而第一项是平方和,
 
 $$
-\Delta{}w=2\sum_{i,j=1}^{n}\left(u_{x_ix_j}\right)^{2}\ge0,\qquad{}x\in\Omega.
+\Delta{}w=2\sum_{i,j=1}^{n}\left(u_{x_ix_j}\right)^{2}\ge0,\quad{}x\in\Omega.
 $$
 
 这就证明了 (1).
@@ -155,7 +155,7 @@ $$
 先证唯一性等价于齐次问题只有零解. 设 $v$ 满足齐次问题
 
 $$
-\Delta{}v=0\,\left(x\in\mathbb{R}^{n}\setminus\overline{\Omega}\right),\qquad{}v=0\,\left(x\in\partial\Omega\right),\qquad\lim_{x\to\infty}v\left(x\right)=0,
+\Delta{}v=0\,\left(x\in\mathbb{R}^{n}\setminus\overline{\Omega}\right),\quad{}v=0\,\left(x\in\partial\Omega\right),\quad\lim_{x\to\infty}v\left(x\right)=0,
 $$
 
 需证 $v\equiv0$.
@@ -175,7 +175,7 @@ $$
 然后证稳定性. 设 $u_1,u_2$ 分别是数据 $\left(f_1,\varphi_1\right)$, $\left(f_2,\varphi_2\right)$ 的解, 记 $v=u_1-u_2$, $F=f_1-f_2$, $\Phi=\varphi_1-\varphi_2$. 则
 
 $$
-\Delta{}v=F\,\left(x\in\mathbb{R}^{n}\setminus\overline{\Omega}\right),\qquad{}v=\Phi\,\left(x\in\partial\Omega\right),\qquad\lim_{x\to\infty}v\left(x\right)=0.
+\Delta{}v=F\,\left(x\in\mathbb{R}^{n}\setminus\overline{\Omega}\right),\quad{}v=\Phi\,\left(x\in\partial\Omega\right),\quad\lim_{x\to\infty}v\left(x\right)=0.
 $$
 
 然后由 $\lim_{x\to\infty}v=0$, 对任意 $\varepsilon>0$ 存在 $R>1$ 使 $\left|v\right|<\varepsilon$ 当 $\left|x\right|\ge{}R$. 在环形区域 $B_{2R}\left(0\right)\setminus\overline{\Omega}$ 上用**定理 2.3.3 (最大模估计)**, 取 $d=2R$,
@@ -193,7 +193,7 @@ $$
 即证: 设 $f\in{}C^{0}\left(\overline{\Omega}\right)$, 由 $u_0\left(x\right):=-\int_{\Omega}\Gamma\left(x-y\right)f\left(y\right)\,\mathrm{d}y$ 定义的 Newton 位势满足 $u_0\in{}C^{1}\left(\mathbb{R}^{2}\right)$ 且
 
 $$
-\partial_{x_i}u_0\left(x\right)=-\int_{\Omega}\partial_{x_i}\Gamma\left(x-y\right)f\left(y\right)\,\mathrm{d}y,\qquad{}i=1,2.
+\partial_{x_i}u_0\left(x\right)=-\int_{\Omega}\partial_{x_i}\Gamma\left(x-y\right)f\left(y\right)\,\mathrm{d}y,\quad{}i=1,2.
 $$
 
 ### 解答 2.7
@@ -201,7 +201,7 @@ $$
 先写出 $n=2$ 时的核. 由**定义 2.4.1 (基本解)**,
 
 $$
-K\left(x\right):=\Gamma\left(x\right)=\frac{1}{2\pi}\ln\frac{1}{\left|x\right|},\qquad\nabla{}K\left(x\right)=-\frac{1}{2\pi}\frac{x}{\left|x\right|^{2}},\qquad\left|\nabla{}K\left(x\right)\right|=\frac{1}{2\pi\left|x\right|}.
+K\left(x\right):=\Gamma\left(x\right)=\frac{1}{2\pi}\ln\frac{1}{\left|x\right|},\quad\nabla{}K\left(x\right)=-\frac{1}{2\pi}\frac{x}{\left|x\right|^{2}},\quad\left|\nabla{}K\left(x\right)\right|=\frac{1}{2\pi\left|x\right|}.
 $$
 
 奇性为 $\left|\nabla{}K\right|\sim\frac{1}{\left|x\right|}$, 只局部可积, 故 $\int_{\Omega}\partial_{x_i}\Gamma\left(x-y\right)f\left(y\right)\,\mathrm{d}y$ 是反常积分, 直接求导不可行, 需先正则化.
@@ -221,7 +221,7 @@ $$
 接着定义正则化解 $u_\varepsilon\left(x\right):=-\int_{\Omega}K_\varepsilon\left(x-y\right)f\left(y\right)\,\mathrm{d}y$. 由于 $K_\varepsilon\in{}C^{1}\left(\mathbb{R}^{2}\right)$ 且 $\Omega$ 有界, 被积函数及其导数都在紧集上连续, 由含参积分的可微性 $u_\varepsilon\in{}C^{1}\left(\mathbb{R}^{2}\right)$ 且
 
 $$
-\partial_{x_i}u_\varepsilon\left(x\right)=-\int_{\Omega}\partial_{x_i}K_\varepsilon\left(x-y\right)f\left(y\right)\,\mathrm{d}y,\qquad{}i=1,2.
+\partial_{x_i}u_\varepsilon\left(x\right)=-\int_{\Omega}\partial_{x_i}K_\varepsilon\left(x-y\right)f\left(y\right)\,\mathrm{d}y,\quad{}i=1,2.
 $$
 
 然后由一致收敛保持可微性, 只需证当 $\varepsilon\to0$ 时
@@ -245,7 +245,7 @@ $$
 其中末一步是 $\int_0^{\varepsilon}r\ln\frac{\varepsilon}{r}\mathrm{d}r=\varepsilon^{2}\int_0^{1}s\ln\frac{1}{s}\mathrm{d}s=\frac{\varepsilon^{2}}{4}$. 故
 
 $$
-\left|u_\varepsilon\left(x\right)-u_0\left(x\right)\right|\le\frac{\varepsilon^{2}}{4}\sup_{\Omega}\left|f\right|\to0\qquad\left(\varepsilon\to0\right),
+\left|u_\varepsilon\left(x\right)-u_0\left(x\right)\right|\le\frac{\varepsilon^{2}}{4}\sup_{\Omega}\left|f\right|\to0\quad\left(\varepsilon\to0\right),
 $$
 
 (1) 得证.
@@ -271,7 +271,7 @@ $$
 故
 
 $$
-\left|\partial_{x_i}u_\varepsilon\left(x\right)+\int_{\Omega}\partial_{x_i}\Gamma\left(x-y\right)f\left(y\right)\,\mathrm{d}y\right|\le\frac{4\varepsilon}{3}\sup_{\Omega}\left|f\right|\to0\qquad\left(\varepsilon\to0\right),
+\left|\partial_{x_i}u_\varepsilon\left(x\right)+\int_{\Omega}\partial_{x_i}\Gamma\left(x-y\right)f\left(y\right)\,\mathrm{d}y\right|\le\frac{4\varepsilon}{3}\sup_{\Omega}\left|f\right|\to0\quad\left(\varepsilon\to0\right),
 $$
 
 (2) 得证.

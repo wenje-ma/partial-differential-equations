@@ -99,7 +99,7 @@ $$
 然后代入 (F) 并整理. 记
 
 $$
-D=\arctan\left(x+at\right)-\arctan\left(x-at\right),\qquad{}P=2\arctan{}x-\arctan\left(x+at\right)-\arctan\left(x-at\right),\tag{L}
+D=\arctan\left(x+at\right)-\arctan\left(x-at\right),\quad{}P=2\arctan{}x-\arctan\left(x+at\right)-\arctan\left(x-at\right),\tag{L}
 $$
 
 则 $\left(\arctan\left(x+at\right)-\arctan{}x\right)+\left(\arctan{}x-\arctan\left(x-at\right)\right)=D$,
@@ -152,19 +152,19 @@ $$
 再引入 $v=ru$. 由 (A),
 
 $$
-\left(ru\right)_{tt}=r{u}_{tt}=a^{2}r\Delta{}u=a^{2}\partial_r^{2}\left(ru\right),\qquad\text{即}\;\;v_{tt}-a^{2}v_{rr}=0.\tag{B}
+\left(ru\right)_{tt}=r{u}_{tt}=a^{2}r\Delta{}u=a^{2}\partial_r^{2}\left(ru\right),\quad\text{即}\;\;v_{tt}-a^{2}v_{rr}=0.\tag{B}
 $$
 
 接着写出 $v$ 的初值. 由 $u\left(x,0\right)=\varphi\left(r\right)$, $u_t\left(x,0\right)=\psi\left(r\right)$,
 
 $$
-v\left(r,0\right)=r\varphi\left(r\right),\qquad{}v_t\left(r,0\right)=r\psi\left(r\right),\qquad{}r>0.\tag{C}
+v\left(r,0\right)=r\varphi\left(r\right),\quad{}v_t\left(r,0\right)=r\psi\left(r\right),\quad{}r>0.\tag{C}
 $$
 
 然后把初值奇延拓到 $r<0$. 定义
 
 $$
-\Phi\left(r\right)=\begin{cases}r\varphi\left(r\right),&r>0,\\r\varphi\left(-r\right),&r<0,\end{cases}\qquad\Psi\left(r\right)=\begin{cases}r\psi\left(r\right),&r>0,\\r\psi\left(-r\right),&r<0.\end{cases}\tag{D}
+\Phi\left(r\right)=\begin{cases}r\varphi\left(r\right),&r>0,\\r\varphi\left(-r\right),&r<0,\end{cases}\quad\Psi\left(r\right)=\begin{cases}r\psi\left(r\right),&r>0,\\r\psi\left(-r\right),&r<0.\end{cases}\tag{D}
 $$
 
 注意 $r<0$ 时 $r\varphi\left(-r\right)=-\left(-r\right)\varphi\left(-r\right)$, 故 $\Phi,\Psi$ 是奇函数: $\Phi\left(-r\right)=-\Phi\left(r\right)$, $\Psi\left(-r\right)=-\Psi\left(r\right)$, 且由 $\varphi,\psi$ 的光滑性它们在全轴 $C^{2}$, $C^{1}$.
@@ -172,13 +172,13 @@ $$
 然后对全轴的 $v$ 用 d'Alembert 公式. 把 (B)(C) 的解按 (D) 延拓为全轴问题, 由**定理 4.2.2 (d'Alembert 公式)**,
 
 $$
-v\left(r,t\right)=\frac{1}{2}\left(\Phi\left(r+at\right)+\Phi\left(r-at\right)\right)+\frac{1}{2a}\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{}r\ge0.\tag{E}
+v\left(r,t\right)=\frac{1}{2}\left(\Phi\left(r+at\right)+\Phi\left(r-at\right)\right)+\frac{1}{2a}\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho,\quad{}r\ge0.\tag{E}
 $$
 
 情形 $r>at$. 此时 $r\pm{}at>0$, 由 (D),
 
 $$
-\Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\qquad\Phi\left(r-at\right)=\left(r-at\right)\varphi\left(r-at\right);
+\Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\quad\Phi\left(r-at\right)=\left(r-at\right)\varphi\left(r-at\right);
 $$
 
 又积分区间 $\left[r-at,r+at\right]\subset\left(0,+\infty\right)$, 故 $\Psi\left(\rho\right)=\rho\psi\left(\rho\right)$. 代入 (E) 并除以 $r$,
@@ -190,7 +190,7 @@ $$
 情形 $r<{}at$. 此时 $r-at<0$, $r+at>0$, 故
 
 $$
-\Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\qquad\Phi\left(r-at\right)=r\varphi\left(at-r\right)=-\left(at-r\right)\varphi\left(at-r\right).\tag{G}
+\Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\quad\Phi\left(r-at\right)=r\varphi\left(at-r\right)=-\left(at-r\right)\varphi\left(at-r\right).\tag{G}
 $$
 
 然后算这一情形的积分项. 由 $r<{}at$,
@@ -214,7 +214,7 @@ $$
 然后合并. 把 (G)(J) 代入 (E) 并除以 $r$,
 
 $$
-u\left(r,t\right)=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{}r<{}at.\tag{K}
+u\left(r,t\right)=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,\quad{}r<{}at.\tag{K}
 $$
 
 收尾. (F) 与 (K) 正是题目给出的分段表达式, 故球面波问题的解确如题所述.
@@ -240,7 +240,7 @@ $$
 准备三条球面积分公式. 记 $S_r\left(x\right)=\left\{y:\left|y-x\right|=r\right\}$. 由球面的旋转对称性, 对 $i,j,k\in\left\{1,2,3\right\}$,
 
 $$
-\int_{S_r\left(x\right)}\left(y_i-x_i\right)\mathrm{d}S=0,\qquad\int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\mathrm{d}S=\frac{4\pi{}r^{4}}{3}\delta_{ij},\tag{B}
+\int_{S_r\left(x\right)}\left(y_i-x_i\right)\mathrm{d}S=0,\quad\int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\mathrm{d}S=\frac{4\pi{}r^{4}}{3}\delta_{ij},\tag{B}
 $$
 
 $$
@@ -312,7 +312,7 @@ $$
 再算被积函数在球面上的积分. 记 $r=a\left(t-\tau\right)$, 令 $y=x+n$, $\left|n\right|=r$. 由
 
 $$
-\left|y\right|^{2}=\left|x\right|^{2}+2x\cdot{}n+\left|n\right|^{2},\qquad\int_{S_r}n\,\mathrm{d}S=0,\qquad\int_{S_r}\mathrm{d}S=4\pi{}r^{2},\tag{B}
+\left|y\right|^{2}=\left|x\right|^{2}+2x\cdot{}n+\left|n\right|^{2},\quad\int_{S_r}n\,\mathrm{d}S=0,\quad\int_{S_r}\mathrm{d}S=4\pi{}r^{2},\tag{B}
 $$
 
 得
@@ -360,7 +360,7 @@ $$
 最后证直接验证. 由 (I),
 
 $$
-\partial_t^{2}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6\right),\qquad{}a^{2}\Delta{}u=a^{2}\left(\mathrm{e}^{t}-1-t\right)\Delta\left|x\right|^{2}=6a^{2}\left(\mathrm{e}^{t}-1-t\right),
+\partial_t^{2}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6\right),\quad{}a^{2}\Delta{}u=a^{2}\left(\mathrm{e}^{t}-1-t\right)\Delta\left|x\right|^{2}=6a^{2}\left(\mathrm{e}^{t}-1-t\right),
 $$
 
 故

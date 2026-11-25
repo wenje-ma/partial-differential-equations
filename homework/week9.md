@@ -39,7 +39,7 @@ $$
 的解, 其中 $\Omega$ 是 $\mathbb{R}^{n}$ 中的有界光滑区域, $\alpha$ 是正常数. 证明: 其能量积分
 
 $$
-E\left(t\right)=\frac{1}{2}\int_{\Omega}\left(u_t^{2}+a^{2}\left|\nabla{}u\right|^{2}\right)\mathrm{d}x,\qquad{}t\ge0
+E\left(t\right)=\frac{1}{2}\int_{\Omega}\left(u_t^{2}+a^{2}\left|\nabla{}u\right|^{2}\right)\mathrm{d}x,\quad{}t\ge0
 $$
 
 单调不增. 进而证明: 该问题的解唯一.
@@ -77,7 +77,7 @@ $$
 然后对 $w$ 的能量 $E_w\left(t\right)=\frac{1}{2}\int_{\Omega}\left(w_t^{2}+a^{2}\left|\nabla{}w\right|^{2}\right)\mathrm{d}x$ 用 (C): $\frac{\mathrm{d}E_w}{\mathrm{d}t}=-\alpha\int_{\Omega}w_t^{2}\mathrm{d}x\le0$. 又 $E_w\left(0\right)=0$ (由零初值), 故
 
 $$
-0\le{}E_w\left(t\right)\le{}E_w\left(0\right)=0,\qquad\text{即}\;E_w\left(t\right)\equiv0.\tag{E}
+0\le{}E_w\left(t\right)\le{}E_w\left(0\right)=0,\quad\text{即}\;E_w\left(t\right)\equiv0.\tag{E}
 $$
 
 最后由 (E) 得 $\nabla{}w\left(\cdot,t\right)=0$, $w_t\left(\cdot,t\right)=0$ 于 $\Omega$, 对一切 $t\ge0$. 前者说明 $w\left(\cdot,t\right)$ 在连通的 $\Omega$ 上为常数; 后者说明该常数不依赖于 $t$; 而 $w=0$ 于 $\partial\Omega$ 给出该常数为零. 故 $w\equiv0$, 即 $u_1=u_2$, 唯一性成立.
@@ -105,7 +105,7 @@ $$
 在无界区域上积分可能发散, 故在 $\Omega_t=\left\{\left|x\right|\le{}R-at\right\}$ 上取能量
 
 $$
-E\left(t\right)=\frac{1}{2}\int_{\Omega_t}\left(u_t^{2}+a^{2}\left|\nabla{}u\right|^{2}\right)\mathrm{d}x,\qquad{}E_0\left(t\right)=\int_{\Omega_t}u^{2}\,\mathrm{d}x.\tag{B}
+E\left(t\right)=\frac{1}{2}\int_{\Omega_t}\left(u_t^{2}+a^{2}\left|\nabla{}u\right|^{2}\right)\mathrm{d}x,\quad{}E_0\left(t\right)=\int_{\Omega_t}u^{2}\,\mathrm{d}x.\tag{B}
 $$
 
 教材中已证明与 (i) 完全平行的两条估计, 即**公式 (4.4.6) (Cauchy 问题的能量不等式)** 与**公式 (4.4.7) (Cauchy 问题的能量不等式)**. 以下照 (ii)(iii) 完成.
@@ -127,13 +127,13 @@ $$
 然后合并能量不等式以备稳定性之用. 由**公式 (4.4.6)** 与**公式 (4.4.7)**, 对 $t\in\left[0,T\right]$,
 
 $$
-E\left(t\right)\le{}E\left(0\right)\mathrm{e}^{t}+\int_0^{t}\mathrm{e}^{t-s}F\left(s\right)\,\mathrm{d}s,\qquad{}E_0\left(t\right)\le\left(E_0\left(0\right)+tE\left(0\right)\right)\mathrm{e}^{t}+\int_0^{t}\left(t-s\right)\mathrm{e}^{t-s}F\left(s\right)\,\mathrm{d}s,
+E\left(t\right)\le{}E\left(0\right)\mathrm{e}^{t}+\int_0^{t}\mathrm{e}^{t-s}F\left(s\right)\,\mathrm{d}s,\quad{}E_0\left(t\right)\le\left(E_0\left(0\right)+tE\left(0\right)\right)\mathrm{e}^{t}+\int_0^{t}\left(t-s\right)\mathrm{e}^{t-s}F\left(s\right)\,\mathrm{d}s,
 $$
 
 其中 $F\left(s\right)=\int_{\Omega_s}f^{2}\left(x,s\right)\mathrm{d}x$. 两式相加并用 $\mathrm{e}^{t},\mathrm{e}^{t-s}\le\mathrm{e}^{T}$, $t\le{}T$,
 
 $$
-E_0\left(t\right)+E\left(t\right)\le\left(1+T\right)\mathrm{e}^{T}\left(E_0\left(0\right)+E\left(0\right)+\int_0^{T}F\left(s\right)\,\mathrm{d}s\right),\qquad{}t\in\left[0,T\right].\tag{E}
+E_0\left(t\right)+E\left(t\right)\le\left(1+T\right)\mathrm{e}^{T}\left(E_0\left(0\right)+E\left(0\right)+\int_0^{T}F\left(s\right)\,\mathrm{d}s\right),\quad{}t\in\left[0,T\right].\tag{E}
 $$
 
 然后证稳定性. 设 $u_i$ 是数据 $\left(f_i,\varphi_i,\psi_i\right)$ 的解, $i=1,2$, $w=u_1-u_2$. 则 $w$ 满足 (A) 型的 Cauchy 问题, 其右端源项为 $f_1-f_2$, 初值为 $\varphi_1-\varphi_2$, $\psi_1-\psi_2$. 对 $w$ 用 (E) (把 $f$ 换成 $f_1-f_2$ 等),
@@ -145,7 +145,7 @@ $$
 最后取 $\delta=\frac{\varepsilon}{\sqrt{6\left(1+T\right)\mathrm{e}^{T}}}$. 当两组数据的差满足
 
 $$
-\int_{\mathbb{R}^{n}}\left(\left(\varphi_1-\varphi_2\right)^{2}+\left(\psi_1-\psi_2\right)^{2}+a^{2}\left|D\left(\varphi_1-\varphi_2\right)\right|^{2}\right)\mathrm{d}x<\delta^{2},\qquad\int_0^{T}\mathrm{d}t\int_{\Omega_t}\left(f_1-f_2\right)^{2}\mathrm{d}x<\delta^{2}
+\int_{\mathbb{R}^{n}}\left(\left(\varphi_1-\varphi_2\right)^{2}+\left(\psi_1-\psi_2\right)^{2}+a^{2}\left|D\left(\varphi_1-\varphi_2\right)\right|^{2}\right)\mathrm{d}x<\delta^{2},\quad\int_0^{T}\mathrm{d}t\int_{\Omega_t}\left(f_1-f_2\right)^{2}\mathrm{d}x<\delta^{2}
 $$
 
 时, 注意 $E_{0,w}\left(0\right)+E_w\left(0\right)=\frac{1}{2}\int_{\mathbb{R}^{n}}\left(\left(\varphi_1-\varphi_2\right)^{2}+\left(\psi_1-\psi_2\right)^{2}+a^{2}\left|D\left(\varphi_1-\varphi_2\right)\right|^{2}\right)\mathrm{d}x<\frac{\delta^{2}}{2}$, 故 (F) 的右端小于
@@ -173,7 +173,7 @@ $$
 的解, 其中 $a>0$ 是常数, $\varphi\left(x\right),\psi\left(x\right)\in{}C^{\infty}\left(-\infty,+\infty\right)$. 若 $x_1<{}x_2$, 证明: 如下能量估计成立
 
 $$
-\int_{x_1}^{x_2}\left(u_t^{2}\left(x,t\right)+a^{2}u_x^{2}\left(x,t\right)\right)\mathrm{d}x\le\int_{x_1-at}^{x_2+at}\left(\psi^{2}\left(x\right)+a^{2}\varphi'^{2}\left(x\right)\right)\mathrm{d}x,\qquad{}t>0.
+\int_{x_1}^{x_2}\left(u_t^{2}\left(x,t\right)+a^{2}u_x^{2}\left(x,t\right)\right)\mathrm{d}x\le\int_{x_1-at}^{x_2+at}\left(\psi^{2}\left(x\right)+a^{2}\varphi'^{2}\left(x\right)\right)\mathrm{d}x,\quad{}t>0.
 $$
 
 ### 解答 4.3
@@ -229,7 +229,7 @@ $$
 然后把活动区间取成依赖区间. 在 (A) 中取 $y_1=x_1-at$, $y_2=x_2+at$, 则
 
 $$
-E\left(t\right)=\int_{x_1-at+at}^{x_2+at-at}\left(u_t^{2}+a^{2}u_x^{2}\right)\mathrm{d}x=\int_{x_1}^{x_2}\left(u_t^{2}+a^{2}u_x^{2}\right)\mathrm{d}x,\qquad{}E\left(0\right)=\int_{x_1-at}^{x_2+at}\left(\psi^{2}+a^{2}\varphi'^{2}\right)\mathrm{d}x.\tag{H}
+E\left(t\right)=\int_{x_1-at+at}^{x_2+at-at}\left(u_t^{2}+a^{2}u_x^{2}\right)\mathrm{d}x=\int_{x_1}^{x_2}\left(u_t^{2}+a^{2}u_x^{2}\right)\mathrm{d}x,\quad{}E\left(0\right)=\int_{x_1-at}^{x_2+at}\left(\psi^{2}+a^{2}\varphi'^{2}\right)\mathrm{d}x.\tag{H}
 $$
 
 于是 (G) 恰好就是所要的估计
@@ -237,6 +237,7 @@ $$
 $$
 \int_{x_1}^{x_2}\left(u_t^{2}+a^{2}u_x^{2}\right)\mathrm{d}x\le\int_{x_1-at}^{x_2+at}\left(\psi^{2}+a^{2}\varphi'^{2}\right)\mathrm{d}x,
 $$
+
 它在 $y_1+at<{}y_2-at$, 即 $x_1<{}x_2$ 时有效; 而这一条件对一切 $t>0$ 都成立 (题设 $x_1<{}x_2$), 故估计对一切 $t>0$ 成立.
 
 最后说明估计的含义: 区间 $\left[x_1-at,x_2+at\right]$ 正是 $\left(x_1,x_2\right)$ 上初值对时刻 $t$ 的影响范围 (依赖区间), 估计说明"时刻 $t$ 在 $\left(x_1,x_2\right)$ 上的能量不超过依赖区间内的初始能量".
@@ -264,31 +265,31 @@ $$
 再利用一条特征线上的数据定出 $q$. 在 $x=at$ 上, $x-at=0$, $x+at=2at$, 故由 (A) 与题设
 
 $$
-p\left(0\right)+q\left(2at\right)=\varphi\left(t\right),\qquad{}t>0.
+p\left(0\right)+q\left(2at\right)=\varphi\left(t\right),\quad{}t>0.
 $$
 
 令 $\xi=2at$ (则 $t=\frac{\xi}{2a}$), 得
 
 $$
-q\left(\xi\right)=\varphi\left(\frac{\xi}{2a}\right)-p\left(0\right),\qquad\xi>0.\tag{B}
+q\left(\xi\right)=\varphi\left(\frac{\xi}{2a}\right)-p\left(0\right),\quad\xi>0.\tag{B}
 $$
 
 接着利用另一条特征线上的数据定出 $p$. 在 $x=-at$ 上, $x-at=-2at$, $x+at=0$, 故
 
 $$
-p\left(-2at\right)+q\left(0\right)=\psi\left(t\right),\qquad{}t>0.
+p\left(-2at\right)+q\left(0\right)=\psi\left(t\right),\quad{}t>0.
 $$
 
 令 $\eta=-2at<0$, 得
 
 $$
-p\left(\eta\right)=\psi\left(-\frac{\eta}{2a}\right)-q\left(0\right),\qquad\eta<0.\tag{C}
+p\left(\eta\right)=\psi\left(-\frac{\eta}{2a}\right)-q\left(0\right),\quad\eta<0.\tag{C}
 $$
 
 确定两个常数. 由 (B)(C) 在 $t=0$ 处给出 $p\left(0\right)+q\left(0\right)=\varphi\left(0\right)$ 与 $p\left(0\right)+q\left(0\right)=\psi\left(0\right)$, 这正是题设的相容性条件 $\varphi\left(0\right)=\psi\left(0\right)$. 记 $p\left(0\right)+q\left(0\right)=C_0$, 则 $C_0=\varphi\left(0\right)=\psi\left(0\right)$. 由于 (A) 只用到 $p,q$ 之和, 可重新分配常数, 不妨取
 
 $$
-p\left(0\right)=0,\qquad{}q\left(0\right)=C_0.\tag{D}
+p\left(0\right)=0,\quad{}q\left(0\right)=C_0.\tag{D}
 $$
 
 然后写出解. 由 (B) 与 (D), 对 $\xi>0$ 有 $q\left(\xi\right)=\varphi\left(\frac{\xi}{2a}\right)$ (在 $\xi\to0^{+}$ 处与 $q\left(0\right)=\varphi\left(0\right)$ 相容); 由 (C) 与 (D), 对 $\eta<0$ 有
@@ -306,7 +307,7 @@ $$
 即
 
 $$
-u\left(x,t\right)=\psi\left(\frac{at-x}{2a}\right)+\varphi\left(\frac{at+x}{2a}\right)-\psi\left(0\right),\qquad\left|x\right|<{}at.\tag{E}
+u\left(x,t\right)=\psi\left(\frac{at-x}{2a}\right)+\varphi\left(\frac{at+x}{2a}\right)-\psi\left(0\right),\quad\left|x\right|<{}at.\tag{E}
 $$
 
 然后验证特征线条件. 在 $x=at$ 上, 由 (E)
@@ -326,7 +327,7 @@ $$
 收尾. 由 (A) 型通解构造出的 (E) 满足方程, 并满足两条特征线上的数据 ((F)(G)), 故
 
 $$
-u\left(x,t\right)=\psi\left(\frac{at-x}{2a}\right)+\varphi\left(\frac{at+x}{2a}\right)-\psi\left(0\right),\qquad\left|x\right|\le{at},t\ge0
+u\left(x,t\right)=\psi\left(\frac{at-x}{2a}\right)+\varphi\left(\frac{at+x}{2a}\right)-\psi\left(0\right),\quad\left|x\right|\le{at},t\ge0
 $$
 
 就是古尔萨问题的解. 说明: Goursat 问题的数据只给在两条特征线上, 解只在它们张成的三角形区域 $\left|x\right|\le{at}$ 中被确定.

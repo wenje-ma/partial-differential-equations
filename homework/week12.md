@@ -17,7 +17,7 @@
 > **定理 6.2.4 (Böcher 定理)**
 > 
 > 设 $u$ 是 $B_1\left(0\right)\setminus\left\{0\right\}$ 内的正的调和函数, 则存在一个函数 $v$ 在 $B_1\left(0\right)$ 内调和与一个常数 $a\ge0$, 使得
-> $u\left(x\right)=\begin{cases}v\left(x\right)+a\log\frac{1}{\left|x\right|},&n=2,\\v\left(x\right)+\frac{a}{\left|x\right|^{n-2}},&n\ge3,\end{cases}\qquad{}x\in{}B_1\left(0\right)\setminus\left\{0\right\}$.
+> $u\left(x\right)=\begin{cases}v\left(x\right)+a\log\frac{1}{\left|x\right|},&n=2,\\v\left(x\right)+\frac{a}{\left|x\right|^{n-2}},&n\ge3,\end{cases}\quad{}x\in{}B_1\left(0\right)\setminus\left\{0\right\}$.
 
 ## 习题 4.13 (退化系数的波动型方程的通解)
 
@@ -42,7 +42,7 @@ $$
 再作未知函数替换. 令
 
 $$
-w\left(x,t\right):=\left(h-x\right)u\left(x,t\right),\qquad\text{即}\quad{}u\left(x,t\right)=\frac{w\left(x,t\right)}{h-x},\tag{B}
+w\left(x,t\right):=\left(h-x\right)u\left(x,t\right),\quad\text{即}\quad{}u\left(x,t\right)=\frac{w\left(x,t\right)}{h-x},\tag{B}
 $$
 
 在 $x\ne{}h$ 处这是可逆的替换.
@@ -106,7 +106,7 @@ $$
 弄清 $v$ 的几何含义. 记 $S_r\left(x\right)=\left\{y\in\mathbb{R}^{5}:\left|y-x\right|=r\right\}$, 则四维球面 $S_r$ 的面积是 $\left|S_r\right|=\omega_5r^{3}$, 其中 $\omega_5=\frac{8\pi^{2}}{3}$ 是单位球面 $S^{4}$ 的面积, 而 $\frac{3}{8\pi^{2}}=\frac{1}{\omega_5}$. 于是题给的 $v$ 可写成
 
 $$
-v\left(x,t\right)=\frac{1}{at}\cdot\frac{1}{\omega_5\left(at\right)^{3}}\int_{S_{at}\left(x\right)}\psi\left(y\right)\,\mathrm{d}S_y=\frac{\bar{\psi}\left(x,at\right)}{at},\qquad\bar{\psi}\left(x,r\right)=\frac{1}{\omega_5r^{3}}\int_{S_r\left(x\right)}\psi\left(y\right)\,\mathrm{d}S_y,\tag{A}
+v\left(x,t\right)=\frac{1}{at}\cdot\frac{1}{\omega_5\left(at\right)^{3}}\int_{S_{at}\left(x\right)}\psi\left(y\right)\,\mathrm{d}S_y=\frac{\bar{\psi}\left(x,at\right)}{at},\quad\bar{\psi}\left(x,r\right)=\frac{1}{\omega_5r^{3}}\int_{S_r\left(x\right)}\psi\left(y\right)\,\mathrm{d}S_y,\tag{A}
 $$
 
 即 $v$ 是球面平均 $\bar\psi$ 再除以 $at$. 下面记 $P\left(x,t\right):=\bar\psi\left(x,at\right)$, 并按 $v=P$ 论证; 题面分母上的 $\left(at\right)^{4}$ 应为 $\left(at\right)^{3}$ 的理由见文末的注.
@@ -122,7 +122,7 @@ $$
 接着算出 (B) 中的定积分. 被积函数的虚部关于 $s$ 是奇函数, 只留实部, 并注意
 
 $$
-\int_{-1}^{1}\cos\left(zs\right)\,\mathrm{d}s=\frac{2\sin{}z}{z},\qquad\int_{-1}^{1}s^{2}\cos\left(zs\right)\,\mathrm{d}s=\frac{2\sin{}z}{z}+\frac{4\cos{}z}{z^{2}}-\frac{4\sin{}z}{z^{3}},\tag{C}
+\int_{-1}^{1}\cos\left(zs\right)\,\mathrm{d}s=\frac{2\sin{}z}{z},\quad\int_{-1}^{1}s^{2}\cos\left(zs\right)\,\mathrm{d}s=\frac{2\sin{}z}{z}+\frac{4\cos{}z}{z^{2}}-\frac{4\sin{}z}{z^{3}},\tag{C}
 $$
 
 故
@@ -154,7 +154,7 @@ $$
 然后证化简方括号, 这是全题唯一的技术点. 由 (F) 记 $G\left(z\right)=\frac{\sin{}z}{z}-\cos{}z$, 则 $g\left(z\right)=\frac{3G\left(z\right)}{z^{2}}$, 于是
 
 $$
-\frac{z^{2}}{3}g'\left(z\right)=\frac{z^{2}}{3}\cdot3\left(\frac{G'\left(z\right)}{z^{2}}-\frac{2G\left(z\right)}{z^{3}}\right)=G'\left(z\right)-\frac{2G\left(z\right)}{z},\qquad{}zg\left(z\right)=\frac{3G\left(z\right)}{z}.\tag{H}
+\frac{z^{2}}{3}g'\left(z\right)=\frac{z^{2}}{3}\cdot3\left(\frac{G'\left(z\right)}{z^{2}}-\frac{2G\left(z\right)}{z^{3}}\right)=G'\left(z\right)-\frac{2G\left(z\right)}{z},\quad{}zg\left(z\right)=\frac{3G\left(z\right)}{z}.\tag{H}
 $$
 
 两式相加, $-\frac{2G}{z}$ 与 $+\frac{3G}{z}$ 合成 $+\frac{G}{z}$,
@@ -166,7 +166,7 @@ $$
 然后算出 $G'+G/z$. 由 $G\left(z\right)=\frac{\sin{}z}{z}-\cos{}z$,
 
 $$
-G'\left(z\right)=\frac{\cos{}z}{z}+\sin{}z-\frac{\sin{}z}{z^{2}},\qquad\frac{G\left(z\right)}{z}=\frac{\sin{}z}{z^{2}}-\frac{\cos{}z}{z},\tag{J}
+G'\left(z\right)=\frac{\cos{}z}{z}+\sin{}z-\frac{\sin{}z}{z^{2}},\quad\frac{G\left(z\right)}{z}=\frac{\sin{}z}{z^{2}}-\frac{\cos{}z}{z},\tag{J}
 $$
 
 相加时 $\frac{\cos{}z}{z}$ 与 $-\frac{\cos{}z}{z}$ 相消, $-\frac{\sin{}z}{z^{2}}$ 与 $+\frac{\sin{}z}{z^{2}}$ 相消,
@@ -220,7 +220,7 @@ $$
 先写出解的积分表示. 由**定理 4.2.6 (三维波动方程的 Poisson 公式)**,
 
 $$
-u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\left[\frac{\partial}{\partial{}t}\int_{S_{at}\left(x\right)}\frac{\varphi\left(y\right)}{t}\,\mathrm{d}S_y+\int_{S_{at}\left(x\right)}\frac{\psi\left(y\right)}{t}\,\mathrm{d}S_y\right],\qquad{}S_{at}\left(x\right)=\left\{y:\left|y-x\right|=at\right\}.\tag{A}
+u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\left[\frac{\partial}{\partial{}t}\int_{S_{at}\left(x\right)}\frac{\varphi\left(y\right)}{t}\,\mathrm{d}S_y+\int_{S_{at}\left(x\right)}\frac{\psi\left(y\right)}{t}\,\mathrm{d}S_y\right],\quad{}S_{at}\left(x\right)=\left\{y:\left|y-x\right|=at\right\}.\tag{A}
 $$
 
 再引入支撑集与球面平均. 记 $K=\overline{\operatorname{supp}\varphi\cup\operatorname{supp}\psi\cup\operatorname{supp}\nabla\varphi}$, 由 $\varphi,\psi\in{}C_0^{\infty}\left(\mathbb{R}^{3}\right)$ 知 $K$ 是紧集, 取 $R>0$ 使 $K\subset{}B_R\left(0\right)$. 把面积分化成单位球面上的积分: 以 $n$ 记单位向量,
@@ -232,7 +232,7 @@ $$
 接着把 (A) 写成 $I_{\varphi},I_{\psi}$ 的组合. 由 (B),
 
 $$
-\int_{S_{at}\left(x\right)}\frac{\varphi\left(y\right)}{t}\,\mathrm{d}S_y=\left(at\right)I_{\varphi},\qquad\int_{S_{at}\left(x\right)}\frac{\psi\left(y\right)}{t}\,\mathrm{d}S_y=\left(at\right)I_{\psi},\tag{C}
+\int_{S_{at}\left(x\right)}\frac{\varphi\left(y\right)}{t}\,\mathrm{d}S_y=\left(at\right)I_{\varphi},\quad\int_{S_{at}\left(x\right)}\frac{\psi\left(y\right)}{t}\,\mathrm{d}S_y=\left(at\right)I_{\psi},\tag{C}
 $$
 
 于是
@@ -321,19 +321,19 @@ $$
 接着构造待证可去性的函数. 取 $a:=c_2\ge0$ 并令
 
 $$
-v\left(x\right):=u\left(x\right)-a\left|x\right|^{2-n},\qquad{}x\in{}B_1\left(0\right)\setminus\left\{0\right\}.\tag{C}
+v\left(x\right):=u\left(x\right)-a\left|x\right|^{2-n},\quad{}x\in{}B_1\left(0\right)\setminus\left\{0\right\}.\tag{C}
 $$
 
 由 $\left|x\right|^{2-n}$ 在 $\mathbb{R}^{n}\setminus\left\{0\right\}$ 内调和知 $v$ 调和; 又 $\left|x\right|^{2-n}$ 在球面 $\left|x\right|=r$ 上的平均值恰为 $r^{2-n}$, 故由 (B)(C) 得 $v$ 的每个球面平均值都是 $c_1$:
 
 $$
-\frac{1}{\omega_nr^{n-1}}\int_{\left|y\right|=r}v\left(y\right)\,\mathrm{d}S_y=c_1,\qquad0<{}r<1.\tag{D}
+\frac{1}{\omega_nr^{n-1}}\int_{\left|y\right|=r}v\left(y\right)\,\mathrm{d}S_y=c_1,\quad0<{}r<1.\tag{D}
 $$
 
 然后用 Harnack 不等式证明 $\left|x\right|^{n-2}v\left(x\right)$ 有界. 由 $u>0$ 与 $u$ 在环壳 $\left\{r/2<\left|x\right|<3r/2\right\}$ 内调和, 应用 Harnack 不等式并沿半径相当的球链比较, 得存在只依赖于 $n$ 的常数 $H_n$, 使球面 $\left|y\right|=r$ 上任意两点满足
 
 $$
-\max_{\left|y\right|=r}u\le{}H_nu\left(y\right),\qquad{}y\in\left\{\left|y\right|=r\right\}.\tag{E}
+\max_{\left|y\right|=r}u\le{}H_nu\left(y\right),\quad{}y\in\left\{\left|y\right|=r\right\}.\tag{E}
 $$
 
 把 (E) 用于 $z\left(x\right):=\left|x\right|^{n-2}u\left(x\right)$: 由 (E) 与 (B),
@@ -351,7 +351,7 @@ $$
 于是存在 $D>0$ 使
 
 $$
-\left|x\right|^{n-2}\left|v\left(x\right)\right|\le{}D,\qquad0<\left|x\right|<1.\tag{H}
+\left|x\right|^{n-2}\left|v\left(x\right)\right|\le{}D,\quad0<\left|x\right|<1.\tag{H}
 $$
 
 然后用极值原理把 (H) 化为 $v$ 在 $0$ 附近有界. 固定 $0<\rho<1/2$, 记 $M_r=\max_{\left|y\right|=r}\left|v\right|$ ($0<{}r<\rho$) 与 $K_\rho=\max_{\left|y\right|=\rho}\left|v\right|$. 比较函数取
@@ -363,13 +363,13 @@ $$
 它是调和函数, 且在 $\left|x\right|=r$ 上等于 $M_r+K_\rho\ge\left|v\right|$, 在 $\left|x\right|=\rho$ 上等于 $M_r\left(r/\rho\right)^{n-2}+K_\rho\ge{}K_\rho\ge\left|v\right|$; 又 $\left|v\right|$ 在 $\left\{r<\left|x\right|<\rho\right\}$ 内次调和, 故由极值原理
 
 $$
-\left|v\left(x\right)\right|\le{}M_r\left(\frac{r}{\left|x\right|}\right)^{n-2}+K_\rho,\qquad{}r<\left|x\right|<\rho.\tag{J}
+\left|v\left(x\right)\right|\le{}M_r\left(\frac{r}{\left|x\right|}\right)^{n-2}+K_\rho,\quad{}r<\left|x\right|<\rho.\tag{J}
 $$
 
 由 (H) 得 $M_r\le{}Dr^{2-n}$, 于是 (J) 右端的第一项满足 $M_r\left(\frac{r}{\left|x\right|}\right)^{n-2}\le{}Dr^{2-n}r^{n-2}\left|x\right|^{2-n}=D\left|x\right|^{2-n}$, 它与 $r$ 无关; 故 (J) 对固定 $x$ ($\left|x\right|<\rho$) 令 $r\to0$ 得
 
 $$
-\left|v\left(x\right)\right|\le{}K_\rho,\qquad0<\left|x\right|<\rho.\tag{L}
+\left|v\left(x\right)\right|\le{}K_\rho,\quad0<\left|x\right|<\rho.\tag{L}
 $$
 
 由此 $v$ 在 $0$ 附近有界.
@@ -377,7 +377,7 @@ $$
 然后说明 $v$ 满足定理 6.2.3 的奇性条件. 由 (L), $v\left(x\right)=O\left(1\right)$ 当 $x\to0$; 而 $\left|x\right|^{2-n}\to+\infty$, 故
 
 $$
-\frac{\left|v\left(x\right)\right|}{\left|x\right|^{2-n}}\le\frac{K_\rho}{\left|x\right|^{2-n}}\longrightarrow0,\qquad\text{即}\quad{}v\left(x\right)=o\left(\left|x\right|^{2-n}\right).\tag{M}
+\frac{\left|v\left(x\right)\right|}{\left|x\right|^{2-n}}\le\frac{K_\rho}{\left|x\right|^{2-n}}\longrightarrow0,\quad\text{即}\quad{}v\left(x\right)=o\left(\left|x\right|^{2-n}\right).\tag{M}
 $$
 
 然后应用定理 6.2.3. 由 (C) 知 $v$ 在 $B_1\left(0\right)\setminus\left\{0\right\}$ 内调和, 由 (M) 知它满足 $n\ge3$ 的奇性条件, 故由**定理 6.2.3 (奇点可去性)** $v$ 的奇点 $x=0$ 可去: 可以在 $x=0$ 处补充定义 $v$ 的值, 使 $v\in{}C^{2}\left(B_1\left(0\right)\right)$ 且在 $B_1\left(0\right)$ 内调和.
@@ -385,7 +385,7 @@ $$
 然后读出 Böcher 定理. 由 (C) 与上面的结论, 若记补充定义后的函数为 $v$ (在 $B_1\left(0\right)$ 内调和), 则
 
 $$
-u\left(x\right)=v\left(x\right)+a\left|x\right|^{2-n},\qquad{}x\in{}B_1\left(0\right)\setminus\left\{0\right\},\tag{N}
+u\left(x\right)=v\left(x\right)+a\left|x\right|^{2-n},\quad{}x\in{}B_1\left(0\right)\setminus\left\{0\right\},\tag{N}
 $$
 
 其中 $a\ge0$. 这正是**定理 6.2.4 (Böcher 定理)** 在 $n\ge3$ 时的结论.
@@ -399,7 +399,7 @@ $$
 由 $\log\left|x\right|$ 调和知 $v$ 调和, 且 $\log\left|x\right|$ 在球面上的平均值为 $\log{}r$, 故结合 (B) 得 $v$ 的球面平均恒为 $c_1$, 与 (D) 平行. 把上面几段中的 $\left|x\right|^{2-n}$ 全部换成 $\log\frac{1}{\left|x\right|}$ (相应的比较函数 $f_r$ 换成 $\frac{\log\left(\rho/\left|x\right|\right)}{\log\left(\rho/r\right)}$), 同样的三步给出 $v=o\left(\log\frac{1}{\left|x\right|}\right)$, 即 $v$ 的对数型奇性系数为零; 由定理 6.2.3 的 $n=2$ 情形得 $v$ 可去延拓到 $B_1\left(0\right)$ 内而调和, 于是
 
 $$
-u\left(x\right)=v\left(x\right)+a\log\frac{1}{\left|x\right|},\qquad{}a\ge0,\tag{P}
+u\left(x\right)=v\left(x\right)+a\log\frac{1}{\left|x\right|},\quad{}a\ge0,\tag{P}
 $$
 
 这就是 **定理 6.2.4 (Böcher 定理)** 在 $n=2$ 时的结论.
@@ -430,7 +430,7 @@ $$
 接着证 $U$ 在 $\Omega^{-}$ 内调和. 对 $x\in\Omega^{-}$, 记 $y=\sigma{}x\in\Omega^{+}$, 则 $U\left(x\right)=-u\left(y\right)$. 因 $\sigma$ 是正交变换, 拉普拉斯算子在正交变换下不变, 即 $\Delta_x\left[u\left(\sigma{}x\right)\right]=\left(\Delta{}u\right)\left(\sigma{}x\right)=0$; 于是
 
 $$
-\Delta{}U\left(x\right)=-\Delta_x\left[u\left(\sigma{}x\right)\right]=0,\qquad{}x\in\Omega^{-}.\tag{B}
+\Delta{}U\left(x\right)=-\Delta_x\left[u\left(\sigma{}x\right)\right]=0,\quad{}x\in\Omega^{-}.\tag{B}
 $$
 
 然后证 $U$ 在有内部的点处连续. 在 $\Omega^{+}$ 内 $U=u$ 连续, 在 $\Omega^{-}$ 内 $U=-u\circ\sigma$ 连续. 在 $T$ 上, 由 $u=0$ 得两侧的极限: 当 $x\in\Omega^{+}$, $x\to{}x_0\in{}T$ 时 $U\left(x\right)=u\left(x\right)\to{}u\left(x_0\right)=0$; 当 $x\in\Omega^{-}$, $x\to{}x_0\in{}T$ 时 $\sigma{}x\to\sigma{}x_0=x_0$, 故 $U\left(x\right)=-u\left(\sigma{}x\right)\to-u\left(x_0\right)=0$. 于是 $U$ 在 $T$ 上连续且 $U|_{T}=0$; 结合上两段, $U$ 在 $\Omega^{+}\cup{}T\cup\Omega^{-}$ 上连续.
@@ -450,13 +450,13 @@ $$
 然后得到 $U$ 在 $T$ 上的球面均值. 把 (D) 代入 (C), 两项相减为零; 又 $U\left(x_0\right)=0$ (因 $x_0\in{}T$), 故
 
 $$
-U\left(x_0\right)=\frac{1}{\left|S^{n-1}_s\right|}\int_{\left|y-x_0\right|=s}U\left(y\right)\,\mathrm{d}S_y,\qquad0<{}s<\rho.\tag{E}
+U\left(x_0\right)=\frac{1}{\left|S^{n-1}_s\right|}\int_{\left|y-x_0\right|=s}U\left(y\right)\,\mathrm{d}S_y,\quad0<{}s<\rho.\tag{E}
 $$
 
 同理把球面平均换成球体平均, 也成立
 
 $$
-U\left(x_0\right)=\frac{1}{\left|B_s\right|}\int_{B_s\left(x_0\right)}U\left(y\right)\,\mathrm{d}y,\qquad0<{}s<\rho.\tag{F}
+U\left(x_0\right)=\frac{1}{\left|B_s\right|}\int_{B_s\left(x_0\right)}U\left(y\right)\,\mathrm{d}y,\quad0<{}s<\rho.\tag{F}
 $$
 
 然后由均值性质与连续性得 $U$ 在 $T$ 上调和. 由 (F), $U$ 在 $B_\rho\left(x_0\right)$ 内每一点都满足球体均值性质 (在 $\Omega^{\pm}$ 内因 $U$ 调和而成立, 在 $T$ 上由 (F) 成立), 且 $U$ 在 $B_\rho\left(x_0\right)$ 上连续; 由调和函数的均值性质刻画 (连续且满足球体均值性质的函数必调和, 见第 2 章关于调和函数均值性质的讨论), $U$ 在 $B_\rho\left(x_0\right)$ 内调和, 特别在 $x_0$ 处调和.

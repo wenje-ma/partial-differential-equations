@@ -33,19 +33,19 @@ $$
 先令 $v=u_t$. 由题设 $v\in{}C^{2,1}\left(Q_T\right)$. 把原方程关于 $t$ 求导 (由 $u_t\in{}C^{2,1}$ 可交换求导次序),
 
 $$
-v_t-a^{2}\Delta{}v=f_t\left(x,t\right),\qquad\left(x,t\right)\in{}Q_T.\tag{A}
+v_t-a^{2}\Delta{}v=f_t\left(x,t\right),\quad\left(x,t\right)\in{}Q_T.\tag{A}
 $$
 
 定出 $v$ 的初值. 在原方程中令 $t=0$, 由 $u\left(x,0\right)=\varphi\left(x\right)$,
 
 $$
-u_t\left(x,0\right)-a^{2}\Delta{}u\left(x,0\right)=f\left(x,0\right),\qquad\text{即}\;v\left(x,0\right)=a^{2}\Delta\varphi\left(x\right)+f\left(x,0\right),\quad{}x\in\overline{\Omega}.\tag{B}
+u_t\left(x,0\right)-a^{2}\Delta{}u\left(x,0\right)=f\left(x,0\right),\quad\text{即}\;v\left(x,0\right)=a^{2}\Delta\varphi\left(x\right)+f\left(x,0\right),\quad{}x\in\overline{\Omega}.\tag{B}
 $$
 
 定出 $v$ 的边值. 由 $u\left(x,t\right)=0$ 对一切 $x\in\partial\Omega$, $0\le{}t\le{}T$ 成立, 关于 $t$ 求导得
 
 $$
-v\left(x,t\right)=0,\qquad{}x\in\partial\Omega,\quad0\le{}t\le{}T.\tag{C}
+v\left(x,t\right)=0,\quad{}x\in\partial\Omega,\quad0\le{}t\le{}T.\tag{C}
 $$
 
 然后对 (A)(B)(C) 用**定理 3.2.3 (初边值问题的最大模估计)**, 取 $f$ 为 $f_t$, $\varphi$ 为 $a^{2}\Delta\varphi\left(\cdot\right)+f\left(\cdot,0\right)$,
@@ -91,7 +91,7 @@ $$
 即
 
 $$
-w_t-\Delta{}w+\left|\nabla{}v\right|-\left|\nabla{}u\right|\ge0,\qquad\left(x,t\right)\in{}Q_T.\tag{A}
+w_t-\Delta{}w+\left|\nabla{}v\right|-\left|\nabla{}u\right|\ge0,\quad\left(x,t\right)\in{}Q_T.\tag{A}
 $$
 
 再用三角不等式控制梯度项. 由 $\nabla{}v=\nabla{}u+\nabla{}w$ 与 $\left|\nabla{}v\right|\le\left|\nabla{}u\right|+\left|\nabla{}w\right|$,
@@ -103,7 +103,7 @@ $$
 代回 (A) 得
 
 $$
-w_t-\Delta{}w+\left|\nabla{}w\right|\ge\left(\left|\nabla{}v\right|-\left|\nabla{}u\right|\right)+\left|\nabla{}w\right|\ge0,\qquad\left(x,t\right)\in{}Q_T.\tag{B}
+w_t-\Delta{}w+\left|\nabla{}w\right|\ge\left(\left|\nabla{}v\right|-\left|\nabla{}u\right|\right)+\left|\nabla{}w\right|\ge0,\quad\left(x,t\right)\in{}Q_T.\tag{B}
 $$
 
 接着证边界条件. 由 $u\le{}v$ 于 $\partial_pQ_T$,
@@ -121,7 +121,7 @@ $$
 然后由 (B), $z$ 满足
 
 $$
-z_t-\Delta{}z+\left|\nabla{}z\right|=w_t+\varepsilon-\Delta{}w+\left|\nabla{}w\right|\ge\varepsilon>0,\qquad\left(x,t\right)\in{}Q_T.\tag{E}
+z_t-\Delta{}z+\left|\nabla{}z\right|=w_t+\varepsilon-\Delta{}w+\left|\nabla{}w\right|\ge\varepsilon>0,\quad\left(x,t\right)\in{}Q_T.\tag{E}
 $$
 
 又由 (C), $z\ge\varepsilon{}t\ge0$ 于 $\partial_pQ_T$.
@@ -137,7 +137,7 @@ $$
 故 $z$ 在 $\overline{Q}_T$ 上的最小值在 $\partial_pQ_T$ 上达到, 从而 $z\ge0$ 于 $\overline{Q}_T$. 由 (D),
 
 $$
-w\left(x,t\right)\ge-\varepsilon{}t\ge-\varepsilon{}T,\qquad\left(x,t\right)\in\overline{Q}_T.
+w\left(x,t\right)\ge-\varepsilon{}t\ge-\varepsilon{}T,\quad\left(x,t\right)\in\overline{Q}_T.
 $$
 
 令 $\varepsilon\to0$ 得 $w\ge0$, 即 $u\le{}v$ 于 $\overline{Q}_T$.
@@ -153,7 +153,7 @@ $$
 由 Poisson 公式给出的形式解. 证明:
 
 $$
-\lim_{h\to0^{+}}u\left(x,t;h\right)=\frac{1}{a\sqrt{\pi{}t}}\mathrm{e}^{-\frac{x^{2}}{4a^{2}t}},\qquad-\infty<{}x<+\infty,t>0.
+\lim_{h\to0^{+}}u\left(x,t;h\right)=\frac{1}{a\sqrt{\pi{}t}}\mathrm{e}^{-\frac{x^{2}}{4a^{2}t}},\quad-\infty<{}x<+\infty,t>0.
 $$
 
 ### 解答 3.9
@@ -237,13 +237,13 @@ $$
 然后用多项式逼近 $u\left(\cdot,t\right)$ ($t$ 固定). 由 (A), $u\left(x,t\right)$ 是 $\mathrm{e}^{-\frac{\left(x-y\right)^{2}}{4t}}$ 与 $f$ 的积分. 取 $t=t_0$ 充分小 (满足 (E)). 在紧集 $\left\{\left(x,y\right):x\in\left[a,b\right],y\in\operatorname{supp}f\right\}$ 上, 核 $\mathrm{e}^{-\frac{\left(x-y\right)^{2}}{4t_0}}$ 关于 $x$ 实解析, 它的关于 $x$ 的 Taylor 级数在该紧集上一致收敛于自身 (Taylor 余项被与 $y$ 无关的几何型常数控制). 于是把 Taylor 级数代入 (A) 并逐项积分, 得
 
 $$
-u\left(x,t_0\right)=\sum_{k=0}^{\infty}c_kx^{k},\qquad{}x\in\left[a,b\right],
+u\left(x,t_0\right)=\sum_{k=0}^{\infty}c_kx^{k},\quad{}x\in\left[a,b\right],
 $$
 
 其中 $c_k$ 是常数, 且该级数在 $\left[a,b\right]$ 上一致收敛. 取 $P_n\left(x\right)=\sum_{k=0}^{n}c_kx^{k}$, 则
 
 $$
-\max_{x\in\left[a,b\right]}\left|P_n\left(x\right)-u\left(x,t_0\right)\right|\to0,\qquad{}n\to\infty.\tag{F}
+\max_{x\in\left[a,b\right]}\left|P_n\left(x\right)-u\left(x,t_0\right)\right|\to0,\quad{}n\to\infty.\tag{F}
 $$
 
 收尾. 取 $n$ 充分大使得 (F) 中的偏差小于 $\varepsilon$; 则由 (E)(F) 的三角不等式
@@ -281,13 +281,13 @@ $$
 然后取实部. 由 (A)(C),
 
 $$
-\mathcal{F}\left[\cos{ax^{2}}\right]\left(\xi\right)=\sqrt{\frac{\pi}{a}}\cos\left(\frac{\pi}{4}-\frac{\xi^{2}}{4a}\right)=\sqrt{\frac{\pi}{2a}}\left(\cos\frac{\xi^{2}}{4a}+\sin\frac{\xi^{2}}{4a}\right),\qquad{}a>0.\tag{D}
+\mathcal{F}\left[\cos{ax^{2}}\right]\left(\xi\right)=\sqrt{\frac{\pi}{a}}\cos\left(\frac{\pi}{4}-\frac{\xi^{2}}{4a}\right)=\sqrt{\frac{\pi}{2a}}\left(\cos\frac{\xi^{2}}{4a}+\sin\frac{\xi^{2}}{4a}\right),\quad{}a>0.\tag{D}
 $$
 
 然后证 $a<0$ 的情形. 令 $b=-a>0$, $\cos{ax^{2}}=\cos{bx^{2}}$, 与上面同法可得
 
 $$
-\mathcal{F}\left[\cos{ax^{2}}\right]\left(\xi\right)=\sqrt{\frac{\pi}{2\left|a\right|}}\left(\cos\frac{\xi^{2}}{4\left|a\right|}-\sin\frac{\xi^{2}}{4\left|a\right|}\right),\qquad{}a<0.\tag{E}
+\mathcal{F}\left[\cos{ax^{2}}\right]\left(\xi\right)=\sqrt{\frac{\pi}{2\left|a\right|}}\left(\cos\frac{\xi^{2}}{4\left|a\right|}-\sin\frac{\xi^{2}}{4\left|a\right|}\right),\quad{}a<0.\tag{E}
 $$
 
 最后比较图像. 变换前 $f\left(x\right)=\cos{ax^{2}}$ 是"调频"振荡: 零点间隔随 $\left|x\right|$ 增大而减小, 频率在 $\left|x\right|$ 大处越来越密. 变换后 (D) 表明 $\mathcal{F}\left[f\right]\left(\xi\right)$ 仍是同类型的调频振荡, 只是把自变量换成 $\xi$, 把参数 $a$ 换成 $\frac{1}{4a}$: 在 $\xi$ 大处振荡也越来越密. 这就是调频信号的"自对偶"性质 (Fourier 变换把 chirp 仍映为 chirp); 同时振幅 $\sqrt{\frac{\pi}{2\left|a\right|}}$ 与频率参数成反比, 与测不准关系的直观一致.
@@ -313,7 +313,7 @@ $$
 接着算出两个积分. 由 $b>0$, 两个指数衰减,
 
 $$
-\int_0^{+\infty}\mathrm{e}^{-\left(b-\mathrm{i}x\right)y}\,\mathrm{d}y=\frac{1}{b-\mathrm{i}x},\qquad\int_{-\infty}^{0}\mathrm{e}^{\left(b+\mathrm{i}x\right)y}\,\mathrm{d}y=\frac{1}{b+\mathrm{i}x}.\tag{C}
+\int_0^{+\infty}\mathrm{e}^{-\left(b-\mathrm{i}x\right)y}\,\mathrm{d}y=\frac{1}{b-\mathrm{i}x},\quad\int_{-\infty}^{0}\mathrm{e}^{\left(b+\mathrm{i}x\right)y}\,\mathrm{d}y=\frac{1}{b+\mathrm{i}x}.\tag{C}
 $$
 
 相加并通分. 把 (C) 代入 (B),

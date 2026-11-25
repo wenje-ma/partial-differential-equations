@@ -115,7 +115,7 @@ $$
 于是在 $\partial\Omega_\delta$ 上 $z\le0$, 而 $\Delta{}z=0$, 由**定理 2.3.1 (弱极值原理)** (对 $z$ 与 $-z$ 同时使用), $z\le0$ 于 $\overline{\Omega}_\delta$, 即
 
 $$
-u\left(x\right)\le\varepsilon\left|x-x_0\right|^{2-n},\qquad{}x\in\Omega_\delta.\tag{B}
+u\left(x\right)\le\varepsilon\left|x-x_0\right|^{2-n},\quad{}x\in\Omega_\delta.\tag{B}
 $$
 
 让 $\delta\to0$. 对任意固定 $x\in\Omega$, 当 $\delta$ 充分小时 $x\in\Omega_\delta$, 由 (B)
@@ -141,7 +141,7 @@ $$
 (1) 先列出关于两条坐标轴的四个对称点. 记
 
 $$
-x^{\left(1\right)}=\left(-x_1,x_2\right),\qquad{}x^{\left(2\right)}=\left(x_1,-x_2\right),\qquad{}x^{\left(3\right)}=\left(-x_1,-x_2\right).
+x^{\left(1\right)}=\left(-x_1,x_2\right),\quad{}x^{\left(2\right)}=\left(x_1,-x_2\right),\quad{}x^{\left(3\right)}=\left(-x_1,-x_2\right).
 $$
 
 则 $x^{\left(1\right)}$ 关于 $x_1=0$ 对称, $x^{\left(2\right)}$ 关于 $x_2=0$ 对称, $x^{\left(3\right)}$ 是两个对称的复合. 这四个点中只有 $x$ 落在 $\Omega$ 内, 其余三点均在 $\Omega$ 外.
@@ -167,7 +167,7 @@ $$
 (2) 先看子区域是单位圆与上半平面的交的情形, 这时需要用关于 $x_2=0$ 的反射与关于单位圆的反演两种变换. 记
 
 $$
-\bar{x}=\left(x_1,-x_2\right),\qquad{}x^{*}=\frac{x}{\left|x\right|^{2}},\qquad\bar{x}^{*}=\frac{\bar{x}}{\left|\bar{x}\right|^{2}}=\frac{\bar{x}}{\left|x\right|^{2}}.
+\bar{x}=\left(x_1,-x_2\right),\quad{}x^{*}=\frac{x}{\left|x\right|^{2}},\quad\bar{x}^{*}=\frac{\bar{x}}{\left|\bar{x}\right|^{2}}=\frac{\bar{x}}{\left|x\right|^{2}}.
 $$
 
 再构造
@@ -185,7 +185,7 @@ $$
 然后在 $\left|y\right|=1$ 上验证 $G=0$. 先算反演像的距离. 与习题 2.12 中的做法同法,
 
 $$
-\left|x^{*}-y\right|^{2}=\frac{\left|x-y\right|^{2}}{\left|x\right|^{2}},\qquad\left|\bar{x}^{*}-y\right|^{2}=\frac{\left|\bar{x}-y\right|^{2}}{\left|x\right|^{2}},\qquad\left|y\right|=1.
+\left|x^{*}-y\right|^{2}=\frac{\left|x-y\right|^{2}}{\left|x\right|^{2}},\quad\left|\bar{x}^{*}-y\right|^{2}=\frac{\left|\bar{x}-y\right|^{2}}{\left|x\right|^{2}},\quad\left|y\right|=1.
 $$
 
 于是
@@ -215,13 +215,13 @@ $$
 先证平移, 设 $a=0$. 题设即: $u$ 在 $0<\left|x\right|<{}R$ 内调和, 且对任意 $\varepsilon>0$ 存在 $\delta\in\left(0,R\right]$, 使得
 
 $$
-\left|u\left(x\right)\right|\le\varepsilon\ln\frac{1}{\left|x\right|},\qquad0<\left|x\right|<\delta.\tag{A}
+\left|u\left(x\right)\right|\le\varepsilon\ln\frac{1}{\left|x\right|},\quad0<\left|x\right|<\delta.\tag{A}
 $$
 
 再证先证 $u$ 在 $0$ 的邻域内有界. 取定 $0<\rho_0<\delta$, 并对 $0<\rho<\frac{\rho_0}{2}$ 记
 
 $$
-A_\rho=\max_{\left|x\right|=\rho}u,\qquad{}B_{\rho_0}=\max_{\left|x\right|=\rho_0}u.\tag{B}
+A_\rho=\max_{\left|x\right|=\rho}u,\quad{}B_{\rho_0}=\max_{\left|x\right|=\rho_0}u.\tag{B}
 $$
 
 接着在两圆所夹的环域 $\left\{\rho<\left|x\right|<\rho_0\right\}$ 上构造比较函数
@@ -233,7 +233,7 @@ $$
 由 $\ln\left|x\right|$ 在 $\mathbb{R}^{2}\setminus\left\{0\right\}$ 内调和, $h$ 在环域内调和; 且由 $B_\rho$, $B_{\rho_0}$ 的定义, 在 $\left|x\right|=\rho$ 上 $h=A_\rho\ge{}u$, 在 $\left|x\right|=\rho_0$ 上 $h=B_{\rho_0}\ge{}u$. 故由**定理 2.3.1 (弱极值原理)**,
 
 $$
-u\left(x\right)\le{}h\left(x\right),\qquad\rho<\left|x\right|<\rho_0.\tag{D}
+u\left(x\right)\le{}h\left(x\right),\quad\rho<\left|x\right|<\rho_0.\tag{D}
 $$
 
 然后在 (D) 中令 $\rho\to0$. 由 (A), $A_\rho\le\varepsilon\ln\frac{1}{\rho}$, 故 (C) 中第一项的绝对值不超过
@@ -245,13 +245,13 @@ $$
 因为分子 $\ln\left(\rho_0/\left|x\right|\right)$ 对固定的 $x$ 是常数, 而分母 $\ln\left(\rho_0/\rho\right)\to+\infty$. 第二项中 $\frac{\ln\left(\left|x\right|/\rho\right)}{\ln\left(\rho_0/\rho\right)}=\frac{\ln\left(1/\rho\right)-\ln\left|x\right|}{\ln\left(1/\rho\right)-\ln\rho_0}\to1$. 故 (D) 的极限给出
 
 $$
-u\left(x\right)\le{}B_{\rho_0},\qquad0<\left|x\right|<\rho_0.\tag{E}
+u\left(x\right)\le{}B_{\rho_0},\quad0<\left|x\right|<\rho_0.\tag{E}
 $$
 
 然后对 $-u$ 用同样的论证 ($-u$ 也满足 (A)), 若记 $b_{\rho_0}=\min_{\left|x\right|=\rho_0}u$, 则
 
 $$
-u\left(x\right)\ge{}b_{\rho_0},\qquad0<\left|x\right|<\rho_0.\tag{F}
+u\left(x\right)\ge{}b_{\rho_0},\quad0<\left|x\right|<\rho_0.\tag{F}
 $$
 
 由 (E)(F), $u$ 在 $B_{\rho_0}\setminus\left\{0\right\}$ 内有界, 记 $\left|u\right|\le{}M$.
@@ -267,7 +267,7 @@ $$
 由 $\ln\left|x\right|$ 调和知 $H_\varepsilon$ 调和, 且 $H_\varepsilon=0$ 于 $\left|x\right|=\rho_0$, $H_\varepsilon=2M$ 于 $\left|x\right|=\varepsilon$. 故在环域的两条边界圆周上 $\pm{}w\le{}H_\varepsilon$, 由**定理 2.3.1 (弱极值原理)**,
 
 $$
-\left|w\left(x\right)\right|\le{}H_\varepsilon\left(x\right)=2M\frac{\ln\left(\left|x\right|/\rho_0\right)}{\ln\left(\varepsilon/\rho_0\right)},\qquad\varepsilon<\left|x\right|<\rho_0.
+\left|w\left(x\right)\right|\le{}H_\varepsilon\left(x\right)=2M\frac{\ln\left(\left|x\right|/\rho_0\right)}{\ln\left(\varepsilon/\rho_0\right)},\quad\varepsilon<\left|x\right|<\rho_0.
 $$
 
 令 $\varepsilon\to0$, 右端趋于 $0$ (分子固定, 分母趋于 $-\infty$), 故 $w\left(x\right)=0$ 于 $B_{\rho_0}\setminus\left\{0\right\}$, 即 $u=U$ 于该球内除原点.
@@ -311,13 +311,13 @@ $$
 然后用关于点的反演把外问题化为有界区域上的内问题. 因 $\Omega$ 有界, 取一点 $x_1\notin\overline{\Omega}$, 并把坐标原点平移到 $x_1$ (平移不改变调和性与有界性). 于是 $0\notin\overline{\Omega}$, 且 $\overline{\Omega}$ 是紧集, 故存在 $0<{}r<{}d$ 使
 
 $$
-\overline{\Omega}\subset\left\{r\le\left|x\right|\le{}d\right\},\qquad\text{特别地}\;0\notin\overline{\Omega}.
+\overline{\Omega}\subset\left\{r\le\left|x\right|\le{}d\right\},\quad\text{特别地}\;0\notin\overline{\Omega}.
 $$
 
 定义反演变换
 
 $$
-y=\Phi\left(x\right):=\frac{x}{\left|x\right|^{2}},\qquad{}x\in\mathbb{R}^{2}\setminus\left\{0\right\},\tag{A}
+y=\Phi\left(x\right):=\frac{x}{\left|x\right|^{2}},\quad{}x\in\mathbb{R}^{2}\setminus\left\{0\right\},\tag{A}
 $$
 
 并记 $\Omega^{*}:=\Phi\left(\mathbb{R}^{2}\setminus\overline{\Omega}\right)$. 由 $\Phi$ 是自身的逆 ($\Phi\left(\Phi\left(x\right)\right)=x$) 与 $\Phi$ 把 $\mathbb{R}^{2}\setminus\left\{0\right\}$ 同胚地映为自身, $\Omega^{*}$ 是有界区域, $\partial\Omega^{*}=\Phi\left(\partial\Omega\right)$. 又 $\Phi$ 把 $0$ 映射到"无穷远", 故当 $x$ 跑遍 $\mathbb{R}^{2}\setminus\overline{\Omega}$ 时 $\Phi\left(x\right)$ 跑遍一个有界区域; 即 $\overline{\Omega}^{*}$ 紧.
@@ -331,7 +331,7 @@ $$
 逐项求导得
 
 $$
-\Delta_xv\left(x\right)=\frac{1}{r^{4}}\Delta_yU\left(y\right),\qquad{}y=\Phi\left(x\right),\tag{B}
+\Delta_xv\left(x\right)=\frac{1}{r^{4}}\Delta_yU\left(y\right),\quad{}y=\Phi\left(x\right),\tag{B}
 $$
 
 (这是二维 Kelvin 变换的公式; 一般 $n$ 维情形为 $v\left(x\right)=\left|x\right|^{2-n}U\left(x/\left|x\right|^{2}\right)$). 故 $U$ 调和蕴含 $v$ 调和. 反之亦然 ($\Phi$ 是自身的逆).
@@ -339,7 +339,7 @@ $$
 然后化归为有界区域上的 Dirichlet 问题. 令 $\psi\left(y\right)=\varphi\left(\Phi\left(y\right)\right)$, $y\in\partial\Omega^{*}$. 由 $\Phi$ 连续与 $\varphi$ 连续, $\psi\in{}C^{0}\left(\partial\Omega^{*}\right)$. 由上面的构造, 只需求
 
 $$
-\Delta{}U=0\;\text{于}\;\Omega^{*},\qquad{}U=\psi\;\text{于}\;\partial\Omega^{*}
+\Delta{}U=0\;\text{于}\;\Omega^{*},\quad{}U=\psi\;\text{于}\;\partial\Omega^{*}
 $$
 
 的解 $U$, 则 $u\left(x\right)=U\left(\Phi\left(x\right)\right)$ 就是外问题的解.
@@ -355,13 +355,13 @@ $$
 最后由**定理 2.6.14 (Dirichlet 问题解的存在性)**, $\Omega^{*}$ 上以 $\psi$ 为边值的 Laplace 方程 Dirichlet 问题存在解 $U\in{}C^{2}\left(\Omega^{*}\right)\cap{}C^{0}\left(\overline{\Omega}^{*}\right)$. 令
 
 $$
-u\left(x\right)=U\left(\Phi\left(x\right)\right),\qquad{}x\in\mathbb{R}^{2}\setminus\overline{\Omega}.
+u\left(x\right)=U\left(\Phi\left(x\right)\right),\quad{}x\in\mathbb{R}^{2}\setminus\overline{\Omega}.
 $$
 
 则由上面的构造, $u$ 在 $\mathbb{R}^{2}\setminus\overline{\Omega}$ 内调和; 由 $U$ 连续到边界与 $\Phi$ 连续,
 
 $$
-u\left(x\right)\to{}U\left(\Phi\left(x_0\right)\right)=\psi\left(\Phi\left(x_0\right)\right)=\varphi\left(x_0\right),\qquad{}x\to{}x_0\in\partial\Omega,
+u\left(x\right)\to{}U\left(\Phi\left(x_0\right)\right)=\psi\left(\Phi\left(x_0\right)\right)=\varphi\left(x_0\right),\quad{}x\to{}x_0\in\partial\Omega,
 $$
 
 故 $u=\varphi$ 于 $\partial\Omega$; 又当 $\left|x\right|\to\infty$ 时 $\Phi\left(x\right)\to0$, 而 $U$ 在 $\overline{\Omega}^{*}$ 上有界, 故 $u$ 在 $\mathbb{R}^{2}\setminus\Omega$ 上有界. 于是 $u$ 是所求的解, 存在性得证.

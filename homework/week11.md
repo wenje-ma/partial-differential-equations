@@ -27,7 +27,7 @@ $$
 确定参数与求解公式. 这里 $a^{2}=2$, 即 $a=\sqrt{2}$; 记 $f\left(x\right)=2x_1^{2}-x_2^{2}$, 则 $\varphi=\psi=f$. 由**定理 4.2.8 (二维波动方程的 Poisson 公式)**,
 
 $$
-u\left(x,t\right)=\frac{1}{2\pi{}a}\left[\frac{\partial}{\partial{}t}I\left(t\right)+I\left(t\right)\right],\qquad{}I\left(t\right)=\int_{B_{at}\left(x\right)}\frac{f\left(y\right)\,\mathrm{d}y}{\sqrt{\left(at\right)^{2}-\left|y-x\right|^{2}}}.\tag{A}
+u\left(x,t\right)=\frac{1}{2\pi{}a}\left[\frac{\partial}{\partial{}t}I\left(t\right)+I\left(t\right)\right],\quad{}I\left(t\right)=\int_{B_{at}\left(x\right)}\frac{f\left(y\right)\,\mathrm{d}y}{\sqrt{\left(at\right)^{2}-\left|y-x\right|^{2}}}.\tag{A}
 $$
 
 再把二重积分化为径向积分. 记 $r=at$. 在极坐标 $y=x+\rho{}n$ ($n$ 为单位向量) 下 $\mathrm{d}y=\rho\,\mathrm{d}\rho\,\mathrm{d}\theta$, 故
@@ -57,7 +57,7 @@ $$
 然后算两个标准积分. 作替换 $\rho=r\sin\varphi$,
 
 $$
-\int_0^{r}\frac{\rho\,\mathrm{d}\rho}{\sqrt{r^{2}-\rho^{2}}}=r,\qquad\int_0^{r}\frac{\rho^{3}\,\mathrm{d}\rho}{\sqrt{r^{2}-\rho^{2}}}=r^{3}\int_0^{\frac{\pi}{2}}\sin^{3}\varphi\,\mathrm{d}\varphi=\frac{2}{3}r^{3},\tag{F}
+\int_0^{r}\frac{\rho\,\mathrm{d}\rho}{\sqrt{r^{2}-\rho^{2}}}=r,\quad\int_0^{r}\frac{\rho^{3}\,\mathrm{d}\rho}{\sqrt{r^{2}-\rho^{2}}}=r^{3}\int_0^{\frac{\pi}{2}}\sin^{3}\varphi\,\mathrm{d}\varphi=\frac{2}{3}r^{3},\tag{F}
 $$
 
 其中用到 $\int_0^{\frac{\pi}{2}}\sin^{3}\varphi\,\mathrm{d}\varphi=\frac{2}{3}$.
@@ -151,13 +151,13 @@ $$
 先证分离变量. 设 $u\left(x,t\right)=X\left(x\right)T\left(t\right)$, 代入方程得 $\frac{T''}{a^{2}T}=\frac{X''}{X}=-\lambda$, 即
 
 $$
-X''+\lambda{}X=0,\quad{}X\left(0\right)=X\left(l\right)=0;\qquad{}T''+a^{2}\lambda{}T=0.\tag{A}
+X''+\lambda{}X=0,\quad{}X\left(0\right)=X\left(l\right)=0;\quad{}T''+a^{2}\lambda{}T=0.\tag{A}
 $$
 
 再解特征值问题. (A) 中空间问题的特征值为 $\lambda_n=\left(\frac{n\pi}{l}\right)^{2}$, 特征函数
 
 $$
-X_n\left(x\right)=\sin\frac{n\pi{}x}{l},\qquad{}n=1,2,\dots\tag{B}
+X_n\left(x\right)=\sin\frac{n\pi{}x}{l},\quad{}n=1,2,\dots\tag{B}
 $$
 
 接着写出通解形式. 对每个 $n$, 时间方程为 $T_n''+\omega_n^{2}T_n=0$, $\omega_n=\frac{n\pi{}a}{l}$, 故
@@ -175,7 +175,7 @@ $$
 由正弦系 $\left\{\sin\frac{n\pi{}x}{l}\right\}$ 在 $\left[0,l\right]$ 上的正交性 (即把右端按此系展开), 得
 
 $$
-C_m=A,\qquad{}C_n=0\,\left(n\ne{}m\right).\tag{E}
+C_m=A,\quad{}C_n=0\,\left(n\ne{}m\right).\tag{E}
 $$
 
 然后用第二个初值定 $D_n$. 对 (C) 关于 $t$ 求导并令 $t=0$,
@@ -221,7 +221,7 @@ $$
 先把非齐次项按特征函数展开. 设
 
 $$
-u\left(x,t\right)=\sum_{n=1}^{\infty}T_n\left(t\right)\sin\frac{n\pi{}x}{l},\qquad{}b\sinh{}x=\sum_{n=1}^{\infty}b_n\sin\frac{n\pi{}x}{l},\tag{A}
+u\left(x,t\right)=\sum_{n=1}^{\infty}T_n\left(t\right)\sin\frac{n\pi{}x}{l},\quad{}b\sinh{}x=\sum_{n=1}^{\infty}b_n\sin\frac{n\pi{}x}{l},\tag{A}
 $$
 
 其中 (由正弦系的正交性)
@@ -251,7 +251,7 @@ $$
 然后得到 $T_n$ 的方程. 把 (A) 代入方程并用正弦系逐项比较,
 
 $$
-T_n''+\omega_n^{2}T_n=b_n,\qquad\omega_n=\frac{n\pi{}a}{l};\tag{F}
+T_n''+\omega_n^{2}T_n=b_n,\quad\omega_n=\frac{n\pi{}a}{l};\tag{F}
 $$
 
 由初值条件 $u\left(x,0\right)=u_t\left(x,0\right)=0$ 得 $T_n\left(0\right)=T_n'\left(0\right)=0$.

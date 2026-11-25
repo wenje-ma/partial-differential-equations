@@ -91,7 +91,7 @@ $$
 又 $P\left(x,y'\right)=-\frac{\partial{}G}{\partial\nu_y}\left(x,y'\right)$, 其中 $G$ 是上半空间的 Green 函数, 而 $\Delta_xG\left(x,y'\right)=0$, 故 $\Delta_xP\left(x,y'\right)=0$, 从而
 
 $$
-\Delta{}u\left(x\right)=\int_{\mathbb{R}^{n-1}}\Delta_xP\left(x,y'\right)\varphi\left(y'\right)\,\mathrm{d}y'=0,\qquad{}x\in\mathbb{R}^{n}_{+}.
+\Delta{}u\left(x\right)=\int_{\mathbb{R}^{n-1}}\Delta_xP\left(x,y'\right)\varphi\left(y'\right)\,\mathrm{d}y'=0,\quad{}x\in\mathbb{R}^{n}_{+}.
 $$
 
 接着证归一化 $\int_{\mathbb{R}^{n-1}}P\left(x,y'\right)\,\mathrm{d}y'=1$. 取 $\varphi\equiv1$, 它是 $\mathbb{R}^{n-1}$ 上的有界连续函数, 由**公式 2.5.9 (上半空间的 Poisson 公式)**, 相应的 $u\equiv1$ 是上半空间 Laplace 方程 Dirichlet 问题的解, 而 $u$ 由积分表示给出, 故 $\int_{\mathbb{R}^{n-1}}P\left(x,y'\right)\,\mathrm{d}y'=1$. 由此立即得到 $u\in{}L^{\infty}\left(\mathbb{R}^{n}_{+}\right)$ 且
@@ -135,7 +135,7 @@ $$
 然后由 (E) 与上面的结果,
 
 $$
-\left|\int_{\left|y'-x_0'\right|\ge\delta}P\left(x,y'\right)\left(\varphi\left(y'\right)-\varphi\left(x_0\right)\right)\mathrm{d}y'\right|\le\frac{2^{n+2}\left\|\varphi\right\|_{L^{\infty}}\omega_{n-1}}{\omega_n\delta}x_n\to0\qquad\left(x_n\to0^{+}\right).
+\left|\int_{\left|y'-x_0'\right|\ge\delta}P\left(x,y'\right)\left(\varphi\left(y'\right)-\varphi\left(x_0\right)\right)\mathrm{d}y'\right|\le\frac{2^{n+2}\left\|\varphi\right\|_{L^{\infty}}\omega_{n-1}}{\omega_n\delta}x_n\to0\quad\left(x_n\to0^{+}\right).
 $$
 
 最后把 (C) 与上面的计算代入 (B), 得 $\limsup_{x\to{}x_0}\left|u\left(x\right)-\varphi\left(x_0\right)\right|\le\varepsilon$. 由 $\varepsilon>0$ 任意, $\lim_{x\to{}x_0}u\left(x\right)=\varphi\left(x_0\right)$. 结合上两段, 结论全部得证.
@@ -171,7 +171,7 @@ $$
 再算边界上 $\Gamma$ 及其法向导数. 由**定义 2.4.1 (基本解)**, 在 $\left|x\right|=r$ 上 $\Gamma\left(x\right)=\frac{r^{2-n}}{\left(n-2\right)\omega_n}$ 为常数, 且由 $\partial_{x_i}\Gamma=-\frac{x_i}{\omega_n\left|x\right|^{n}}$ 与外法向 $\nu=\frac{x}{r}$,
 
 $$
-\frac{\partial\Gamma}{\partial\nu}\left(x\right)=\sum_{i=1}^{n}\left(-\frac{x_i}{\omega_n\left|x\right|^{n}}\right)\cdot\frac{x_i}{r}=-\frac{1}{\omega_nr^{n-1}},\qquad\left|x\right|=r.\tag{B}
+\frac{\partial\Gamma}{\partial\nu}\left(x\right)=\sum_{i=1}^{n}\left(-\frac{x_i}{\omega_n\left|x\right|^{n}}\right)\cdot\frac{x_i}{r}=-\frac{1}{\omega_nr^{n-1}},\quad\left|x\right|=r.\tag{B}
 $$
 
 接着把 (B) 代入 (A), 并用 $u=\varphi$, $\Delta{}u=f$,
@@ -197,7 +197,7 @@ $$
 然后证 $n=2$ 的情形同法. 此时 $\Gamma\left(x\right)=\frac{1}{2\pi}\ln\frac{1}{\left|x\right|}$, 在 $\left|x\right|=r$ 上 $\Gamma\left(x\right)=\frac{1}{2\pi}\ln\frac{1}{r}$, 且
 
 $$
-\frac{\partial\Gamma}{\partial\nu}\left(x\right)=\left(-\frac{1}{2\pi}\frac{x}{\left|x\right|^{2}}\right)\cdot\frac{x}{r}=-\frac{1}{2\pi{}r},\qquad\left|x\right|=r.
+\frac{\partial\Gamma}{\partial\nu}\left(x\right)=\left(-\frac{1}{2\pi}\frac{x}{\left|x\right|^{2}}\right)\cdot\frac{x}{r}=-\frac{1}{2\pi{}r},\quad\left|x\right|=r.
 $$
 
 于是与上面同法,
@@ -239,7 +239,7 @@ $$
 然后估计 $\partial{}B_\varepsilon\left(x\right)$ 上的值. 由 $G\left(x,y\right)=\Gamma\left(x-y\right)+\Phi\left(x,y\right)$, 而 $\Phi\left(x,\cdot\right)$ 在 $\overline{B}_\varepsilon\left(x\right)$ 上有界 (它在 $\Omega$ 内调和, 故在紧集上连续), 记其界为 $M$; 又 $\Gamma\left(x-y\right)\to+\infty$ 当 $y\to{}x$. 故当 $\varepsilon$ 充分小时
 
 $$
-G\left(x,y\right)\ge\Gamma\left(x-y\right)-M>0,\qquad{}y\in\partial{}B_\varepsilon\left(x\right).
+G\left(x,y\right)\ge\Gamma\left(x-y\right)-M>0,\quad{}y\in\partial{}B_\varepsilon\left(x\right).
 $$
 
 最后代回 (B), 得 $G\left(x,y\right)>0$ 于 $\Omega\setminus\overline{B}_\varepsilon\left(x\right)$, 令 $\varepsilon\to0$ 即 $G\left(x,y\right)>0$ 于 $\Omega\setminus\left\{x\right\}$. 结合上面的不等式, 得 $0<{}G\left(x,y\right)<\Gamma\left(x-y\right)$.
@@ -255,7 +255,7 @@ $$
 先用关于单位圆的反演. 对 $x\in\Omega$ ($\left|x\right|>1$) 定义反演点
 
 $$
-x^{*}:=\frac{x}{\left|x\right|^{2}},\qquad\left|x^{*}\right|=\frac{1}{\left|x\right|}<1.
+x^{*}:=\frac{x}{\left|x\right|^{2}},\quad\left|x^{*}\right|=\frac{1}{\left|x\right|}<1.
 $$
 
 再证边界上的关键等式. 对 $y\in\partial{}B_1\left(0\right)$, 即 $\left|y\right|=1$,
@@ -267,13 +267,13 @@ $$
 其中用了 $\left|x^{*}\right|^{2}=1/\left|x\right|^{2}$, $x^{*}\cdot{}y=\left(x\cdot{}y\right)/\left|x\right|^{2}$, $\left|y\right|=1$. 故
 
 $$
-\left|x\right|\left|x^{*}-y\right|=\left|x-y\right|,\qquad{}y\in\partial{}B_1\left(0\right).\tag{A}
+\left|x\right|\left|x^{*}-y\right|=\left|x-y\right|,\quad{}y\in\partial{}B_1\left(0\right).\tag{A}
 $$
 
 接着构造 Green 函数. 由 (A), 函数
 
 $$
-G\left(x,y\right):=\Gamma\left(x-y\right)-\Gamma\left(\left|x\right|\left|x^{*}-y\right|\right),\qquad{}x,y\in\Omega,x\ne{}y\tag{B}
+G\left(x,y\right):=\Gamma\left(x-y\right)-\Gamma\left(\left|x\right|\left|x^{*}-y\right|\right),\quad{}x,y\in\Omega,x\ne{}y\tag{B}
 $$
 
 在 $\partial{}B_1\left(0\right)$ 上为零: 由 (A) 两基本解的宗量绝对值相同, 而 $\Gamma$ 只依赖 $\left|x-y\right|$.

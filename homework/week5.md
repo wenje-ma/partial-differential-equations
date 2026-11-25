@@ -33,7 +33,7 @@
 先用关于超平面 $x_n=0$ 的镜像点构造 Green 函数. 记 $\bar{x}=\left(x_1,\dots,x_{n-1},-x_n\right)$, 则 $\bar{x}\notin\mathbb{R}^{n}_{+}$. 定义
 
 $$
-G\left(x,y\right):=\Gamma\left(x-y\right)-\Gamma\left(\bar{x}-y\right),\qquad{}x,y\in\mathbb{R}^{n}_{+}.\tag{A}
+G\left(x,y\right):=\Gamma\left(x-y\right)-\Gamma\left(\bar{x}-y\right),\quad{}x,y\in\mathbb{R}^{n}_{+}.\tag{A}
 $$
 
 再验证 (A) 是上半空间的 Green 函数. 由**定义 2.5.3 (Green 函数)**, 需 $\Delta_yG\left(x,\cdot\right)=0$ 于 $\mathbb{R}^{n}_{+}$ ($y\ne{}x$), 且 $G\left(x,\cdot\right)=0$ 于 $\partial\mathbb{R}^{n}_{+}$. 前者由 $\Gamma\left(x-\cdot\right)$ 除 $y=x$ 外调和, $\Gamma\left(\bar{x}-\cdot\right)$ 在 $\mathbb{R}^{n}_{+}$ 上处处调和 ($\bar{x}$ 不在 $\mathbb{R}^{n}_{+}$ 内); 后者由上面的等式.
@@ -49,7 +49,7 @@ $$
 然后计算 $G$ 的外法向导数. $\mathbb{R}^{n}_{+}$ 的单位外法向是 $\nu=-e_n$, 故 $\frac{\partial{}G}{\partial\nu}\left(x,y\right)=-\frac{\partial{}G}{\partial{y_n}}\left(x,y\right)$. 由**定义 2.4.1 (基本解)**, 对 $z=x-y$,
 
 $$
-\frac{\partial}{\partial{y_n}}\Gamma\left(x-y\right)=\frac{x_n-y_n}{\omega_n\left|x-y\right|^{n}},\qquad\frac{\partial}{\partial{y_n}}\Gamma\left(\bar{x}-y\right)=\frac{\bar{x}_n-y_n}{\omega_n\left|\bar{x}-y\right|^{n}}=\frac{-x_n-y_n}{\omega_n\left|x-y\right|^{n}},
+\frac{\partial}{\partial{y_n}}\Gamma\left(x-y\right)=\frac{x_n-y_n}{\omega_n\left|x-y\right|^{n}},\quad\frac{\partial}{\partial{y_n}}\Gamma\left(\bar{x}-y\right)=\frac{\bar{x}_n-y_n}{\omega_n\left|\bar{x}-y\right|^{n}}=\frac{-x_n-y_n}{\omega_n\left|x-y\right|^{n}},
 $$
 
 其中第二个等式用了 (B). 两式相减并在 $y_n=0$ 上取值,
@@ -61,7 +61,7 @@ $$
 然后由 (C) 与 $\nu=-e_n$,
 
 $$
--\frac{\partial{}G}{\partial\nu}\left(x,y\right)=\frac{2x_n}{\omega_n\left|x-y\right|^{n}},\qquad{}y\in\partial\mathbb{R}^{n}_{+}.\tag{D}
+-\frac{\partial{}G}{\partial\nu}\left(x,y\right)=\frac{2x_n}{\omega_n\left|x-y\right|^{n}},\quad{}y\in\partial\mathbb{R}^{n}_{+}.\tag{D}
 $$
 
 然后写出解. 由**定义 2.5.3 (Green 函数)** 给出的表示式, 当 $\Delta{}u=0$ 于 $\mathbb{R}^{n}_{+}$, $u=\varphi$ 于 $\partial\mathbb{R}^{n}_{+}$ 时,
@@ -79,7 +79,7 @@ $$
 求解 $\mathbb{R}^{2}_{+}=\left\{\left(x_1,x_2\right)\in\mathbb{R}^{2}\,\middle|\,x_2>0\right\}$ 上 Laplace 方程 Dirichlet 问题
 
 $$
-\Delta{}u=0,\quad{}x_2>0;\qquad\left.{u}\right|_{x_2=0}=\frac{1}{1+x_1^{2}}.
+\Delta{}u=0,\quad{}x_2>0;\quad\left.{u}\right|_{x_2=0}=\frac{1}{1+x_1^{2}}.
 $$
 
 ### 解答 2.14
@@ -105,11 +105,11 @@ $$
 把 $\left(\xi-A\right)^{2}+B^{2}=\xi^{2}-2A\xi+A^{2}+B^{2}$ 逐项乘开并按 $\xi$ 的幂次归并,
 
 $$
-\xi^{3}\;\text{项}:2A-2A=0,\qquad\xi^{2}\;\text{项}:\left(A^{2}+B^{2}-1\right)-4A^{2}+\left(3A^{2}-B^{2}+1\right)=0,
+\xi^{3}\;\text{项}:2A-2A=0,\quad\xi^{2}\;\text{项}:\left(A^{2}+B^{2}-1\right)-4A^{2}+\left(3A^{2}-B^{2}+1\right)=0,
 $$
 
 $$
-\xi\;\text{项}:2A\left(A^{2}+B^{2}\right)-2A\left(A^{2}+B^{2}-1\right)-2A=0,\qquad\text{常数项}:\left(A^{2}+B^{2}-1\right)\left(A^{2}+B^{2}\right)+\left(3A^{2}-B^{2}+1\right).
+\xi\;\text{项}:2A\left(A^{2}+B^{2}\right)-2A\left(A^{2}+B^{2}-1\right)-2A=0,\quad\text{常数项}:\left(A^{2}+B^{2}-1\right)\left(A^{2}+B^{2}\right)+\left(3A^{2}-B^{2}+1\right).
 $$
 
 常数项写开得 $\left(A^{2}+B^{2}\right)^{2}-2\left(A^{2}+B^{2}\right)+1+4A^{2}=\left(A^{2}+B^{2}-1\right)^{2}+4A^{2}=D$. 故 $N\left(\xi\right)\equiv{}D$, (B) 成立.
@@ -163,7 +163,7 @@ $$
 再在 $x_0$ 的一个球内 $w\equiv0$. 由 2.2 节末关于调和函数解析性的结论, 调和函数在 $\Omega$ 内实解析, 即存在 $r>0$ 使 $B_r\left(x_0\right)\subset\Omega$ 且 $w$ 在 $B_r\left(x_0\right)$ 内可展成 Taylor 级数
 
 $$
-w\left(x\right)=\sum_{\alpha}\frac{\partial^{\alpha}w\left(x_0\right)}{\alpha!}\left(x-x_0\right)^{\alpha},\qquad{}x\in{}B_r\left(x_0\right).
+w\left(x\right)=\sum_{\alpha}\frac{\partial^{\alpha}w\left(x_0\right)}{\alpha!}\left(x-x_0\right)^{\alpha},\quad{}x\in{}B_r\left(x_0\right).
 $$
 
 由上面的论证, 该级数的所有系数为零, 故 $w\equiv0$ 于 $B_r\left(x_0\right)$.
@@ -201,7 +201,7 @@ $$
 再由题设 $\int_{\Omega}u\Delta\varphi\,\mathrm{d}x=0$, 于是
 
 $$
-\int_{\Omega}\varphi\left(x\right)\Delta{}u\left(x\right)\,\mathrm{d}x=0,\qquad\text{对一切}\;\varphi\in{}C_0^{2}\left(\Omega\right).\tag{A}
+\int_{\Omega}\varphi\left(x\right)\Delta{}u\left(x\right)\,\mathrm{d}x=0,\quad\text{对一切}\;\varphi\in{}C_0^{2}\left(\Omega\right).\tag{A}
 $$
 
 接着证反证. 若存在 $x_1\in\Omega$ 使 $\Delta{}u\left(x_1\right)=c\ne0$. 由 $\Delta{}u$ 连续, 存在 $\rho>0$ 使 $\overline{B}_\rho\left(x_1\right)\subset\Omega$ 且在 $B_\rho\left(x_1\right)$ 内 $\Delta{}u$ 与 $c$ 同号, 且 $\left|\Delta{}u\right|\ge\frac{\left|c\right|}{2}$.
@@ -237,7 +237,7 @@ $$
 等号当 $\left(x,\sqrt{2}y\right)=t\left(1,\frac{1}{\sqrt{2}}\right)$ 时成立, 即 $x=t$, $y=\frac{t}{2}$. 代入 $x^{2}+2y^{2}=2$ 得 $\frac{3}{2}t^{2}=2$, $t=\frac{2}{\sqrt{3}}$, 对应的点为 $\left(\frac{2}{\sqrt{3}},\frac{1}{\sqrt{3}}\right)\in\Gamma_2$. 故
 
 $$
-\max_{\Gamma_2}u=\sqrt{3},\qquad{}M:=\max_{\overline{\Omega}}u\ge\sqrt{3}>0.\tag{B}
+\max_{\Gamma_2}u=\sqrt{3},\quad{}M:=\max_{\overline{\Omega}}u\ge\sqrt{3}>0.\tag{B}
 $$
 
 再证最大值不在 $\Omega$ 内部达到. 由 $\Delta{}u=0$ 于 $\Omega$ 与**定理 2.3.1 (弱极值原理)** (对 $u$ 与 $-u$ 同时使用), $u$ 的最大值与最小值都在 $\partial\Omega$ 上达到.
