@@ -2,30 +2,30 @@
 
 > **定理 4.2.2 (d'Alembert 公式)**
 > 
-> 若 $\varphi\in{C}^{2}\left(\left(-\infty,+\infty\right)\right)$, $\psi\in{C}^{1}\left(\left(-\infty,+\infty\right)\right)$, 则由
+> 若 $\varphi\in{}C^{2}\left(\left(-\infty,+\infty\right)\right)$, $\psi\in{}C^{1}\left(\left(-\infty,+\infty\right)\right)$, 则由
 > $u\left(x,t\right)=\frac{1}{2}\left(\varphi\left(x+at\right)+\varphi\left(x-at\right)\right)+\frac{1}{2a}\int_{x-at}^{x+at}\psi\left(s\right)\,\mathrm{d}s$ (即公式 (4.2.9))
-> 给出的 $u\in{C}^{2}\left(\left(-\infty,+\infty\right)\times\left[0,+\infty\right)\right)$ 是无界弦自由振动 Cauchy 问题 $u_{tt}-a^{2}u_{xx}=0$, $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=\psi\left(x\right)$ 的解.
+> 给出的 $u\in{}C^{2}\left(\left(-\infty,+\infty\right)\times\left[0,+\infty\right)\right)$ 是无界弦自由振动 Cauchy 问题 $u_{tt}-a^{2}u_{xx}=0$, $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=\psi\left(x\right)$ 的解.
 
 > **定义 4.2.4 (球面平均函数)**
 > 
-> 设 $w\in{C}^{0}\left(\mathbb{R}^{3}\right)$, 定义其球面平均函数 $w_B\left(x,r\right)=\frac{1}{4\pi{r}^{2}}\int_{S_r\left(x\right)}w\left(y\right)\,\mathrm{d}S_y=\frac{1}{4\pi}\int_{\left|n\right|=1}w\left(x+rn\right)\,\mathrm{d}S_n$.
+> 设 $w\in{}C^{0}\left(\mathbb{R}^{3}\right)$, 定义其球面平均函数 $w_B\left(x,r\right)=\frac{1}{4\pi{}r^{2}}\int_{S_r\left(x\right)}w\left(y\right)\,\mathrm{d}S_y=\frac{1}{4\pi}\int_{\left|n\right|=1}w\left(x+rn\right)\,\mathrm{d}S_n$.
 
 > **定理 4.2.6 (三维波动方程的 Poisson 公式)**
 > 
-> 设 $\varphi\in{C}^{3}\left(\mathbb{R}^{3}\right)$, $\psi\in{C}^{2}\left(\mathbb{R}^{3}\right)$, 则三维波动方程 Cauchy 问题的解为
-> $u\left(x,t\right)=\frac{\partial}{\partial{t}}\left(t\varphi_B\left(x,at\right)\right)+t\psi_B\left(x,at\right)$, 即公式 (4.2.15)
-> $u\left(x,t\right)=\frac{1}{4\pi{a}^{2}}\left[\frac{\partial}{\partial{t}}\left(\frac{1}{t}\int_{S_{at}\left(x\right)}\varphi\left(y\right)\,\mathrm{d}S_y\right)+\frac{1}{t}\int_{S_{at}\left(x\right)}\psi\left(y\right)\,\mathrm{d}S_y\right]$.
+> 设 $\varphi\in{}C^{3}\left(\mathbb{R}^{3}\right)$, $\psi\in{}C^{2}\left(\mathbb{R}^{3}\right)$, 则三维波动方程 Cauchy 问题的解为
+> $u\left(x,t\right)=\frac{\partial}{\partial{}t}\left(t\varphi_B\left(x,at\right)\right)+t\psi_B\left(x,at\right)$, 即公式 (4.2.15)
+> $u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\left[\frac{\partial}{\partial{}t}\left(\frac{1}{t}\int_{S_{at}\left(x\right)}\varphi\left(y\right)\,\mathrm{d}S_y\right)+\frac{1}{t}\int_{S_{at}\left(x\right)}\psi\left(y\right)\,\mathrm{d}S_y\right]$.
 
 > **公式 (4.2.17) (三维非齐次波动方程 Cauchy 问题的解)**
 > 
-> $u\left(x,t\right)=\frac{1}{4\pi{a}^{2}}\int_0^{t}\mathrm{d}\tau\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{f\left(y,\tau\right)}{t-\tau}\,\mathrm{d}S_y$.
+> $u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\int_0^{t}\mathrm{d}\tau\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{f\left(y,\tau\right)}{t-\tau}\,\mathrm{d}S_y$.
 
 ## 习题 4.5 (非齐次弦振动方程的 Cauchy 问题)
 
 求解非齐次弦振动方程的 Cauchy 问题
 
 $$
-\begin{cases}u_{tt}-a^{2}u_{xx}=\frac{xt}{\left(1+x^{2}\right)^{2}},&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=0,\quad{u}_t\left(x,0\right)=\frac{1}{1+x^{2}},&-\infty<{}x<+\infty.\end{cases}
+\begin{cases}u_{tt}-a^{2}u_{xx}=\frac{xt}{\left(1+x^{2}\right)^{2}},&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=0,\quad{}u_t\left(x,0\right)=\frac{1}{1+x^{2}},&-\infty<{}x<+\infty.\end{cases}
 $$
 
 ### 解答 4.5
@@ -71,7 +71,7 @@ $$
 然后算两个基本积分. 令 $r=t-\tau$, 则 $\tau=t-r$, $\mathrm{d}\tau=-\mathrm{d}r$, 于是
 
 $$
-\int_0^{t}\tau\,g\left(x\pm{a}\left(t-\tau\right)\right)\mathrm{d}\tau=\int_0^{t}\left(t-r\right)g\left(x\pm{a}r\right)\,\mathrm{d}r.\tag{G}
+\int_0^{t}\tau\,g\left(x\pm{}a\left(t-\tau\right)\right)\mathrm{d}\tau=\int_0^{t}\left(t-r\right)g\left(x\pm{}ar\right)\,\mathrm{d}r.\tag{G}
 $$
 
 对第一类积分作变量替换 $u=x+ar$,
@@ -80,10 +80,10 @@ $$
 \int_0^{t}\left(t-r\right)\frac{\mathrm{d}r}{1+\left(x+ar\right)^{2}}=\frac{1}{a}\int_{x}^{x+at}\left(t+\frac{x}{a}-\frac{u}{a}\right)\frac{\mathrm{d}u}{1+u^{2}},\tag{H}
 $$
 
-于是用 $\int\frac{\mathrm{d}u}{1+u^{2}}=\arctan{u}$ 与 $\int\frac{u\,\mathrm{d}u}{1+u^{2}}=\frac{1}{2}\ln\left(1+u^{2}\right)$,
+于是用 $\int\frac{\mathrm{d}u}{1+u^{2}}=\arctan{}u$ 与 $\int\frac{u\,\mathrm{d}u}{1+u^{2}}=\frac{1}{2}\ln\left(1+u^{2}\right)$,
 
 $$
-\int_0^{t}\left(t-r\right)g\left(x+ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t+\frac{x}{a}\right)\left(\arctan\left(x+at\right)-\arctan{x}\right)-\frac{1}{2a^{2}}\ln\frac{1+\left(x+at\right)^{2}}{1+x^{2}}.\tag{I}
+\int_0^{t}\left(t-r\right)g\left(x+ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t+\frac{x}{a}\right)\left(\arctan\left(x+at\right)-\arctan{}x\right)-\frac{1}{2a^{2}}\ln\frac{1+\left(x+at\right)^{2}}{1+x^{2}}.\tag{I}
 $$
 
 同样算出 $x-ar$ 那一项. 作 $u=x-ar$,
@@ -93,17 +93,17 @@ $$
 $$
 
 $$
-\int_0^{t}\left(t-r\right)g\left(x-ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t-\frac{x}{a}\right)\left(\arctan{x}-\arctan\left(x-at\right)\right)+\frac{1}{2a^{2}}\ln\frac{1+x^{2}}{1+\left(x-at\right)^{2}}.\tag{K}
+\int_0^{t}\left(t-r\right)g\left(x-ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t-\frac{x}{a}\right)\left(\arctan{}x-\arctan\left(x-at\right)\right)+\frac{1}{2a^{2}}\ln\frac{1+x^{2}}{1+\left(x-at\right)^{2}}.\tag{K}
 $$
 
 然后代入 (F) 并整理. 记
 
 $$
-D=\arctan\left(x+at\right)-\arctan\left(x-at\right),\qquad{P}=2\arctan{x}-\arctan\left(x+at\right)-\arctan\left(x-at\right),\tag{L}
+D=\arctan\left(x+at\right)-\arctan\left(x-at\right),\qquad{}P=2\arctan{}x-\arctan\left(x+at\right)-\arctan\left(x-at\right),\tag{L}
 $$
 
-则 $\left(\arctan\left(x+at\right)-\arctan{x}\right)+\left(\arctan{x}-\arctan\left(x-at\right)\right)=D$,
-$\left(\arctan{x}-\arctan\left(x-at\right)\right)-\left(\arctan\left(x+at\right)-\arctan{x}\right)=P$, 且 (I)(K) 中的两个对数项相加后为 $\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}}$. 于是
+则 $\left(\arctan\left(x+at\right)-\arctan{}x\right)+\left(\arctan{}x-\arctan\left(x-at\right)\right)=D$,
+$\left(\arctan{}x-\arctan\left(x-at\right)\right)-\left(\arctan\left(x+at\right)-\arctan{}x\right)=P$, 且 (I)(K) 中的两个对数项相加后为 $\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}}$. 于是
 
 $$
 u_2\left(x,t\right)=\frac{1}{4a}\left[\frac{tP-\frac{x}{a}D}{a}+\frac{1}{2a}\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}}\right].\tag{M}
@@ -130,7 +130,7 @@ $$
 证明: 球面波问题
 
 $$
-\begin{cases}u_{tt}-a^{2}\Delta{u}=0,&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=\varphi\left(r\right),\quad{u}_t\left(x,0\right)=\psi\left(r\right),&x\in\mathbb{R}^{3}\end{cases}
+\begin{cases}u_{tt}-a^{2}\Delta{}u=0,&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=\varphi\left(r\right),\quad{}u_t\left(x,0\right)=\psi\left(r\right),&x\in\mathbb{R}^{3}\end{cases}
 $$
 
 的解为
@@ -143,22 +143,22 @@ $$
 
 ### 解答 4.6
 
-先把三维径向问题化为一维问题. 记 $r=\left|x\right|$, 设 $u=u\left(r,t\right)$. 由径向对称, $\nabla{u}=u_r\frac{x}{r}$, 于是
+先把三维径向问题化为一维问题. 记 $r=\left|x\right|$, 设 $u=u\left(r,t\right)$. 由径向对称, $\nabla{}u=u_r\frac{x}{r}$, 于是
 
 $$
-\Delta{u}=u_{rr}+\frac{2}{r}u_r=\frac{1}{r}\left(\partial_r^{2}\left(ru\right)\right).\tag{A}
+\Delta{}u=u_{rr}+\frac{2}{r}u_r=\frac{1}{r}\left(\partial_r^{2}\left(ru\right)\right).\tag{A}
 $$
 
 再引入 $v=ru$. 由 (A),
 
 $$
-\left(ru\right)_{tt}=r{u}_{tt}=a^{2}r\Delta{u}=a^{2}\partial_r^{2}\left(ru\right),\qquad\text{即}\;\;v_{tt}-a^{2}v_{rr}=0.\tag{B}
+\left(ru\right)_{tt}=r{u}_{tt}=a^{2}r\Delta{}u=a^{2}\partial_r^{2}\left(ru\right),\qquad\text{即}\;\;v_{tt}-a^{2}v_{rr}=0.\tag{B}
 $$
 
 接着写出 $v$ 的初值. 由 $u\left(x,0\right)=\varphi\left(r\right)$, $u_t\left(x,0\right)=\psi\left(r\right)$,
 
 $$
-v\left(r,0\right)=r\varphi\left(r\right),\qquad{v}_t\left(r,0\right)=r\psi\left(r\right),\qquad{r}>0.\tag{C}
+v\left(r,0\right)=r\varphi\left(r\right),\qquad{}v_t\left(r,0\right)=r\psi\left(r\right),\qquad{}r>0.\tag{C}
 $$
 
 然后把初值奇延拓到 $r<0$. 定义
@@ -172,10 +172,10 @@ $$
 然后对全轴的 $v$ 用 d'Alembert 公式. 把 (B)(C) 的解按 (D) 延拓为全轴问题, 由**定理 4.2.2 (d'Alembert 公式)**,
 
 $$
-v\left(r,t\right)=\frac{1}{2}\left(\Phi\left(r+at\right)+\Phi\left(r-at\right)\right)+\frac{1}{2a}\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{r}\ge0.\tag{E}
+v\left(r,t\right)=\frac{1}{2}\left(\Phi\left(r+at\right)+\Phi\left(r-at\right)\right)+\frac{1}{2a}\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{}r\ge0.\tag{E}
 $$
 
-情形 $r>at$. 此时 $r\pm{a}t>0$, 由 (D),
+情形 $r>at$. 此时 $r\pm{}at>0$, 由 (D),
 
 $$
 \Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\qquad\Phi\left(r-at\right)=\left(r-at\right)\varphi\left(r-at\right);
@@ -214,7 +214,7 @@ $$
 然后合并. 把 (G)(J) 代入 (E) 并除以 $r$,
 
 $$
-u\left(r,t\right)=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{r}<{}at.\tag{K}
+u\left(r,t\right)=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,\qquad{}r<{}at.\tag{K}
 $$
 
 收尾. (F) 与 (K) 正是题目给出的分段表达式, 故球面波问题的解确如题所述.
@@ -224,7 +224,7 @@ $$
 求解下述三维波动方程的 Cauchy 问题
 
 $$
-\begin{cases}u_{tt}-a^{2}\Delta{u}=0,&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=x_1^{2}+x_2^{2}x_3,\quad{u}_t\left(x,0\right)=0,&x\in\mathbb{R}^{3}.\end{cases}
+\begin{cases}u_{tt}-a^{2}\Delta{}u=0,&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=x_1^{2}+x_2^{2}x_3,\quad{}u_t\left(x,0\right)=0,&x\in\mathbb{R}^{3}.\end{cases}
 $$
 
 ### 解答 4.7
@@ -232,7 +232,7 @@ $$
 先写出求解公式. 由**定理 4.2.6 (三维波动方程的 Poisson 公式)**, 取 $\varphi=x_1^{2}+x_2^{2}x_3$, $\psi=0$,
 
 $$
-u\left(x,t\right)=\frac{\partial}{\partial{t}}\left(t\varphi_B\left(x,at\right)\right),\tag{A}
+u\left(x,t\right)=\frac{\partial}{\partial{}t}\left(t\varphi_B\left(x,at\right)\right),\tag{A}
 $$
 
 其中 $\varphi_B$ 是由**定义 4.2.4 (球面平均函数)** 给出的球面平均.
@@ -240,14 +240,14 @@ $$
 准备三条球面积分公式. 记 $S_r\left(x\right)=\left\{y:\left|y-x\right|=r\right\}$. 由球面的旋转对称性, 对 $i,j,k\in\left\{1,2,3\right\}$,
 
 $$
-\int_{S_r\left(x\right)}\left(y_i-x_i\right)\mathrm{d}S=0,\qquad\int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\mathrm{d}S=\frac{4\pi{r}^{4}}{3}\delta_{ij},\tag{B}
+\int_{S_r\left(x\right)}\left(y_i-x_i\right)\mathrm{d}S=0,\qquad\int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\mathrm{d}S=\frac{4\pi{}r^{4}}{3}\delta_{ij},\tag{B}
 $$
 
 $$
 \int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\left(y_k-x_k\right)\mathrm{d}S=0.\tag{C}
 $$
 
-(B) 的第二式来自: 三个二阶矩由对称性相等, 而其和等于 $\int_{S_r}\left|y-x\right|^{2}\mathrm{d}S=r^{2}\cdot4\pi{r}^{2}=4\pi{r}^{4}$; (C) 来自关于 $y_k-x_k$ 的奇对称.
+(B) 的第二式来自: 三个二阶矩由对称性相等, 而其和等于 $\int_{S_r}\left|y-x\right|^{2}\mathrm{d}S=r^{2}\cdot4\pi{}r^{2}=4\pi{}r^{4}$; (C) 来自关于 $y_k-x_k$ 的奇对称.
 
 接着算 $\varphi$ 的球面平均. 令 $y=x+n$, $\left|n\right|=r$, 则
 
@@ -258,16 +258,16 @@ $$
 然后逐项展开并对球面积分. 由 (B)(C),
 
 $$
-\int_{S_r}\left(x_1+n_1\right)^{2}\mathrm{d}S=4\pi{r}^{2}x_1^{2}+\int_{S_r}n_1^{2}\mathrm{d}S=4\pi{r}^{2}x_1^{2}+\frac{4\pi{r}^{4}}{3},\tag{E}
+\int_{S_r}\left(x_1+n_1\right)^{2}\mathrm{d}S=4\pi{}r^{2}x_1^{2}+\int_{S_r}n_1^{2}\mathrm{d}S=4\pi{}r^{2}x_1^{2}+\frac{4\pi{}r^{4}}{3},\tag{E}
 $$
 
 $$
-\int_{S_r}\left(x_2+n_2\right)^{2}\left(x_3+n_3\right)\mathrm{d}S=4\pi{r}^{2}x_2^{2}x_3+x_3\int_{S_r}n_2^{2}\mathrm{d}S=4\pi{r}^{2}x_2^{2}x_3+\frac{4\pi{r}^{4}}{3}x_3,\tag{F}
+\int_{S_r}\left(x_2+n_2\right)^{2}\left(x_3+n_3\right)\mathrm{d}S=4\pi{}r^{2}x_2^{2}x_3+x_3\int_{S_r}n_2^{2}\mathrm{d}S=4\pi{}r^{2}x_2^{2}x_3+\frac{4\pi{}r^{4}}{3}x_3,\tag{F}
 $$
 
-这里其余项含 $n_i$ 的一次或三次因子, 由 (B)(C) 积分为零 (如 $2x_2x_3\int{n}_2\mathrm{d}S=0$, $\int{n}_2^{2}n_3\mathrm{d}S=0$, $2x_2\int{n}_2n_3\mathrm{d}S=0$).
+这里其余项含 $n_i$ 的一次或三次因子, 由 (B)(C) 积分为零 (如 $2x_2x_3\int{}n_2\mathrm{d}S=0$, $\int{}n_2^{2}n_3\mathrm{d}S=0$, $2x_2\int{}n_2n_3\mathrm{d}S=0$).
 
-然后写出 $\varphi_B$. 由 (E)(F) 与 $\varphi_B=\frac{1}{4\pi{r}^{2}}\int_{S_r}\varphi\,\mathrm{d}S$,
+然后写出 $\varphi_B$. 由 (E)(F) 与 $\varphi_B=\frac{1}{4\pi{}r^{2}}\int_{S_r}\varphi\,\mathrm{d}S$,
 
 $$
 \varphi_B\left(x,r\right)=x_1^{2}+x_2^{2}x_3+\frac{r^{2}}{3}\left(1+x_3\right)=\varphi\left(x\right)+\frac{r^{2}}{3}\left(1+x_3\right).\tag{G}
@@ -282,7 +282,7 @@ $$
 然后求导得解. 由 (A)(H),
 
 $$
-u\left(x,t\right)=\frac{\partial}{\partial{t}}\left[t\varphi\left(x\right)+\frac{a^{2}t^{3}}{3}\left(1+x_3\right)\right]=\varphi\left(x\right)+a^{2}t^{2}\left(1+x_3\right),
+u\left(x,t\right)=\frac{\partial}{\partial{}t}\left[t\varphi\left(x\right)+\frac{a^{2}t^{3}}{3}\left(1+x_3\right)\right]=\varphi\left(x\right)+a^{2}t^{2}\left(1+x_3\right),
 $$
 
 即
@@ -291,14 +291,14 @@ $$
 u\left(x,t\right)=x_1^{2}+x_2^{2}x_3+a^{2}t^{2}\left(1+x_3\right).\tag{I}
 $$
 
-最后证直接验证. $\partial_t^{2}u=2a^{2}\left(1+x_3\right)$; 又 $\Delta\left(x_1^{2}+x_2^{2}x_3\right)=2+2x_3$ 且 $\Delta\left(a^{2}t^{2}x_3\right)=0$, 故 $a^{2}\Delta{u}=2a^{2}\left(1+x_3\right)=\partial_t^{2}u$, 方程成立; $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=0$ 也成立.
+最后证直接验证. $\partial_t^{2}u=2a^{2}\left(1+x_3\right)$; 又 $\Delta\left(x_1^{2}+x_2^{2}x_3\right)=2+2x_3$ 且 $\Delta\left(a^{2}t^{2}x_3\right)=0$, 故 $a^{2}\Delta{}u=2a^{2}\left(1+x_3\right)=\partial_t^{2}u$, 方程成立; $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=0$ 也成立.
 
 ## 习题 4.8 (三维非齐次波动方程的 Cauchy 问题)
 
 求解下述三维非齐次波动方程的 Cauchy 问题
 
 $$
-\begin{cases}u_{tt}-a^{2}\Delta{u}=\left|x\right|^{2}\mathrm{e}^{t},&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=u_t\left(x,0\right)=0,&x\in\mathbb{R}^{3}.\end{cases}
+\begin{cases}u_{tt}-a^{2}\Delta{}u=\left|x\right|^{2}\mathrm{e}^{t},&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=u_t\left(x,0\right)=0,&x\in\mathbb{R}^{3}.\end{cases}
 $$
 
 ### 解答 4.8
@@ -306,25 +306,25 @@ $$
 先写出求解公式. 取 $f\left(x,t\right)=\left|x\right|^{2}\mathrm{e}^{t}$, 由**公式 (4.2.17) (三维非齐次波动方程 Cauchy 问题的解)**,
 
 $$
-u\left(x,t\right)=\frac{1}{4\pi{a}^{2}}\int_0^{t}\mathrm{d}\tau\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y.\tag{A}
+u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\int_0^{t}\mathrm{d}\tau\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y.\tag{A}
 $$
 
 再算被积函数在球面上的积分. 记 $r=a\left(t-\tau\right)$, 令 $y=x+n$, $\left|n\right|=r$. 由
 
 $$
-\left|y\right|^{2}=\left|x\right|^{2}+2x\cdot{n}+\left|n\right|^{2},\qquad\int_{S_r}n\,\mathrm{d}S=0,\qquad\int_{S_r}\mathrm{d}S=4\pi{r}^{2},\tag{B}
+\left|y\right|^{2}=\left|x\right|^{2}+2x\cdot{}n+\left|n\right|^{2},\qquad\int_{S_r}n\,\mathrm{d}S=0,\qquad\int_{S_r}\mathrm{d}S=4\pi{}r^{2},\tag{B}
 $$
 
 得
 
 $$
-\int_{S_r\left(x\right)}\left|y\right|^{2}\,\mathrm{d}S=4\pi{r}^{2}\left(\left|x\right|^{2}+r^{2}\right).\tag{C}
+\int_{S_r\left(x\right)}\left|y\right|^{2}\,\mathrm{d}S=4\pi{}r^{2}\left(\left|x\right|^{2}+r^{2}\right).\tag{C}
 $$
 
 接着代入 (A) 并化简. 由 (B)(C),
 
 $$
-\frac{1}{4\pi{a}^{2}}\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y=\frac{4\pi{a}^{2}\left(t-\tau\right)^{2}\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}}{4\pi{a}^{2}\left(t-\tau\right)}=\left(t-\tau\right)\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}.\tag{D}
+\frac{1}{4\pi{}a^{2}}\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y=\frac{4\pi{}a^{2}\left(t-\tau\right)^{2}\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}}{4\pi{}a^{2}\left(t-\tau\right)}=\left(t-\tau\right)\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}.\tag{D}
 $$
 
 故
@@ -360,13 +360,13 @@ $$
 最后证直接验证. 由 (I),
 
 $$
-\partial_t^{2}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6\right),\qquad{a}^{2}\Delta{u}=a^{2}\left(\mathrm{e}^{t}-1-t\right)\Delta\left|x\right|^{2}=6a^{2}\left(\mathrm{e}^{t}-1-t\right),
+\partial_t^{2}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6\right),\qquad{}a^{2}\Delta{}u=a^{2}\left(\mathrm{e}^{t}-1-t\right)\Delta\left|x\right|^{2}=6a^{2}\left(\mathrm{e}^{t}-1-t\right),
 $$
 
 故
 
 $$
-\partial_t^{2}u-a^{2}\Delta{u}=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6-6\mathrm{e}^{t}+6+6t\right)=\left|x\right|^{2}\mathrm{e}^{t},
+\partial_t^{2}u-a^{2}\Delta{}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6-6\mathrm{e}^{t}+6+6t\right)=\left|x\right|^{2}\mathrm{e}^{t},
 $$
 
 方程成立. 又 $u\left(x,0\right)=\left|x\right|^{2}\left(1-1\right)+a^{2}\left(6-6\right)=0$, $u_t\left(x,0\right)=\left|x\right|^{2}\left(1-1\right)+a^{2}\left(6-6\right)=0$, 初值条件也成立.

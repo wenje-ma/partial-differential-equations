@@ -2,7 +2,7 @@
 
 > **定理 2.3.1 (弱极值原理)**
 > 
-> 设 $u\in{C}^{2}\left(\Omega\right)\cap{C}^{0}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内满足 $\Delta{u}\ge0$ (或 $\Delta{u}\le0$), 则 $u$ 在 $\overline{\Omega}$ 上的最大值 (最小值) 在 $\partial\Omega$ 上达到.
+> 设 $u\in{}C^{2}\left(\Omega\right)\cap{}C^{0}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内满足 $\Delta{}u\ge0$ (或 $\Delta{}u\le0$), 则 $u$ 在 $\overline{\Omega}$ 上的最大值 (最小值) 在 $\partial\Omega$ 上达到.
 
 > **定义 2.4.1 (基本解)**
 > 
@@ -10,11 +10,11 @@
 
 > **公式 2.5.2 (Green 第二恒等式)**
 > 
-> $\int_{\Omega}\left(v\Delta{u}-u\Delta{v}\right)\mathrm{d}x=\int_{\partial\Omega}\left(v\frac{\partial{u}}{\partial\nu}-u\frac{\partial{v}}{\partial\nu}\right)\mathrm{d}S$, $\nu$ 为 $\partial\Omega$ 的单位外法向.
+> $\int_{\Omega}\left(v\Delta{}u-u\Delta{}v\right)\mathrm{d}x=\int_{\partial\Omega}\left(v\frac{\partial{}u}{\partial\nu}-u\frac{\partial{}v}{\partial\nu}\right)\mathrm{d}S$, $\nu$ 为 $\partial\Omega$ 的单位外法向.
 
 > **定义 2.5.3 (Green 函数)**
 > 
-> 设 $\Phi\left(x,\cdot\right)\in{C}^{1}\left(\overline{\Omega}\right)\cap{C}^{2}\left(\Omega\right)$ 是 $\Delta_y\Phi\left(x,y\right)=0$ ($y\in\Omega$), $\Phi\left(x,y\right)=-\Gamma\left(x,y\right)$ ($y\in\partial\Omega$) 的解, 则 $G\left(x,y\right):=\Gamma\left(x,y\right)+\Phi\left(x,y\right)$ 称为区域 $\Omega$ 上的 Green 函数; 且当 $\Delta{u}=0$ 时, $u\left(x\right)=-\int_{\partial\Omega}\varphi\left(y\right)\frac{\partial{G}}{\partial\nu}\left(x,y\right)\,\mathrm{d}S$.
+> 设 $\Phi\left(x,\cdot\right)\in{}C^{1}\left(\overline{\Omega}\right)\cap{}C^{2}\left(\Omega\right)$ 是 $\Delta_y\Phi\left(x,y\right)=0$ ($y\in\Omega$), $\Phi\left(x,y\right)=-\Gamma\left(x,y\right)$ ($y\in\partial\Omega$) 的解, 则 $G\left(x,y\right):=\Gamma\left(x,y\right)+\Phi\left(x,y\right)$ 称为区域 $\Omega$ 上的 Green 函数; 且当 $\Delta{}u=0$ 时, $u\left(x\right)=-\int_{\partial\Omega}\varphi\left(y\right)\frac{\partial{}G}{\partial\nu}\left(x,y\right)\,\mathrm{d}S$.
 
 > **定义 2.7.1 (内球条件)**
 > 
@@ -22,7 +22,7 @@
 
 > **引理 2.7.2 (霍普夫引理)**
 > 
-> 设 $\Omega\subset\mathbb{R}^{n}$ 为一个区域, $\nu$ 是 $\partial\Omega$ 的单位外法向量, $x_0\in\partial\Omega$, 且 $\partial\Omega$ 在 $x_0$ 点满足内球条件. 设函数 $u\in{C}^{2}\left(\Omega\right)\cap{C}^{1}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内下调和, 在 $x_0$ 点连续, 并且对任意 $x\in\Omega$ 有 $u\left(x_0\right)>u\left(x\right)$, 则其在边界点 $x_0$ 处的法向导数满足 $\frac{\partial{u}}{\partial\nu}\left(x_0\right)>0$.
+> 设 $\Omega\subset\mathbb{R}^{n}$ 为一个区域, $\nu$ 是 $\partial\Omega$ 的单位外法向量, $x_0\in\partial\Omega$, 且 $\partial\Omega$ 在 $x_0$ 点满足内球条件. 设函数 $u\in{}C^{2}\left(\Omega\right)\cap{}C^{1}\left(\overline{\Omega}\right)$ 在 $\Omega$ 内下调和, 在 $x_0$ 点连续, 并且对任意 $x\in\Omega$ 有 $u\left(x_0\right)>u\left(x\right)$, 则其在边界点 $x_0$ 处的法向导数满足 $\frac{\partial{}u}{\partial\nu}\left(x_0\right)>0$.
 
 ## 习题 2.13 (上半空间的 Poisson 公式)
 
@@ -33,10 +33,10 @@
 先用关于超平面 $x_n=0$ 的镜像点构造 Green 函数. 记 $\bar{x}=\left(x_1,\dots,x_{n-1},-x_n\right)$, 则 $\bar{x}\notin\mathbb{R}^{n}_{+}$. 定义
 
 $$
-G\left(x,y\right):=\Gamma\left(x-y\right)-\Gamma\left(\bar{x}-y\right),\qquad{x},y\in\mathbb{R}^{n}_{+}.\tag{A}
+G\left(x,y\right):=\Gamma\left(x-y\right)-\Gamma\left(\bar{x}-y\right),\qquad{}x,y\in\mathbb{R}^{n}_{+}.\tag{A}
 $$
 
-再验证 (A) 是上半空间的 Green 函数. 由**定义 2.5.3 (Green 函数)**, 需 $\Delta_yG\left(x,\cdot\right)=0$ 于 $\mathbb{R}^{n}_{+}$ ($y\ne{x}$), 且 $G\left(x,\cdot\right)=0$ 于 $\partial\mathbb{R}^{n}_{+}$. 前者由 $\Gamma\left(x-\cdot\right)$ 除 $y=x$ 外调和, $\Gamma\left(\bar{x}-\cdot\right)$ 在 $\mathbb{R}^{n}_{+}$ 上处处调和 ($\bar{x}$ 不在 $\mathbb{R}^{n}_{+}$ 内); 后者由上面的等式.
+再验证 (A) 是上半空间的 Green 函数. 由**定义 2.5.3 (Green 函数)**, 需 $\Delta_yG\left(x,\cdot\right)=0$ 于 $\mathbb{R}^{n}_{+}$ ($y\ne{}x$), 且 $G\left(x,\cdot\right)=0$ 于 $\partial\mathbb{R}^{n}_{+}$. 前者由 $\Gamma\left(x-\cdot\right)$ 除 $y=x$ 外调和, $\Gamma\left(\bar{x}-\cdot\right)$ 在 $\mathbb{R}^{n}_{+}$ 上处处调和 ($\bar{x}$ 不在 $\mathbb{R}^{n}_{+}$ 内); 后者由上面的等式.
 
 接着证边界上的距离相等. 对 $y\in\partial\mathbb{R}^{n}_{+}$, 即 $y_n=0$,
 
@@ -46,7 +46,7 @@ $$
 
 故 $\left|\bar{x}-y\right|=\left|x-y\right|$, 而 $\Gamma$ 只依赖宗量的绝对值, 于是 $G\left(x,y\right)=\Gamma\left(x-y\right)-\Gamma\left(\bar{x}-y\right)=0$.
 
-然后计算 $G$ 的外法向导数. $\mathbb{R}^{n}_{+}$ 的单位外法向是 $\nu=-e_n$, 故 $\frac{\partial{G}}{\partial\nu}\left(x,y\right)=-\frac{\partial{G}}{\partial{y_n}}\left(x,y\right)$. 由**定义 2.4.1 (基本解)**, 对 $z=x-y$,
+然后计算 $G$ 的外法向导数. $\mathbb{R}^{n}_{+}$ 的单位外法向是 $\nu=-e_n$, 故 $\frac{\partial{}G}{\partial\nu}\left(x,y\right)=-\frac{\partial{}G}{\partial{y_n}}\left(x,y\right)$. 由**定义 2.4.1 (基本解)**, 对 $z=x-y$,
 
 $$
 \frac{\partial}{\partial{y_n}}\Gamma\left(x-y\right)=\frac{x_n-y_n}{\omega_n\left|x-y\right|^{n}},\qquad\frac{\partial}{\partial{y_n}}\Gamma\left(\bar{x}-y\right)=\frac{\bar{x}_n-y_n}{\omega_n\left|\bar{x}-y\right|^{n}}=\frac{-x_n-y_n}{\omega_n\left|x-y\right|^{n}},
@@ -55,19 +55,19 @@ $$
 其中第二个等式用了 (B). 两式相减并在 $y_n=0$ 上取值,
 
 $$
-\frac{\partial{G}}{\partial{y_n}}\left(x,y\right)=\frac{\left(x_n-y_n\right)+\left(x_n+y_n\right)}{\omega_n\left|x-y\right|^{n}}=\frac{2x_n}{\omega_n\left|x-y\right|^{n}}.\tag{C}
+\frac{\partial{}G}{\partial{y_n}}\left(x,y\right)=\frac{\left(x_n-y_n\right)+\left(x_n+y_n\right)}{\omega_n\left|x-y\right|^{n}}=\frac{2x_n}{\omega_n\left|x-y\right|^{n}}.\tag{C}
 $$
 
 然后由 (C) 与 $\nu=-e_n$,
 
 $$
--\frac{\partial{G}}{\partial\nu}\left(x,y\right)=\frac{2x_n}{\omega_n\left|x-y\right|^{n}},\qquad{y}\in\partial\mathbb{R}^{n}_{+}.\tag{D}
+-\frac{\partial{}G}{\partial\nu}\left(x,y\right)=\frac{2x_n}{\omega_n\left|x-y\right|^{n}},\qquad{}y\in\partial\mathbb{R}^{n}_{+}.\tag{D}
 $$
 
-然后写出解. 由**定义 2.5.3 (Green 函数)** 给出的表示式, 当 $\Delta{u}=0$ 于 $\mathbb{R}^{n}_{+}$, $u=\varphi$ 于 $\partial\mathbb{R}^{n}_{+}$ 时,
+然后写出解. 由**定义 2.5.3 (Green 函数)** 给出的表示式, 当 $\Delta{}u=0$ 于 $\mathbb{R}^{n}_{+}$, $u=\varphi$ 于 $\partial\mathbb{R}^{n}_{+}$ 时,
 
 $$
-u\left(x\right)=-\int_{\partial\mathbb{R}^{n}_{+}}\varphi\left(y\right)\frac{\partial{G}}{\partial\nu}\left(x,y\right)\,\mathrm{d}S=\frac{2x_n}{\omega_n}\int_{\mathbb{R}^{n-1}}\frac{\varphi\left(y'\right)}{\left(\left|x'-y'\right|^{2}+x_n^{2}\right)^{\frac{n}{2}}}\,\mathrm{d}y'.\tag{E}
+u\left(x\right)=-\int_{\partial\mathbb{R}^{n}_{+}}\varphi\left(y\right)\frac{\partial{}G}{\partial\nu}\left(x,y\right)\,\mathrm{d}S=\frac{2x_n}{\omega_n}\int_{\mathbb{R}^{n-1}}\frac{\varphi\left(y'\right)}{\left(\left|x'-y'\right|^{2}+x_n^{2}\right)^{\frac{n}{2}}}\,\mathrm{d}y'.\tag{E}
 $$
 
 这里用了 $\mathrm{d}S=\mathrm{d}y'$, $\left|x-y\right|^{2}=\left|x'-y'\right|^{2}+x_n^{2}$.
@@ -79,7 +79,7 @@ $$
 求解 $\mathbb{R}^{2}_{+}=\left\{\left(x_1,x_2\right)\in\mathbb{R}^{2}\,\middle|\,x_2>0\right\}$ 上 Laplace 方程 Dirichlet 问题
 
 $$
-\Delta{u}=0,\quad{x}_2>0;\qquad\left.{u}\right|_{x_2=0}=\frac{1}{1+x_1^{2}}.
+\Delta{}u=0,\quad{}x_2>0;\qquad\left.{u}\right|_{x_2=0}=\frac{1}{1+x_1^{2}}.
 $$
 
 ### 解答 2.14
@@ -112,7 +112,7 @@ $$
 \xi\;\text{项}:2A\left(A^{2}+B^{2}\right)-2A\left(A^{2}+B^{2}-1\right)-2A=0,\qquad\text{常数项}:\left(A^{2}+B^{2}-1\right)\left(A^{2}+B^{2}\right)+\left(3A^{2}-B^{2}+1\right).
 $$
 
-常数项写开得 $\left(A^{2}+B^{2}\right)^{2}-2\left(A^{2}+B^{2}\right)+1+4A^{2}=\left(A^{2}+B^{2}-1\right)^{2}+4A^{2}=D$. 故 $N\left(\xi\right)\equiv{D}$, (B) 成立.
+常数项写开得 $\left(A^{2}+B^{2}\right)^{2}-2\left(A^{2}+B^{2}\right)+1+4A^{2}=\left(A^{2}+B^{2}-1\right)^{2}+4A^{2}=D$. 故 $N\left(\xi\right)\equiv{}D$, (B) 成立.
 
 然后逐项积分. 两式的奇函数部分在 $\mathbb{R}$ 上积分为零, 偶函数部分用 $\int_{\mathbb{R}}\frac{\mathrm{d}\xi}{1+\xi^{2}}=\pi$ 与 $\int_{\mathbb{R}}\frac{\mathrm{d}\xi}{\left(\xi-A\right)^{2}+B^{2}}=\frac{\pi}{B}$:
 
@@ -154,7 +154,7 @@ $$
 
 ## 习题 2.15 (由一点处的所有导数确定调和函数)
 
-设 $\Omega$ 是 $\mathbb{R}^{n}$ 中的连通开集, $u,v$ 是 $\Omega$ 上的两个调和函数. 若存在一点 $x_0\in\Omega$, 使得对任意多重指标 $\alpha$, 都有 $\partial^{\alpha}u\left(x_0\right)=\partial^{\alpha}v\left(x_0\right)$, 则 $u\equiv{v}$ 于 $\Omega$.
+设 $\Omega$ 是 $\mathbb{R}^{n}$ 中的连通开集, $u,v$ 是 $\Omega$ 上的两个调和函数. 若存在一点 $x_0\in\Omega$, 使得对任意多重指标 $\alpha$, 都有 $\partial^{\alpha}u\left(x_0\right)=\partial^{\alpha}v\left(x_0\right)$, 则 $u\equiv{}v$ 于 $\Omega$.
 
 ### 解答 2.15
 
@@ -163,7 +163,7 @@ $$
 再在 $x_0$ 的一个球内 $w\equiv0$. 由 2.2 节末关于调和函数解析性的结论, 调和函数在 $\Omega$ 内实解析, 即存在 $r>0$ 使 $B_r\left(x_0\right)\subset\Omega$ 且 $w$ 在 $B_r\left(x_0\right)$ 内可展成 Taylor 级数
 
 $$
-w\left(x\right)=\sum_{\alpha}\frac{\partial^{\alpha}w\left(x_0\right)}{\alpha!}\left(x-x_0\right)^{\alpha},\qquad{x}\in{B}_r\left(x_0\right).
+w\left(x\right)=\sum_{\alpha}\frac{\partial^{\alpha}w\left(x_0\right)}{\alpha!}\left(x-x_0\right)^{\alpha},\qquad{}x\in{}B_r\left(x_0\right).
 $$
 
 由上面的论证, 该级数的所有系数为零, 故 $w\equiv0$ 于 $B_r\left(x_0\right)$.
@@ -174,54 +174,54 @@ $$
 E:=\left\{x\in\Omega\,\middle|\,\partial^{\alpha}w\left(x\right)=0\quad\text{对一切多重指标}\;\alpha\right\}.
 $$
 
-对任意 $x\in{E}$, 由上面的论证 (把 $x_0$ 换成 $x$) 存在 $\rho>0$ 使 $w\equiv0$ 于 $B_\rho\left(x\right)$, 从而该球内 $w$ 的一切偏导数都为零, 即 $B_\rho\left(x\right)\subset{E}$. 故 $E$ 是开集.
+对任意 $x\in{}E$, 由上面的论证 (把 $x_0$ 换成 $x$) 存在 $\rho>0$ 使 $w\equiv0$ 于 $B_\rho\left(x\right)$, 从而该球内 $w$ 的一切偏导数都为零, 即 $B_\rho\left(x\right)\subset{}E$. 故 $E$ 是开集.
 
-然后证 $E$ 是闭集 (在 $\Omega$ 中). 若 $x_k\in{E}$ 且 $x_k\to{x}\in\Omega$, 则由 $w$ 光滑, $\partial^{\alpha}w$ 连续, 故
+然后证 $E$ 是闭集 (在 $\Omega$ 中). 若 $x_k\in{}E$ 且 $x_k\to{}x\in\Omega$, 则由 $w$ 光滑, $\partial^{\alpha}w$ 连续, 故
 
 $$
 \partial^{\alpha}w\left(x\right)=\lim_{k\to\infty}\partial^{\alpha}w\left(x_k\right)=0
 $$
 
-对一切 $\alpha$ 成立, 即 $x\in{E}$.
+对一切 $\alpha$ 成立, 即 $x\in{}E$.
 
-最后用连通性. 由上面的论证, $x_0\in{E}$, 故 $E$ 非空. 由上两段, $E$ 在连通的 $\Omega$ 中既开又闭且非空, 故 $E=\Omega$. 于是 $w\equiv0$ 于 $\Omega$, 即 $u\equiv{v}$.
+最后用连通性. 由上面的论证, $x_0\in{}E$, 故 $E$ 非空. 由上两段, $E$ 在连通的 $\Omega$ 中既开又闭且非空, 故 $E=\Omega$. 于是 $w\equiv0$ 于 $\Omega$, 即 $u\equiv{}v$.
 
 ## 习题 2.16 (弱意义下的调和性)
 
-设 $u\in{C}^{2}\left(\Omega\right)$. 证明: 若对一切 $\varphi\in{C}_0^{2}\left(\Omega\right)$ 都有 $\int_{\Omega}u\Delta\varphi\,\mathrm{d}x=0$, 则 $u$ 是 $\Omega$ 上的调和函数.
+设 $u\in{}C^{2}\left(\Omega\right)$. 证明: 若对一切 $\varphi\in{}C_0^{2}\left(\Omega\right)$ 都有 $\int_{\Omega}u\Delta\varphi\,\mathrm{d}x=0$, 则 $u$ 是 $\Omega$ 上的调和函数.
 
 ### 解答 2.16
 
-先把条件转成 $\Delta{u}$ 的积分条件. 取任意 $\varphi\in{C}_0^{2}\left(\Omega\right)$. 由 $\varphi$ 在 $\partial\Omega$ 的一个邻域内为零, 在**公式 2.5.2 (Green 第二恒等式)** 中边界积分为零, 即
+先把条件转成 $\Delta{}u$ 的积分条件. 取任意 $\varphi\in{}C_0^{2}\left(\Omega\right)$. 由 $\varphi$ 在 $\partial\Omega$ 的一个邻域内为零, 在**公式 2.5.2 (Green 第二恒等式)** 中边界积分为零, 即
 
 $$
-\int_{\Omega}\left(u\Delta\varphi-\varphi\Delta{u}\right)\mathrm{d}x=0.
+\int_{\Omega}\left(u\Delta\varphi-\varphi\Delta{}u\right)\mathrm{d}x=0.
 $$
 
 再由题设 $\int_{\Omega}u\Delta\varphi\,\mathrm{d}x=0$, 于是
 
 $$
-\int_{\Omega}\varphi\left(x\right)\Delta{u}\left(x\right)\,\mathrm{d}x=0,\qquad\text{对一切}\;\varphi\in{C}_0^{2}\left(\Omega\right).\tag{A}
+\int_{\Omega}\varphi\left(x\right)\Delta{}u\left(x\right)\,\mathrm{d}x=0,\qquad\text{对一切}\;\varphi\in{}C_0^{2}\left(\Omega\right).\tag{A}
 $$
 
-接着证反证. 若存在 $x_1\in\Omega$ 使 $\Delta{u}\left(x_1\right)=c\ne0$. 由 $\Delta{u}$ 连续, 存在 $\rho>0$ 使 $\overline{B}_\rho\left(x_1\right)\subset\Omega$ 且在 $B_\rho\left(x_1\right)$ 内 $\Delta{u}$ 与 $c$ 同号, 且 $\left|\Delta{u}\right|\ge\frac{\left|c\right|}{2}$.
+接着证反证. 若存在 $x_1\in\Omega$ 使 $\Delta{}u\left(x_1\right)=c\ne0$. 由 $\Delta{}u$ 连续, 存在 $\rho>0$ 使 $\overline{B}_\rho\left(x_1\right)\subset\Omega$ 且在 $B_\rho\left(x_1\right)$ 内 $\Delta{}u$ 与 $c$ 同号, 且 $\left|\Delta{}u\right|\ge\frac{\left|c\right|}{2}$.
 
-然后取试验函数. 取 $\varphi\in{C}_0^{2}\left(\Omega\right)$, 满足 $\varphi\ge0$, $\operatorname{supp}\varphi\subset{B}_\rho\left(x_1\right)$, 且在 $B_{\rho/2}\left(x_1\right)$ 上 $\varphi\equiv1$. 则
+然后取试验函数. 取 $\varphi\in{}C_0^{2}\left(\Omega\right)$, 满足 $\varphi\ge0$, $\operatorname{supp}\varphi\subset{}B_\rho\left(x_1\right)$, 且在 $B_{\rho/2}\left(x_1\right)$ 上 $\varphi\equiv1$. 则
 
 $$
-\int_{\Omega}\varphi\Delta{u}\,\mathrm{d}x=\int_{B_\rho\left(x_1\right)}\varphi\Delta{u}\,\mathrm{d}x
+\int_{\Omega}\varphi\Delta{}u\,\mathrm{d}x=\int_{B_\rho\left(x_1\right)}\varphi\Delta{}u\,\mathrm{d}x
 $$
 
 的被积函数在 $B_\rho$ 内与 $c$ 同号, 且在 $B_{\rho/2}$ 上 $\varphi=1$, 故该积分的符号与 $c$ 相同, 且绝对值不小于 $\frac{\left|c\right|}{2}\left|B_{\rho/2}\left(x_1\right)\right|>0$, 与 (A) 矛盾.
 
-故 $\Delta{u}\equiv0$ 于 $\Omega$, 即 $u$ 是 $\Omega$ 上的调和函数.
+故 $\Delta{}u\equiv0$ 于 $\Omega$, 即 $u$ 是 $\Omega$ 上的调和函数.
 
 ## 习题 2.17 (环形椭圆区域上调和函数的最大值)
 
-设 $\Omega=\left\{\left(x,y\right)\in\mathbb{R}^{2}\,\middle|\,1<{}x^{2}+2y^{2}<2\right\}$, $u\in{C}^{2}\left(\overline{\Omega}\right)$ 满足
+设 $\Omega=\left\{\left(x,y\right)\in\mathbb{R}^{2}\,\middle|\,1<{}x^{2}+2y^{2}<2\right\}$, $u\in{}C^{2}\left(\overline{\Omega}\right)$ 满足
 
 $$
-\begin{cases}\Delta{u}=0,&\text{于}\;\Omega,\\u=x+y,&\text{于}\;x^{2}+2y^{2}=2,\\\frac{\partial{u}}{\partial\nu}+\left(1-x\right)u=0,&\text{于}\;x^{2}+2y^{2}=1,\end{cases}
+\begin{cases}\Delta{}u=0,&\text{于}\;\Omega,\\u=x+y,&\text{于}\;x^{2}+2y^{2}=2,\\\frac{\partial{}u}{\partial\nu}+\left(1-x\right)u=0,&\text{于}\;x^{2}+2y^{2}=1,\end{cases}
 $$
 
 其中 $\nu$ 是 $\partial\Omega$ 的单位外法向. 求 $\max_{\overline{\Omega}}u$.
@@ -237,20 +237,20 @@ $$
 等号当 $\left(x,\sqrt{2}y\right)=t\left(1,\frac{1}{\sqrt{2}}\right)$ 时成立, 即 $x=t$, $y=\frac{t}{2}$. 代入 $x^{2}+2y^{2}=2$ 得 $\frac{3}{2}t^{2}=2$, $t=\frac{2}{\sqrt{3}}$, 对应的点为 $\left(\frac{2}{\sqrt{3}},\frac{1}{\sqrt{3}}\right)\in\Gamma_2$. 故
 
 $$
-\max_{\Gamma_2}u=\sqrt{3},\qquad{M}:=\max_{\overline{\Omega}}u\ge\sqrt{3}>0.\tag{B}
+\max_{\Gamma_2}u=\sqrt{3},\qquad{}M:=\max_{\overline{\Omega}}u\ge\sqrt{3}>0.\tag{B}
 $$
 
-再证最大值不在 $\Omega$ 内部达到. 由 $\Delta{u}=0$ 于 $\Omega$ 与**定理 2.3.1 (弱极值原理)** (对 $u$ 与 $-u$ 同时使用), $u$ 的最大值与最小值都在 $\partial\Omega$ 上达到.
+再证最大值不在 $\Omega$ 内部达到. 由 $\Delta{}u=0$ 于 $\Omega$ 与**定理 2.3.1 (弱极值原理)** (对 $u$ 与 $-u$ 同时使用), $u$ 的最大值与最小值都在 $\partial\Omega$ 上达到.
 
 接着设最大值在 $\Gamma_1$ 上某点 $p=\left(x,y\right)$ 达到. 椭圆 $\Gamma_1$ 是光滑闭曲线, 区域 $\Omega$ 在 $p$ 处满足**定义 2.7.1 (内球条件)**: 取以 $p$ 为切点的内切圆盘, 它整个含于 $\Omega$ 且与 $\overline{\Omega}$ 只交于 $p$, 法向重合. 又 $u$ 在 $\Omega$ 内调和 (从而下调和), 且 $u\left(p\right)=M>u\left(x\right)$ 对一切 $x\in\Omega$ 成立 (由上面的论证, $p$ 是整体最大点). 于是由**引理 2.7.2 (霍普夫引理)**,
 
 $$
-\frac{\partial{u}}{\partial\nu}\left(p\right)>0,\tag{C}
+\frac{\partial{}u}{\partial\nu}\left(p\right)>0,\tag{C}
 $$
 
 其中 $\nu$ 是 $\Omega$ 在 $p$ 处的单位外法向 ($\Gamma_1$ 上的外法向指向原点一侧).
 
-与内边界条件矛盾. 在 $p$ 处题设的边界条件给出 $\frac{\partial{u}}{\partial\nu}\left(p\right)=-\left(1-x\right)u\left(p\right)=\left(x-1\right)M$. 由 (C) 得 $\left(x-1\right)M>0$, 而 $M>0$, 故 $x>1$. 但 $\Gamma_1$ 上 $x^{2}+2y^{2}=1$, 故 $x^{2}\le1$, $x\le1$, 矛盾.
+与内边界条件矛盾. 在 $p$ 处题设的边界条件给出 $\frac{\partial{}u}{\partial\nu}\left(p\right)=-\left(1-x\right)u\left(p\right)=\left(x-1\right)M$. 由 (C) 得 $\left(x-1\right)M>0$, 而 $M>0$, 故 $x>1$. 但 $\Gamma_1$ 上 $x^{2}+2y^{2}=1$, 故 $x^{2}\le1$, $x\le1$, 矛盾.
 
 收尾. 由上面几段, 最大值只能在 $\Gamma_2$ 上达到, 故由 (B)
 

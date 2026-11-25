@@ -2,7 +2,7 @@
 
 ## 习题 1.1 (Laplace 方程在 $\mathbb{R}^{n}\setminus\left\{0\right\}$ 的径向对称解)
 
-求 Laplace 方程 $\Delta{u}=\sum_{i=1}^{n}\frac{\partial^{2}u}{\partial{x_i}^{2}}=0$, $x\in\mathbb{R}^{n}\setminus\left\{0\right\}$ 的径向对称解.
+求 Laplace 方程 $\Delta{}u=\sum_{i=1}^{n}\frac{\partial^{2}u}{\partial{x_i}^{2}}=0$, $x\in\mathbb{R}^{n}\setminus\left\{0\right\}$ 的径向对称解.
 
 ### 解答 1.1
 
@@ -23,10 +23,10 @@ $$
 接着对 $i$ 求和, 用 $\sum_{i=1}^{n}x_i^{2}=r^{2}$,
 
 $$
-\Delta{u}=\left(\frac{U''\left(r\right)}{r^{2}}-\frac{U'\left(r\right)}{r^{3}}\right)r^{2}+\frac{nU'\left(r\right)}{r}=U''\left(r\right)+\frac{n-1}{r}U'\left(r\right).
+\Delta{}u=\left(\frac{U''\left(r\right)}{r^{2}}-\frac{U'\left(r\right)}{r^{3}}\right)r^{2}+\frac{nU'\left(r\right)}{r}=U''\left(r\right)+\frac{n-1}{r}U'\left(r\right).
 $$
 
-于是方程 $\Delta{u}=0$ 等价于常微分方程
+于是方程 $\Delta{}u=0$ 等价于常微分方程
 
 $$
 rU''\left(r\right)+\left(n-1\right)U'\left(r\right)=0.\tag{A}
@@ -40,7 +40,7 @@ $$
 
 故 $r^{n-1}U'\left(r\right)=C$, 即 $U'\left(r\right)=Cr^{1-n}$.
 
-分两种情形积分. 当 $n=2$ 时, $U'\left(r\right)=\frac{C}{r}$, 故 $U=C_1\ln{r}+C_2$; 当 $n\ge3$ 时, $U'\left(r\right)=Cr^{1-n}$, 故 $U=\frac{C}{2-n}r^{2-n}+C_2$. 把 $\frac{C}{2-n}$ 仍记作 $C_1$, 并换回 $r=\left|x\right|$, 得所求的全部径向对称解
+分两种情形积分. 当 $n=2$ 时, $U'\left(r\right)=\frac{C}{r}$, 故 $U=C_1\ln{}r+C_2$; 当 $n\ge3$ 时, $U'\left(r\right)=Cr^{1-n}$, 故 $U=\frac{C}{2-n}r^{2-n}+C_2$. 把 $\frac{C}{2-n}$ 仍记作 $C_1$, 并换回 $r=\left|x\right|$, 得所求的全部径向对称解
 
 $$
 u\left(x\right)=\begin{cases}C_1\ln\left|x\right|+C_2,&n=2,\\C_1\left|x\right|^{2-n}+C_2,&n\ge3,\end{cases}
@@ -55,7 +55,7 @@ $$
 (1) 伯格斯 (Burgers) 方程
 
 $$
-\frac{\partial{u}}{\partial{t}}-a^{2}\frac{\partial^{2}u}{\partial{x}^{2}}+u\frac{\partial{u}}{\partial{x}}=0,
+\frac{\partial{}u}{\partial{}t}-a^{2}\frac{\partial^{2}u}{\partial{}x^{2}}+u\frac{\partial{}u}{\partial{}x}=0,
 $$
 
 其中 $a$ 是一个常数;
@@ -63,7 +63,7 @@ $$
 (2) 电报方程
 
 $$
-\frac{\partial^{2}u}{\partial{x}^{2}}=CL\frac{\partial^{2}u}{\partial{t}^{2}}+CR\frac{\partial{u}}{\partial{t}},
+\frac{\partial^{2}u}{\partial{}x^{2}}=CL\frac{\partial^{2}u}{\partial{}t^{2}}+CR\frac{\partial{}u}{\partial{}t},
 $$
 
 其中 $C,L,R$ 均为常数;
@@ -79,13 +79,13 @@ $$
 (4) 平均曲率流方程
 
 $$
-\frac{\partial{u}}{\partial{t}}=\frac{\left(1+\left(u_y\right)^{2}\right)u_{xx}-2u_xu_yu_{xy}+\left(1+\left(u_x\right)^{2}\right)u_{yy}}{1+\left(u_x\right)^{2}+\left(u_y\right)^{2}};
+\frac{\partial{}u}{\partial{}t}=\frac{\left(1+\left(u_y\right)^{2}\right)u_{xx}-2u_xu_yu_{xy}+\left(1+\left(u_x\right)^{2}\right)u_{yy}}{1+\left(u_x\right)^{2}+\left(u_y\right)^{2}};
 $$
 
 (5) 哈密顿-雅可比 (Hamilton-Jacobi) 方程
 
 $$
-\frac{\partial{V}}{\partial{t}}+\inf_{\xi}\left\{\sum_{i=1}^{n}b_{\xi}^{i}\left(x,t\right)\frac{\partial{V}}{\partial{x_i}}+c_{\xi}\left(x,t\right)\right\}=0,
+\frac{\partial{}V}{\partial{}t}+\inf_{\xi}\left\{\sum_{i=1}^{n}b_{\xi}^{i}\left(x,t\right)\frac{\partial{}V}{\partial{x_i}}+c_{\xi}\left(x,t\right)\right\}=0,
 $$
 
 其中 $b_{\xi}^{i},c_{\xi}$ 为已知函数;
@@ -93,7 +93,7 @@ $$
 (6) 守恒律方程
 
 $$
-\frac{\partial{u}}{\partial{t}}+\operatorname{div}F\left(u\right)=0,
+\frac{\partial{}u}{\partial{}t}+\operatorname{div}F\left(u\right)=0,
 $$
 
 其中 $F$ 是一个已知的向量值函数;
@@ -101,13 +101,13 @@ $$
 (7) 波希西内斯克 (Boussinesq) 方程
 
 $$
-u_{tt}-u_{xx}-\frac{\partial^{2}\left(u^{2}\right)}{\partial{y}^{2}}+\frac{\partial^{4}u}{\partial{x}^{4}}=0;
+u_{tt}-u_{xx}-\frac{\partial^{2}\left(u^{2}\right)}{\partial{}y^{2}}+\frac{\partial^{4}u}{\partial{}x^{4}}=0;
 $$
 
 (8) 克莱因-戈尔登 (Klein-Gordon) 方程
 
 $$
-\frac{\partial^{2}\psi}{\partial{t}^{2}}-\Delta\psi+\psi=0.
+\frac{\partial^{2}\psi}{\partial{}t^{2}}-\Delta\psi+\psi=0.
 $$
 
 ### 解答 1.2
@@ -121,7 +121,7 @@ $$
 (3) $Du=\left(u_x,u_y\right)$ 是一阶导数组成的向量, 方程中出现的最高阶导数含在 $\operatorname{div}\left(Du/\left|Du\right|\right)$ 内, 即二阶导数, 阶数为 $2$. 由
 
 $$
-\operatorname{div}\left(\frac{Du}{\left|Du\right|}\right)=\frac{\Delta{u}}{\left|Du\right|}-\frac{Du\cdot\nabla\left|Du\right|}{\left|Du\right|^{3}},
+\operatorname{div}\left(\frac{Du}{\left|Du\right|}\right)=\frac{\Delta{}u}{\left|Du\right|}-\frac{Du\cdot\nabla\left|Du\right|}{\left|Du\right|^{3}},
 $$
 
 右端关于二阶导数是线性的, 系数依赖一阶导数 $Du$, 故拟线性.
@@ -133,12 +133,12 @@ $$
 (6) 最高阶导数是 $u_t$ 与 $\operatorname{div}F\left(u\right)$ 中的一阶导数, 阶数为 $1$. 由 $F=\left(F_1,\dots,F_n\right)$ 与链式法则
 
 $$
-\operatorname{div}F\left(u\right)=\sum_{i=1}^{n}F_i'\left(u\right)\frac{\partial{u}}{\partial{x_i}},
+\operatorname{div}F\left(u\right)=\sum_{i=1}^{n}F_i'\left(u\right)\frac{\partial{}u}{\partial{x_i}},
 $$
 
 方程关于一阶导数线性, 系数 $F_i'\left(u\right)$ 依赖 $u$, 故拟线性; 当 $F$ 是线性向量函数时它退化为线性方程.
 
-(7) 最高阶导数是 $\frac{\partial^{4}u}{\partial{x}^{4}}$, 阶数为 $4$. 最高阶项 $u_{tt},u_{xx},u_{xxxx}$ 的系数均为常数, 非线性只来自低阶项 $\frac{\partial^{2}\left(u^{2}\right)}{\partial{y}^{2}}$ (二阶), 故为半线性方程, 从而非线性.
+(7) 最高阶导数是 $\frac{\partial^{4}u}{\partial{}x^{4}}$, 阶数为 $4$. 最高阶项 $u_{tt},u_{xx},u_{xxxx}$ 的系数均为常数, 非线性只来自低阶项 $\frac{\partial^{2}\left(u^{2}\right)}{\partial{}y^{2}}$ (二阶), 故为半线性方程, 从而非线性.
 
 (8) 最高阶导数是 $\psi_{tt}$ 与 $\Delta\psi$ 中的二阶导数, 阶数为 $2$. 方程关于 $\psi$ 及其二阶导数为一次, 系数都是常数, 故线性.
 
@@ -147,7 +147,7 @@ $$
 若 $u\left(x,t\right)$ 满足热传导方程
 
 $$
-\frac{\partial{u}}{\partial{t}}=\frac{\partial^{2}u}{\partial{x}^{2}},
+\frac{\partial{}u}{\partial{}t}=\frac{\partial^{2}u}{\partial{}x^{2}},
 $$
 
 则
@@ -163,7 +163,7 @@ $$
 先作自变量替换
 
 $$
-y=\frac{x}{t},\qquad{s}=-\frac{1}{t},
+y=\frac{x}{t},\qquad{}s=-\frac{1}{t},
 $$
 
 并记
@@ -175,13 +175,13 @@ $$
 于是 $v\left(x,t\right)=a\left(t,x\right)u\left(y,s\right)$, 其中 $u=u\left(y,s\right)$ 满足 $u_s=u_{yy}$. 由 $y,s$ 的定义,
 
 $$
-\frac{\partial{y}}{\partial{t}}=-\frac{x}{t^{2}}=-\frac{y}{t},\qquad\frac{\partial{s}}{\partial{t}}=\frac{1}{t^{2}},\qquad\frac{\partial{y}}{\partial{x}}=\frac{1}{t},\qquad\frac{\partial^{2}y}{\partial{x}^{2}}=0.
+\frac{\partial{}y}{\partial{}t}=-\frac{x}{t^{2}}=-\frac{y}{t},\qquad\frac{\partial{}s}{\partial{}t}=\frac{1}{t^{2}},\qquad\frac{\partial{}y}{\partial{}x}=\frac{1}{t},\qquad\frac{\partial^{2}y}{\partial{}x^{2}}=0.
 $$
 
 先算 $a$ 的一阶偏导数
 
 $$
-a_t=a\left(-\frac{1}{2t}+\frac{x^{2}}{4t^{2}}\right),\qquad{a}_x=a\left(-\frac{x}{2t}\right).
+a_t=a\left(-\frac{1}{2t}+\frac{x^{2}}{4t^{2}}\right),\qquad{}a_x=a\left(-\frac{x}{2t}\right).
 $$
 
 接着对 $x$ 求导两次,
@@ -213,7 +213,7 @@ $$
 求热传导方程
 
 $$
-\frac{\partial{u}}{\partial{t}}=a^{2}\frac{\partial^{2}u}{\partial{x}^{2}}
+\frac{\partial{}u}{\partial{}t}=a^{2}\frac{\partial^{2}u}{\partial{}x^{2}}
 $$
 
 所有形如
@@ -241,7 +241,7 @@ $$
 再算 $u_t$. 由乘积法则与链式法则,
 
 $$
-u_t=-\frac{1}{2}t^{-\frac{3}{2}}f+t^{-\frac{1}{2}}f'\left(\xi\right)\left(-\frac{\xi}{2t}\right)=t^{-\frac{3}{2}}\left(-\frac{1}{2}f-\frac{1}{2}\xi{f}'\right).\tag{A}
+u_t=-\frac{1}{2}t^{-\frac{3}{2}}f+t^{-\frac{1}{2}}f'\left(\xi\right)\left(-\frac{\xi}{2t}\right)=t^{-\frac{3}{2}}\left(-\frac{1}{2}f-\frac{1}{2}\xi{}f'\right).\tag{A}
 $$
 
 接着算 $u_{xx}$. 先有一阶导数
@@ -259,19 +259,19 @@ $$
 然后把 (A) 与 (B) 代入方程 $u_t=a^{2}u_{xx}$, 得
 
 $$
-t^{-\frac{3}{2}}\left(-\frac{1}{2}f-\frac{1}{2}\xi{f}'\right)=\frac{f''\left(\xi\right)}{4t^{\frac{3}{2}}}.
+t^{-\frac{3}{2}}\left(-\frac{1}{2}f-\frac{1}{2}\xi{}f'\right)=\frac{f''\left(\xi\right)}{4t^{\frac{3}{2}}}.
 $$
 
 两端乘以 $4t^{\frac{3}{2}}$, 化成关于 $f$ 的常微分方程
 
 $$
-f''\left(\xi\right)+2\xi{f}'\left(\xi\right)+2f\left(\xi\right)=0.\tag{C}
+f''\left(\xi\right)+2\xi{}f'\left(\xi\right)+2f\left(\xi\right)=0.\tag{C}
 $$
 
-然后解 (C). 注意 $f''+2\xi{f}'+2f=\left(f'+2\xi{f}\right)'$, 故 (C) 等价于
+然后解 (C). 注意 $f''+2\xi{}f'+2f=\left(f'+2\xi{}f\right)'$, 故 (C) 等价于
 
 $$
-f'\left(\xi\right)+2\xi{f}\left(\xi\right)=C_1,
+f'\left(\xi\right)+2\xi{}f\left(\xi\right)=C_1,
 $$
 
 其中 $C_1$ 是常数. 以积分因子 $\mathrm{e}^{\xi^{2}}$ 乘两端,
