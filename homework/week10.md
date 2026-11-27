@@ -1,372 +1,69 @@
 # week10
 
-> **定理 4.2.2 (d'Alembert 公式)**
-> 
-> 若 $\varphi\in{}C^{2}\left(\left(-\infty,+\infty\right)\right)$, $\psi\in{}C^{1}\left(\left(-\infty,+\infty\right)\right)$, 则由
-> $u\left(x,t\right)=\frac{1}{2}\left(\varphi\left(x+at\right)+\varphi\left(x-at\right)\right)+\frac{1}{2a}\int_{x-at}^{x+at}\psi\left(s\right)\,\mathrm{d}s$ (即公式 (4.2.9))
-> 给出的 $u\in{}C^{2}\left(\left(-\infty,+\infty\right)\times\left[0,+\infty\right)\right)$ 是无界弦自由振动 Cauchy 问题 $u_{tt}-a^{2}u_{xx}=0$, $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=\psi\left(x\right)$ 的解.
+第 III 章 §3, Fourier 变换与初值问题. 这一节闭卷主要考两件事: 会不会算变换, 会不会把变换解写回卷积.
 
-> **定义 4.2.4 (球面平均函数)**
-> 
-> 设 $w\in{}C^{0}\left(\mathbb{R}^{3}\right)$, 定义其球面平均函数 $w_B\left(x,r\right)=\frac{1}{4\pi{}r^{2}}\int_{S_r\left(x\right)}w\left(y\right)\,\mathrm{d}S_y=\frac{1}{4\pi}\int_{\left|n\right|=1}w\left(x+rn\right)\,\mathrm{d}S_n$.
+## 习题 10.1 (变换的定义与两个基本例)
 
-> **定理 4.2.6 (三维波动方程的 Poisson 公式)**
-> 
-> 设 $\varphi\in{}C^{3}\left(\mathbb{R}^{3}\right)$, $\psi\in{}C^{2}\left(\mathbb{R}^{3}\right)$, 则三维波动方程 Cauchy 问题的解为
-> $u\left(x,t\right)=\frac{\partial}{\partial{}t}\left(t\varphi_B\left(x,at\right)\right)+t\psi_B\left(x,at\right)$, 即公式 (4.2.15)
-> $u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\left[\frac{\partial}{\partial{}t}\left(\frac{1}{t}\int_{S_{at}\left(x\right)}\varphi\left(y\right)\,\mathrm{d}S_y\right)+\frac{1}{t}\int_{S_{at}\left(x\right)}\psi\left(y\right)\,\mathrm{d}S_y\right]$.
+记 $\mathcal F[f](\xi)=\int_{\mathbb R^n}f(x)e^{-ix\cdot\xi}\,\mathrm dx$, 逆变换为 $\frac{1}{(2\pi)^n}\int_{\mathbb R^n}\hat f(\xi)e^{ix\cdot\xi}\,\mathrm d\xi$.
 
-> **公式 (4.2.17) (三维非齐次波动方程 Cauchy 问题的解)**
-> 
-> $u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\int_0^{t}\mathrm{d}\tau\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{f\left(y,\tau\right)}{t-\tau}\,\mathrm{d}S_y$.
+(1) 算 $\mathcal F[\mathbf 1_{[-A,A]}](\xi)$, 得 $\frac{2\sin(A\xi)}{\xi}$, 并说明 $\xi=0$ 时的取值;
+(2) 算 $\mathcal F[e^{-x}\mathbf 1_{(0,\infty)}](\xi)=\frac{1}{1+i\xi}$, 说明它的模方 $\frac{1}{1+\xi^2}$ 与 Cauchy 分布密度只差常数;
+(3) 说明 $\mathcal F[\mathbf 1_{[0,\infty)}]$ 在通常意义下为什么不存在, 而 $\mathcal F[\mathbf 1_{[-A,A]}]$ 可以 (提示: 平方可积性);
+(4) 对 (1) 的结果用逆变换公式算回去, 得 $\mathbf 1_{[-A,A]}$, 即矩形窗与 sinc 互为变换.
 
-## 习题 4.5 (非齐次弦振动方程的 Cauchy 问题)
+> 自测 30 分钟. 核对: 第 III 章 §3 p303–320.
 
-求解非齐次弦振动方程的 Cauchy 问题
+## 习题 10.2 (Gauss 函数)
 
-$$
-\begin{cases}u_{tt}-a^{2}u_{xx}=\frac{xt}{\left(1+x^{2}\right)^{2}},&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=0,\quad{}u_t\left(x,0\right)=\frac{1}{1+x^{2}},&-\infty<{}x<+\infty.\end{cases}
-$$
-
-### 解答 4.5
-
-先用叠加原理分解问题. 令 $u=u_1+u_2$, 其中 $u_1$ 是齐次方程的 Cauchy 问题
-
-$$
-\begin{cases}\left(u_1\right)_{tt}-a^{2}\left(u_1\right)_{xx}=0,\\u_1\left(x,0\right)=0,\quad\left(u_1\right)_t\left(x,0\right)=\frac{1}{1+x^{2}}\end{cases}\tag{A}
-$$
-
-的解, $u_2$ 是非齐次方程带零初值的 Cauchy 问题
-
-$$
-\begin{cases}\left(u_2\right)_{tt}-a^{2}\left(u_2\right)_{xx}=\frac{xt}{\left(1+x^{2}\right)^{2}},\\u_2\left(x,0\right)=\left(u_2\right)_t\left(x,0\right)=0\end{cases}\tag{B}
-$$
-
-的解. 由线性, $u_1+u_2$ 就是原问题的解.
-
-再用**定理 4.2.2 (d'Alembert 公式)** 求 $u_1$. 此时 $\varphi=0$, $\psi\left(s\right)=\frac{1}{1+s^{2}}$,
-
-$$
-u_1\left(x,t\right)=\frac{1}{2a}\int_{x-at}^{x+at}\frac{\mathrm{d}s}{1+s^{2}}=\frac{1}{2a}\left(\arctan\left(x+at\right)-\arctan\left(x-at\right)\right).\tag{C}
-$$
-
-接着对 (B) 用齐次化原理. 齐次化原理给出
-
-$$
-u_2\left(x,t\right)=\frac{1}{2a}\int_0^{t}\mathrm{d}\tau\int_{x-a\left(t-\tau\right)}^{x+a\left(t-\tau\right)}\frac{s\tau}{\left(1+s^{2}\right)^{2}}\,\mathrm{d}s.\tag{D}
-$$
-
-然后算内层积分. 由 $\frac{\mathrm{d}}{\mathrm{d}s}\left(-\frac{1}{2\left(1+s^{2}\right)}\right)=\frac{s}{\left(1+s^{2}\right)^{2}}$,
-
-$$
-\int_{x-a\left(t-\tau\right)}^{x+a\left(t-\tau\right)}\frac{s\,\mathrm{d}s}{\left(1+s^{2}\right)^{2}}=-\frac{1}{2\left(1+\left(x+a\left(t-\tau\right)\right)^{2}\right)}+\frac{1}{2\left(1+\left(x-a\left(t-\tau\right)\right)^{2}\right)}.\tag{E}
-$$
-
-然后代入 (D). 记 $g\left(s\right)=\frac{1}{1+s^{2}}$, 把 (E) 代入 (D),
-
-$$
-u_2\left(x,t\right)=\frac{1}{4a}\int_0^{t}\tau\left[g\left(x-a\left(t-\tau\right)\right)-g\left(x+a\left(t-\tau\right)\right)\right]\mathrm{d}\tau.\tag{F}
-$$
-
-然后算两个基本积分. 令 $r=t-\tau$, 则 $\tau=t-r$, $\mathrm{d}\tau=-\mathrm{d}r$, 于是
-
-$$
-\int_0^{t}\tau\,g\left(x\pm{}a\left(t-\tau\right)\right)\mathrm{d}\tau=\int_0^{t}\left(t-r\right)g\left(x\pm{}ar\right)\,\mathrm{d}r.\tag{G}
-$$
-
-对第一类积分作变量替换 $u=x+ar$,
-
-$$
-\int_0^{t}\left(t-r\right)\frac{\mathrm{d}r}{1+\left(x+ar\right)^{2}}=\frac{1}{a}\int_{x}^{x+at}\left(t+\frac{x}{a}-\frac{u}{a}\right)\frac{\mathrm{d}u}{1+u^{2}},\tag{H}
-$$
-
-于是用 $\int\frac{\mathrm{d}u}{1+u^{2}}=\arctan{}u$ 与 $\int\frac{u\,\mathrm{d}u}{1+u^{2}}=\frac{1}{2}\ln\left(1+u^{2}\right)$,
-
-$$
-\int_0^{t}\left(t-r\right)g\left(x+ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t+\frac{x}{a}\right)\left(\arctan\left(x+at\right)-\arctan{}x\right)-\frac{1}{2a^{2}}\ln\frac{1+\left(x+at\right)^{2}}{1+x^{2}}.\tag{I}
-$$
-
-同样算出 $x-ar$ 那一项. 作 $u=x-ar$,
-
-$$
-\int_0^{t}\left(t-r\right)\frac{\mathrm{d}r}{1+\left(x-ar\right)^{2}}=\frac{1}{a}\int_{x-at}^{x}\left(t-\frac{x}{a}+\frac{u}{a}\right)\frac{\mathrm{d}u}{1+u^{2}},\tag{J}
-$$
-
-$$
-\int_0^{t}\left(t-r\right)g\left(x-ar\right)\,\mathrm{d}r=\frac{1}{a}\left(t-\frac{x}{a}\right)\left(\arctan{}x-\arctan\left(x-at\right)\right)+\frac{1}{2a^{2}}\ln\frac{1+x^{2}}{1+\left(x-at\right)^{2}}.\tag{K}
-$$
-
-然后代入 (F) 并整理. 记
-
-$$
-D=\arctan\left(x+at\right)-\arctan\left(x-at\right),\quad{}P=2\arctan{}x-\arctan\left(x+at\right)-\arctan\left(x-at\right),\tag{L}
-$$
-
-则 $\left(\arctan\left(x+at\right)-\arctan{}x\right)+\left(\arctan{}x-\arctan\left(x-at\right)\right)=D$,
-$\left(\arctan{}x-\arctan\left(x-at\right)\right)-\left(\arctan\left(x+at\right)-\arctan{}x\right)=P$, 且 (I)(K) 中的两个对数项相加后为 $\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}}$. 于是
-
-$$
-u_2\left(x,t\right)=\frac{1}{4a}\left[\frac{tP-\frac{x}{a}D}{a}+\frac{1}{2a}\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}}\right].\tag{M}
-$$
-
-然后合并得解. 由 (C)(M),
-
-$$
-u\left(x,t\right)=\frac{D}{2a}+\frac{tP}{4a^{2}}-\frac{xD}{4a^{3}}+\frac{1}{8a^{3}}\ln\frac{1+\left(x+at\right)^{2}}{1+\left(x-at\right)^{2}},\tag{N}
-$$
-
-其中 $D,P$ 由 (L) 给出.
-
-最后验证初值. 在 $t=0$ 时 $D=0$, $P=0$, 对数项为零, 故 $u\left(x,0\right)=0$. 关于 $t$ 求导后令 $t=0$: 由 (C), $u_1$ 的贡献为 $\frac{1}{2a}\left(a\frac{1}{1+x^{2}}+a\frac{1}{1+x^{2}}\right)=\frac{1}{1+x^{2}}$; 由 (M), $P$ 与 $D$ 在 $t=0$ 处为零而 $P_t$, $D_t$ 项自动消失, 对数项的贡献为
-
-$$
-\frac{1}{8a^{3}}\left.\left(\frac{2a\left(x+at\right)}{1+\left(x+at\right)^{2}}+\frac{2a\left(x-at\right)}{1+\left(x-at\right)^{2}}\right)\right|_{t=0}=\frac{x}{2a^{2}\left(1+x^{2}\right)},
-$$
-
-而 $-\frac{xD}{4a^{3}}$ 的导数在 $t=0$ 处为 $-\frac{x}{4a^{3}}\cdot{2a}\cdot\frac{1}{1+x^{2}}=-\frac{x}{2a^{2}\left(1+x^{2}\right)}$, 两项相消. 故 $u_t\left(x,0\right)=\frac{1}{1+x^{2}}$, 与题设相符.
-
-## 习题 4.6 (球面波问题解的验证)
-
-证明: 球面波问题
-
-$$
-\begin{cases}u_{tt}-a^{2}\Delta{}u=0,&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=\varphi\left(r\right),\quad{}u_t\left(x,0\right)=\psi\left(r\right),&x\in\mathbb{R}^{3}\end{cases}
-$$
-
-的解为
-
-$$
-u\left(r,t\right)=\begin{cases}\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)+\left(r-at\right)\varphi\left(r-at\right)\right)+\frac{1}{2ar}\int_{r-at}^{r+at}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,&r>at,\\\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,&r<{}at,\end{cases}
-$$
-
-其中 $r=\left|x\right|$.
-
-### 解答 4.6
-
-先把三维径向问题化为一维问题. 记 $r=\left|x\right|$, 设 $u=u\left(r,t\right)$. 由径向对称, $\nabla{}u=u_r\frac{x}{r}$, 于是
-
-$$
-\Delta{}u=u_{rr}+\frac{2}{r}u_r=\frac{1}{r}\left(\partial_r^{2}\left(ru\right)\right).\tag{A}
-$$
-
-再引入 $v=ru$. 由 (A),
-
-$$
-\left(ru\right)_{tt}=r{u}_{tt}=a^{2}r\Delta{}u=a^{2}\partial_r^{2}\left(ru\right),\quad\text{即}\;\;v_{tt}-a^{2}v_{rr}=0.\tag{B}
-$$
-
-接着写出 $v$ 的初值. 由 $u\left(x,0\right)=\varphi\left(r\right)$, $u_t\left(x,0\right)=\psi\left(r\right)$,
-
-$$
-v\left(r,0\right)=r\varphi\left(r\right),\quad{}v_t\left(r,0\right)=r\psi\left(r\right),\quad{}r>0.\tag{C}
-$$
-
-然后把初值奇延拓到 $r<0$. 定义
-
-$$
-\Phi\left(r\right)=\begin{cases}r\varphi\left(r\right),&r>0,\\r\varphi\left(-r\right),&r<0,\end{cases}\quad\Psi\left(r\right)=\begin{cases}r\psi\left(r\right),&r>0,\\r\psi\left(-r\right),&r<0.\end{cases}\tag{D}
-$$
-
-注意 $r<0$ 时 $r\varphi\left(-r\right)=-\left(-r\right)\varphi\left(-r\right)$, 故 $\Phi,\Psi$ 是奇函数: $\Phi\left(-r\right)=-\Phi\left(r\right)$, $\Psi\left(-r\right)=-\Psi\left(r\right)$, 且由 $\varphi,\psi$ 的光滑性它们在全轴 $C^{2}$, $C^{1}$.
-
-然后对全轴的 $v$ 用 d'Alembert 公式. 把 (B)(C) 的解按 (D) 延拓为全轴问题, 由**定理 4.2.2 (d'Alembert 公式)**,
-
-$$
-v\left(r,t\right)=\frac{1}{2}\left(\Phi\left(r+at\right)+\Phi\left(r-at\right)\right)+\frac{1}{2a}\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho,\quad{}r\ge0.\tag{E}
-$$
-
-情形 $r>at$. 此时 $r\pm{}at>0$, 由 (D),
-
-$$
-\Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\quad\Phi\left(r-at\right)=\left(r-at\right)\varphi\left(r-at\right);
-$$
-
-又积分区间 $\left[r-at,r+at\right]\subset\left(0,+\infty\right)$, 故 $\Psi\left(\rho\right)=\rho\psi\left(\rho\right)$. 代入 (E) 并除以 $r$,
-
-$$
-u\left(r,t\right)=\frac{v\left(r,t\right)}{r}=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)+\left(r-at\right)\varphi\left(r-at\right)\right)+\frac{1}{2ar}\int_{r-at}^{r+at}\rho\psi\left(\rho\right)\,\mathrm{d}\rho.\tag{F}
-$$
-
-情形 $r<{}at$. 此时 $r-at<0$, $r+at>0$, 故
-
-$$
-\Phi\left(r+at\right)=\left(r+at\right)\varphi\left(r+at\right),\quad\Phi\left(r-at\right)=r\varphi\left(at-r\right)=-\left(at-r\right)\varphi\left(at-r\right).\tag{G}
-$$
-
-然后算这一情形的积分项. 由 $r<{}at$,
-
-$$
-\int_{r-at}^{r+at}\Psi\left(\rho\right)\,\mathrm{d}\rho=\int_{r-at}^{0}\Psi\,\mathrm{d}\rho+\int_0^{r+at}\Psi\,\mathrm{d}\rho.\tag{H}
-$$
-
-在第一段作替换 $\rho=-s$ ($s$ 从 $at-r$ 到 $0$), 用 $\Psi\left(-s\right)=-\Psi\left(s\right)=-s\psi\left(s\right)$,
-
-$$
-\int_{r-at}^{0}\Psi\left(\rho\right)\,\mathrm{d}\rho=\int_{at-r}^{0}\left(-\Psi\left(s\right)\right)\left(-\mathrm{d}s\right)=-\int_0^{at-r}s\psi\left(s\right)\,\mathrm{d}s.\tag{I}
-$$
-
-又第二段为 $\int_0^{r+at}\rho\psi\left(\rho\right)\mathrm{d}\rho$. 故 (H) 等于
-
-$$
-\int_{at-r}^{r+at}\rho\psi\left(\rho\right)\,\mathrm{d}\rho=\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho.\tag{J}
-$$
-
-然后合并. 把 (G)(J) 代入 (E) 并除以 $r$,
-
-$$
-u\left(r,t\right)=\frac{1}{2r}\left(\left(r+at\right)\varphi\left(r+at\right)-\left(at-r\right)\varphi\left(at-r\right)\right)+\frac{1}{2ar}\int_{at-r}^{at+r}\rho\psi\left(\rho\right)\,\mathrm{d}\rho,\quad{}r<{}at.\tag{K}
-$$
-
-收尾. (F) 与 (K) 正是题目给出的分段表达式, 故球面波问题的解确如题所述.
-
-## 习题 4.7 (三维波动方程的 Cauchy 问题)
-
-求解下述三维波动方程的 Cauchy 问题
-
-$$
-\begin{cases}u_{tt}-a^{2}\Delta{}u=0,&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=x_1^{2}+x_2^{2}x_3,\quad{}u_t\left(x,0\right)=0,&x\in\mathbb{R}^{3}.\end{cases}
-$$
-
-### 解答 4.7
-
-先写出求解公式. 由**定理 4.2.6 (三维波动方程的 Poisson 公式)**, 取 $\varphi=x_1^{2}+x_2^{2}x_3$, $\psi=0$,
-
-$$
-u\left(x,t\right)=\frac{\partial}{\partial{}t}\left(t\varphi_B\left(x,at\right)\right),\tag{A}
-$$
-
-其中 $\varphi_B$ 是由**定义 4.2.4 (球面平均函数)** 给出的球面平均.
-
-准备三条球面积分公式. 记 $S_r\left(x\right)=\left\{y:\left|y-x\right|=r\right\}$. 由球面的旋转对称性, 对 $i,j,k\in\left\{1,2,3\right\}$,
-
-$$
-\int_{S_r\left(x\right)}\left(y_i-x_i\right)\mathrm{d}S=0,\quad\int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\mathrm{d}S=\frac{4\pi{}r^{4}}{3}\delta_{ij},\tag{B}
-$$
-
-$$
-\int_{S_r\left(x\right)}\left(y_i-x_i\right)\left(y_j-x_j\right)\left(y_k-x_k\right)\mathrm{d}S=0.\tag{C}
-$$
-
-(B) 的第二式来自: 三个二阶矩由对称性相等, 而其和等于 $\int_{S_r}\left|y-x\right|^{2}\mathrm{d}S=r^{2}\cdot4\pi{}r^{2}=4\pi{}r^{4}$; (C) 来自关于 $y_k-x_k$ 的奇对称.
-
-接着算 $\varphi$ 的球面平均. 令 $y=x+n$, $\left|n\right|=r$, 则
-
-$$
-\varphi\left(y\right)=y_1^{2}+y_2^{2}y_3=\left(x_1+n_1\right)^{2}+\left(x_2+n_2\right)^{2}\left(x_3+n_3\right).\tag{D}
-$$
-
-然后逐项展开并对球面积分. 由 (B)(C),
-
-$$
-\int_{S_r}\left(x_1+n_1\right)^{2}\mathrm{d}S=4\pi{}r^{2}x_1^{2}+\int_{S_r}n_1^{2}\mathrm{d}S=4\pi{}r^{2}x_1^{2}+\frac{4\pi{}r^{4}}{3},\tag{E}
-$$
-
-$$
-\int_{S_r}\left(x_2+n_2\right)^{2}\left(x_3+n_3\right)\mathrm{d}S=4\pi{}r^{2}x_2^{2}x_3+x_3\int_{S_r}n_2^{2}\mathrm{d}S=4\pi{}r^{2}x_2^{2}x_3+\frac{4\pi{}r^{4}}{3}x_3,\tag{F}
-$$
-
-这里其余项含 $n_i$ 的一次或三次因子, 由 (B)(C) 积分为零 (如 $2x_2x_3\int{}n_2\mathrm{d}S=0$, $\int{}n_2^{2}n_3\mathrm{d}S=0$, $2x_2\int{}n_2n_3\mathrm{d}S=0$).
-
-然后写出 $\varphi_B$. 由 (E)(F) 与 $\varphi_B=\frac{1}{4\pi{}r^{2}}\int_{S_r}\varphi\,\mathrm{d}S$,
-
-$$
-\varphi_B\left(x,r\right)=x_1^{2}+x_2^{2}x_3+\frac{r^{2}}{3}\left(1+x_3\right)=\varphi\left(x\right)+\frac{r^{2}}{3}\left(1+x_3\right).\tag{G}
-$$
-
-然后代入 (A). 把 $r=at$ 代入,
-
-$$
-t\varphi_B\left(x,at\right)=t\left(\varphi\left(x\right)+\frac{a^{2}t^{2}}{3}\left(1+x_3\right)\right).\tag{H}
-$$
-
-然后求导得解. 由 (A)(H),
-
-$$
-u\left(x,t\right)=\frac{\partial}{\partial{}t}\left[t\varphi\left(x\right)+\frac{a^{2}t^{3}}{3}\left(1+x_3\right)\right]=\varphi\left(x\right)+a^{2}t^{2}\left(1+x_3\right),
-$$
-
-即
-
-$$
-u\left(x,t\right)=x_1^{2}+x_2^{2}x_3+a^{2}t^{2}\left(1+x_3\right).\tag{I}
-$$
-
-最后证直接验证. $\partial_t^{2}u=2a^{2}\left(1+x_3\right)$; 又 $\Delta\left(x_1^{2}+x_2^{2}x_3\right)=2+2x_3$ 且 $\Delta\left(a^{2}t^{2}x_3\right)=0$, 故 $a^{2}\Delta{}u=2a^{2}\left(1+x_3\right)=\partial_t^{2}u$, 方程成立; $u\left(x,0\right)=\varphi\left(x\right)$, $u_t\left(x,0\right)=0$ 也成立.
-
-## 习题 4.8 (三维非齐次波动方程的 Cauchy 问题)
-
-求解下述三维非齐次波动方程的 Cauchy 问题
-
-$$
-\begin{cases}u_{tt}-a^{2}\Delta{}u=\left|x\right|^{2}\mathrm{e}^{t},&x\in\mathbb{R}^{3},t>0,\\u\left(x,0\right)=u_t\left(x,0\right)=0,&x\in\mathbb{R}^{3}.\end{cases}
-$$
-
-### 解答 4.8
+(1) 配方把 $e^{-Ax^2-ix\xi}$ 写成 $e^{-\xi^2/(4A)}\cdot e^{-A\left(x+\frac{i\xi}{2A}\right)^2}$, 并说明沿实轴平移后 $\int e^{-A(x+ic)^2}\,\mathrm dx=\sqrt{\pi/A}$;
+(2) 得 $\mathcal F[e^{-A|x|^2}](\xi)=\left(\frac{\pi}{A}\right)^{n/2}e^{-|\xi|^2/(4A)}$, 对 $n=1$ 与 $n=3$ 分别核对常数;
+(3) 取 $A=\frac{1}{4a^2t}$, 说明热核 $g$ 的变换是 $e^{-a^2|\xi|^2t}$;
+(4) 说明 $A\to0^+$ 时形式上趋于 $\delta$ 函数, 从而 $\int_{\mathbb R^n}g\,\mathrm dx=1$ 可由 $\xi=0$ 处读出.
 
-先写出求解公式. 取 $f\left(x,t\right)=\left|x\right|^{2}\mathrm{e}^{t}$, 由**公式 (4.2.17) (三维非齐次波动方程 Cauchy 问题的解)**,
+> 自测 30 分钟. 核对: 第 III 章 §3 (Gauss 函数例).
 
-$$
-u\left(x,t\right)=\frac{1}{4\pi{}a^{2}}\int_0^{t}\mathrm{d}\tau\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y.\tag{A}
-$$
-
-再算被积函数在球面上的积分. 记 $r=a\left(t-\tau\right)$, 令 $y=x+n$, $\left|n\right|=r$. 由
-
-$$
-\left|y\right|^{2}=\left|x\right|^{2}+2x\cdot{}n+\left|n\right|^{2},\quad\int_{S_r}n\,\mathrm{d}S=0,\quad\int_{S_r}\mathrm{d}S=4\pi{}r^{2},\tag{B}
-$$
-
-得
-
-$$
-\int_{S_r\left(x\right)}\left|y\right|^{2}\,\mathrm{d}S=4\pi{}r^{2}\left(\left|x\right|^{2}+r^{2}\right).\tag{C}
-$$
-
-接着代入 (A) 并化简. 由 (B)(C),
-
-$$
-\frac{1}{4\pi{}a^{2}}\int_{S_{a\left(t-\tau\right)}\left(x\right)}\frac{\left|y\right|^{2}\mathrm{e}^{\tau}}{t-\tau}\,\mathrm{d}S_y=\frac{4\pi{}a^{2}\left(t-\tau\right)^{2}\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}}{4\pi{}a^{2}\left(t-\tau\right)}=\left(t-\tau\right)\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}.\tag{D}
-$$
-
-故
-
-$$
-u\left(x,t\right)=\int_0^{t}\left(t-\tau\right)\left(\left|x\right|^{2}+a^{2}\left(t-\tau\right)^{2}\right)\mathrm{e}^{\tau}\,\mathrm{d}\tau.\tag{E}
-$$
+## 习题 10.3 (三条性质的证明)
 
-然后换元. 令 $s=t-\tau$, 则 $\tau=t-s$, $\mathrm{d}\tau=-\mathrm{d}s$,
+(1) 线性: 说明 $\mathcal F$ 把函数线性组合送到变换的线性组合;
+(2) 伸缩: 对 $c>0$, 令 $y=cx$, 证明 $\mathcal F[f(cx)](\xi)=\frac{1}{c}\mathcal F[f]\left(\frac{\xi}{c}\right)$;
+(3) 乘子: 对 $f$ 衰减足够快, 分部积分证明 $\mathcal F[xf(x)](\xi)=i\frac{\mathrm d}{\mathrm d\xi}\mathcal F[f](\xi)$;
+(4) 用 (2)(3) 说明"对 $x$ 求导变成乘 $-|\xi|^2$", 并指出这是热方程能用变换解的关键.
 
-$$
-u\left(x,t\right)=\mathrm{e}^{t}\int_0^{t}s\left(\left|x\right|^{2}+a^{2}s^{2}\right)\mathrm{e}^{-s}\,\mathrm{d}s=\mathrm{e}^{t}\left[\left|x\right|^{2}\int_0^{t}s\mathrm{e}^{-s}\,\mathrm{d}s+a^{2}\int_0^{t}s^{3}\mathrm{e}^{-s}\,\mathrm{d}s\right].\tag{F}
-$$
+> 自测 30 分钟. 核对: 第 III 章 §3 p303–339.
 
-然后算两个积分. 由分部积分,
+## 习题 10.4 (热方程的初值问题)
 
 $$
-\int_0^{t}s\mathrm{e}^{-s}\,\mathrm{d}s=1-\left(1+t\right)\mathrm{e}^{-t},\tag{G}
+u_t=a^2u_{xx},\quad x\in\mathbb R,\ t>0;\qquad u(x,0)=\varphi(x).
 $$
 
-$$
-\int_0^{t}s^{3}\mathrm{e}^{-s}\,\mathrm{d}s=6-\left(t^{3}+3t^{2}+6t+6\right)\mathrm{e}^{-t},\tag{H}
-$$
+(1) 对方程关于 $x$ 作变换, 得 $\hat u_t=-a^2\xi^2\hat u$, 解出 $\hat u(\xi,t)=\hat\varphi(\xi)e^{-a^2\xi^2t}$;
+(2) 把 $e^{-a^2\xi^2t}$ 看成热核的变换, 用卷积定理写回 $u(x,t)=\int_{\mathbb R}g(x-y,t)\varphi(y)\,\mathrm dy$, 其中 $g(x,t)=\frac{1}{2a\sqrt{\pi t}}e^{-x^2/(4a^2t)}$;
+(3) 取 $\varphi=\mathbf 1_{[-1,1]}$, 把积分算成 $\frac12\left[\mathrm{erf}\frac{x+1}{2a\sqrt t}-\mathrm{erf}\frac{x-1}{2a\sqrt t}\right]$, 其中 $\mathrm{erf}(z)=\frac{2}{\sqrt\pi}\int_0^ze^{-s^2}\,\mathrm ds$;
+(4) 对非齐次 $u_t=a^2u_{xx}+f(x,t)$, 写出 $u=g*\varphi+\int_0^tg(\cdot,t-s)*f(\cdot,s)\,\mathrm ds$ 这一项的来源;
+(5) 说明 $\varphi$ 有界时 $u$ 在 $t>0$ 自动光滑, 并解释"热方程的时间方向不可逆"在核上如何体现.
 
-其中 (H) 由三次分部积分得到: $\int_0^{t}s^{3}\mathrm{e}^{-s}\mathrm{d}s=\left[-s^{3}\mathrm{e}^{-s}\right]_0^{t}+3\int_0^{t}s^{2}\mathrm{e}^{-s}\mathrm{d}s$, 逐次降幂并代入 $\int_0^{t}\mathrm{e}^{-s}\mathrm{d}s=1-\mathrm{e}^{-t}$.
+> 自测 40 分钟. 核对: 第 III 章 §3 p340–357.
 
-然后合并得解. 把 (G)(H) 代入 (F),
+## 习题 10.5 (半平面的 Laplace 方程)
 
 $$
-u\left(x,t\right)=\left|x\right|^{2}\left(\mathrm{e}^{t}-1-t\right)+a^{2}\left(6\mathrm{e}^{t}-t^{3}-3t^{2}-6t-6\right).\tag{I}
+u_{xx}+u_{yy}=0,\quad x\in\mathbb R,\ y>0;\qquad u(x,0)=g(x).
 $$
 
-最后证直接验证. 由 (I),
+(1) 关于 $x$ 作变换, 得 $\hat u_{yy}=\xi^2\hat u$;
+(2) 由 $y\to\infty$ 时有界 (或趋于零) 舍去 $e^{|\xi|y}$ 分支, 得 $\hat u(\xi,y)=\hat g(\xi)e^{-|\xi|y}$;
+(3) 把 $e^{-|\xi|y}$ 写成 $\mathcal F\left[\frac{y}{\pi(x^2+y^2)}\right]$, 用卷积写回 $u(x,y)=\frac{y}{\pi}\int_{\mathbb R}\frac{g(t)}{(x-t)^2+y^2}\,\mathrm dt$;
+(4) 与附录 A 中半空间的 Poisson 核 $\frac{2x_n}{\omega_n|x-y|^n}$ 在 $n=2$ 时的形式对照, 说明两处为什么一致;
+(5) 取 $g=\mathbf 1_{[0,\infty)}$, 算出 $u=\frac{1}{\pi}\left(\frac{\pi}{2}+\arctan\frac{x}{y}\right)$ 并与第 8 周的结果核对.
 
-$$
-\partial_t^{2}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6\right),\quad{}a^{2}\Delta{}u=a^{2}\left(\mathrm{e}^{t}-1-t\right)\Delta\left|x\right|^{2}=6a^{2}\left(\mathrm{e}^{t}-1-t\right),
-$$
+> 自测 35 分钟. 核对: 第 III 章 §3 (半平面 Laplace), 附录 A 例 7.3.
 
-故
+## 习题 10.6 (解的验证与半直线)
 
-$$
-\partial_t^{2}u-a^{2}\Delta{}u=\left|x\right|^{2}\mathrm{e}^{t}+a^{2}\left(6\mathrm{e}^{t}-6t-6-6\mathrm{e}^{t}+6+6t\right)=\left|x\right|^{2}\mathrm{e}^{t},
-$$
+(1) 把 $(x,t)\to(x_0,0^+)$ 的极限拆成近处与远处: 近处 $|y-x_0|\le\delta$ 上用 $\varphi$ 的连续性, 远处用 $g$ 的衰减, 说明 $\lim u=\varphi(x_0)$;
+(2) 说明若 $|\varphi(x)|\le Me^{Ax^2}$, 卷积在 $0\lt t\lt\frac{1}{4Aa^2}$ 内收敛, 由此解释初值增长越快, 解的存在时间越短;
+(3) 半直线 $x>0$, $u(0,t)=0$, $u(x,0)=\varphi(x)$: 用奇延拓 (奇函数在 $y>0$ 取 $\varphi$, 在 $y\lt0$ 取 $-\varphi(-y)$), 写出 $u=\int_0^\infty\left[g(x-y,t)-g(x+y,t)\right]\varphi(y)\,\mathrm dy$, 并验证 $u(0,t)=0$;
+(4) 把边界条件改为 $u(0,t)=h(t)$ 且 $h(0)=0$, 说明此时该用偶延拓还是其他构造, 并写出对应的解的积分式.
 
-方程成立. 又 $u\left(x,0\right)=\left|x\right|^{2}\left(1-1\right)+a^{2}\left(6-6\right)=0$, $u_t\left(x,0\right)=\left|x\right|^{2}\left(1-1\right)+a^{2}\left(6-6\right)=0$, 初值条件也成立.
+> 自测 40 分钟. 核对: 第 III 章 §3 (解的验证, 半空间问题).

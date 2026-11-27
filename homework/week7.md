@@ -1,354 +1,92 @@
 # week7
 
-> **定理 3.2.1 (弱极值原理)**
-> 
-> 设函数 $u\in{}C^{2,1}\left(Q_T\right)\cap{}C^{0}\left(\overline{Q}_T\right)$ 满足 $u_t-a^{2}\Delta{}u\le0$ (或 $\ge0$) 于 $Q_T$, 则 $u$ 在 $\overline{Q}_T$ 上的最大 (小) 值必在其抛物边界 $\partial_pQ_T$ 上达到.
+第 II 章 §5–§6, 基本解, Newton 位势与 Green 表示. 这一章是整本书的地基, 计算量集中在这里.
 
-> **定理 3.2.3 (初边值问题的最大模估计)**
-> 
-> 设 $f\in{}C^{0}\left(\overline{Q}_T\right)$, $\varphi\in{}C^{0}\left(\partial_pQ_T\right)$. 若 $u\in{}C^{2,1}\left(Q_T\right)\cap{}C^{0}\left(\overline{Q}_T\right)$ 是 $u_t-a^{2}\Delta{}u=f$, $u=\varphi$ 于 $\partial_pQ_T$ 的解, 则 $\max_{\overline{Q}_T}\left|u\right|\le{}T\max_{\overline{Q}_T}\left|f\right|+\max_{\partial_pQ_T}\left|\varphi\right|$.
+> **定义 5.1 (基本解)**
+>
+> $\Gamma(x)=\frac{1}{2\pi}\log\frac{1}{|x|}$ ($n=2$), $\Gamma(x)=\frac{1}{(n-2)\omega_n|x|^{n-2}}$ ($n>3$); 且 $D_\nu\Gamma(x)=-\frac{1}{\omega_nr^{n-1}}$ 于 $|x|=r$.
 
-> **定理 3.2.5 (Cauchy 问题的最大模估计)**
-> 
-> 设 $f\in{}L^{\infty}\left(\mathbb{R}_T\right)$, $\varphi\in{}L^{\infty}\left(\mathbb{R}^{n}\right)$. 若 $u\in{}C^{2,1}\left(\mathbb{R}_T\right)\cap{}C^{0}\left(\overline{\mathbb{R}}_T\right)$ 是 $u_t-a^{2}\Delta{}u=f$, $u\left(x,0\right)=\varphi\left(x\right)$ 的有界解, 则 $\sup_{\mathbb{R}_T}\left|u\right|\le{}T\sup_{\mathbb{R}_T}\left|f\right|+\sup_{\mathbb{R}^{n}}\left|\varphi\right|$.
+> **定理 5.2 (基本解的分布意义)**
+>
+> 在分布意义下 $-\Delta\Gamma=\delta_0$, 即对 $\varphi\in C_c^\infty(\mathbb R^n)$ 有 $\int_{\mathbb R^n}\Gamma\Delta\varphi\,\mathrm dx=-\varphi(0)$.
 
-> **定理 3.2.6 (Cauchy 问题的唯一性和稳定性)**
-> 
-> 问题 $u_t-a^{2}\Delta{}u=f$ ($\left(x,t\right)\in\mathbb{R}_T$), $u\left(x,0\right)=\varphi\left(x\right)$ ($x\in\mathbb{R}^{n}$) 在 $\mathbb{R}_T$ 上的有界函数类中是唯一的, 并且在最大模意义下关于 $f\in{}L^{\infty}\left(\mathbb{R}_T\right)$ 和 $\varphi\in{}L^{\infty}\left(\mathbb{R}^{n}\right)$ 是稳定的.
+> **定理 5.4 (Newton 位势的 $C^1$ 正则性)**
+>
+> 若 $f\in C(\Omega)$, 令 $u_0(x)=-\int_\Omega\Gamma(x-y)f(y)\,\mathrm dy$, 则 $u_0\in C^1(\mathbb R^n)$ 且 $D_iu_0(x)=\frac{1}{\omega_n}\int_\Omega\frac{x_i-y_i}{|x-y|^n}f(y)\,\mathrm dy$.
 
-> **定理 3.3.1 (Duhamel 原理)**
-> 
-> 对任意 $\tau>0$, 设 $w\left(x,t;\tau\right)$ 满足 $w_t-a^{2}w_{xx}=0$ ($t>\tau$), $w\left(x,\tau;\tau\right)=\bar{f}\left(x,\tau\right)$, 齐次边界条件, 则原非齐次问题的解可表示为 $\bar{u}_2\left(x,t\right)=\int_0^tw\left(x,t;\tau\right)\,\mathrm{d}\tau$.
+> **例 5.7 (球内的常源问题)**
+>
+> $\Delta u=1$ 于 $B_R(0)$, $u|_{\partial B_R}=0$ 的唯一经典解是 $u(x)=\frac{|x|^2-R^2}{2n}$.
 
-> **定义 3.4.3 (Fourier 变换)**
-> 
-> 设 $f$ 在 $\left(-\infty,+\infty\right)$ 上绝对可积, 定义 $f$ 的 Fourier 变换为 $\mathcal{F}\left[f\right]\left(y\right)=\int_{-\infty}^{+\infty}f\left(x\right)\mathrm{e}^{-\mathrm{i}xy}\,\mathrm{d}x$, 并定义 $g$ 的 Fourier 逆变换为 $\mathcal{F}^{-1}\left[g\right]\left(x\right)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}g\left(y\right)\mathrm{e}^{\mathrm{i}xy}\,\mathrm{d}y$.
+> **定理 6.1 (基本解表示公式)**
+>
+> 设 $\Omega$ 有界且边界分片 $C^1$, $u\in C^2(\Omega)\cap C^1(\overline\Omega)$, $\Delta u\in L^1(\Omega)$. 则
+> $$
+> u(x)=-\int_\Omega\Gamma(x-y)\Delta u(y)\,\mathrm dy+\int_{\partial\Omega}\Gamma(x-y)D_\nu u(y)\,\mathrm dS_y-\int_{\partial\Omega}u(y)D_{\nu_y}\Gamma(x-y)\,\mathrm dS_y.
+> $$
 
-## 习题 3.1 (含零阶项热方程的最大模估计)
+> **定理 6.2 (Green 函数的性质)**
+>
+> 设 $\Omega$ 有界, 且校正函数存在. 则 $G(x,y)$ 由 $\Gamma$ 与区域唯一确定; $G(x,y)=G(y,x)$; 且 $G(x,y)\gt0$ 当 $x\ne y$.
 
-设 $\varphi\in{}C^{0}\left(\partial_pQ_T\right)$, $c>0$ 是一个常数. 若 $u\in{}C^{2,1}\left(Q_T\right)\cap{}C^{0}\left(\overline{Q}_T\right)$ 是问题
+> **命题 6.4 (Poisson 核的非负性与归一化)**
+>
+> 在足够光滑的有界区域上, $K(x,y)=-D_{\nu_y}G(x,y)\gt0$ 且 $\int_{\partial\Omega}K(x,y)\,\mathrm dS_y=1$.
 
-$$
-\begin{cases}u_t-\Delta{}u-cu=0,&\left(x,t\right)\in{}Q_T,\\u=\varphi\left(x,t\right),&\left(x,t\right)\in\partial_pQ_T\end{cases}
-$$
+## 习题 7.1 (径向调和函数与通量归一化)
 
-的解, 证明: 在 $\overline{Q}_T$ 上 $\left|u\left(x,t\right)\right|\le\mathrm{e}^{ct}\max_{\partial_pQ_T}\left|\varphi\right|$.
+设 $u(x)=v(r)$, $r=|x|$.
 
-### 解答 3.1
+(1) 由链式法则写出 $D_iu$ 与 $D_i^2u$, 求和得径向 Laplace 方程 $v''+\frac{n-1}{r}v'=0$;
+(2) 令 $w=v'$, 解 $w'=-\frac{n-1}{r}w$, 得 $v=C_1\log r+C_2$ ($n=2$) 与 $v=\frac{C_1}{2-n}r^{2-n}+C_2$ ($n>3$), 说明 $C_2$ 为何不影响点源强度;
+(3) 用 $\int_{\partial B_r(0)}D_\nu v\,\mathrm dS=-1$ 定出 $C_1$, 得到**定义 5.1** 中的两个常数, 并验证 $D_\nu\Gamma=-\frac{1}{\omega_nr^{n-1}}$ 与维数无关;
+(4) 直接算 $\Delta\Gamma$ 于 $\mathbb R^n\setminus\{0\}$, 说明原点之外它确实调和.
 
-先消去零阶项. 令
+> 自测 30 分钟. 核对: 附录 A §5.1.
 
-$$
-v\left(x,t\right)=\mathrm{e}^{-ct}u\left(x,t\right),\quad\left(x,t\right)\in\overline{Q}_T.
-$$
+## 习题 7.2 (定理 5.2 的挖球证明)
 
-再验证 $v$ 满足齐次热方程. 直接求导,
+对 $\varphi\in C_c^\infty(\mathbb R^n)$, 取 $R$ 使 $\operatorname{supp}\varphi\subset B_R(0)$.
 
-$$
-v_t=\mathrm{e}^{-ct}u_t-c\mathrm{e}^{-ct}u,\quad\Delta{}v=\mathrm{e}^{-ct}\Delta{}u,
-$$
+(1) 在穿孔球 $B_R(0)\setminus B_r(0)$ 上用 Green 第二恒等式, 写出 $\int_{B_R\setminus B_r}\Gamma\Delta\varphi\,\mathrm dx$ 等于哪两个边界积分;
+(2) 说明外球面上的项为什么消失, 内球面 $\partial B_r(0)$ 上外法向为何是 $\nu=-x/r$;
+(3) 估 $\int_{\partial B_r}\Gamma D_\nu\varphi\,\mathrm dS$ 的量级 (三维为 $O(r)$, 二维为 $O(r|\log r|)$), 说明它趋于零;
+(4) 算出 $-\int_{\partial B_r}\varphi D_\nu\Gamma\,\mathrm dS=\fint_{\partial B_r}\varphi\,\mathrm dS\to\varphi(0)$, 从而 $-\Delta\Gamma=\delta_0$.
 
-故
+> 自测 30 分钟. 核对: 附录 A §5.2.
 
-$$
-v_t-\Delta{}v=\mathrm{e}^{-ct}\left(u_t-\Delta{}u-cu\right)=0,\quad\left(x,t\right)\in{}Q_T.\tag{A}
-$$
+## 习题 7.3 (Newton 位势的一阶导数)
 
-接着验证 $v$ 的抛物边界条件. 由 $u=\varphi$ 于 $\partial_pQ_T$,
+(1) 说明 $D^2\Gamma$ 具有 $|x|^{-n}$ 阶奇性因而不可积, 所以不能直接在原积分下求二阶导数;
+(2) 按**定理 5.4** 的构造写出截断核 $\Gamma_\varepsilon$, 并检查函数值与一阶径向导数在 $|x|=\varepsilon$ 处对接;
+(3) 用 $\int_{B_\varepsilon}(\Gamma-\Gamma_\varepsilon)\,\mathrm dz=\frac{\varepsilon^2}{2(n+2)}$ 与 $\int_{B_\varepsilon}\left(\frac{|z|}{\varepsilon^n}+\frac{1}{|z|^{n-1}}\right)\mathrm dz=\frac{n+2}{n+1}\omega_n\varepsilon$ 说明函数差为 $O(\varepsilon^2)$, 一阶导数为 $O(\varepsilon)$;
+(4) 取 $f\equiv1$, $\Omega=B_R(0)$, $x=0$, 验证 $D_iu_0(0)=0$ (被积函数关于 $y$ 为奇函数).
 
-$$
-v=\mathrm{e}^{-ct}\varphi,\quad\left(x,t\right)\in\partial_pQ_T,\quad\max_{\partial_pQ_T}\left|v\right|\le\max_{\partial_pQ_T}\left|\varphi\right|.\tag{B}
-$$
+> 自测 30 分钟. 核对: 附录 A §5.4.
 
-然后对 $v$ 用**定理 3.2.3 (初边值问题的最大模估计)**, 取 $f=0$, 得
+## 习题 7.4 (常源球与稳态温度)
 
-$$
-\max_{\overline{Q}_T}\left|v\right|\le\max_{\partial_pQ_T}\left|v\right|\le\max_{\partial_pQ_T}\left|\varphi\right|.\tag{C}
-$$
+(1) 用 $\Delta|x|^2=2n$ 说明 $\Delta\left(\frac{|x|^2}{2n}\right)=1$;
+(2) 于是**例 5.7** 的解为 $u=\frac{|x|^2-R^2}{2n}$, 验证边界为零, 并用弱极值原理说明唯一;
+(3) 若稳态温度满足 $\Delta T=-\frac{q_0}{k}$ ($q_0\gt0$ 均匀热源), 边界温度为零, 写出 $T$ 并求出最高温度与位置;
+(4) 说明 $R$ 增大时最高温度按 $R^2$ 增长的具体含义.
 
-回到 $u$. 由 $u=\mathrm{e}^{ct}v$ 与 $0<\mathrm{e}^{ct}\le\mathrm{e}^{cT}$ 于 $\overline{Q}_T$,
+> 自测 25 分钟. 核对: 附录 A §5.5 末, 例 5.7.
 
-$$
-\left|u\left(x,t\right)\right|=\mathrm{e}^{ct}\left|v\left(x,t\right)\right|\le\mathrm{e}^{ct}\max_{\partial_pQ_T}\left|\varphi\right|\le\mathrm{e}^{cT}\max_{\partial_pQ_T}\left|\varphi\right|.
-$$
+## 习题 7.5 (定理 6.1 的推导)
 
-这就是所要的估计.
+(1) 固定 $x\in\Omega$, 在 $\Omega_r=\Omega\setminus B_r(x)$ 上对 $u(y)$ 与 $\Gamma(x-y)$ 用 Green 第二恒等式, 注意 $\Delta_y\Gamma(x-y)=0$;
+(2) 说明 $r\to0$ 时体积项趋于 $\int_\Omega\Gamma\Delta u$, 并分别估计内球面上两项;
+(3) 算出内球面 $-u D_{\nu_r}\Gamma$ 项 (用 $\nu_r=-(y-x)/r$ 与 $D_{\nu_r}\Gamma=\frac{1}{\omega_nr^{n-1}}$) 的极限为 $-u(x)$, 从而移项得到 (6.2);
+(4) 回答: 表示公式里出现了 $D_\nu u$, 而 Dirichlet 问题并不给这一项, 所以下一步必须做什么.
 
-## 习题 3.2 (Robin 边界下解的上界与下界)
+> 自测 35 分钟. 核对: 附录 A §6.1.
 
-设 $l,T,b,u_0$ 是正常数. 若 $u\in{}C^{2,1}\left(\left(0,l\right)\times\left(0,T\right)\right)$, $u_x\in{}C^{0}\left(\left[0,l\right]\times\left[0,T\right]\right)$, $u$ 是问题
+## 习题 7.6 (对称性, 正性与归一化)
 
-$$
-\begin{cases}u_t-u_{xx}=0,&0<{}x<{}l,0<{}t\le{}T,\\u\left(x,0\right)=0,&0\le{}x\le{}l,\\u_x\left(0,t\right)+b\left(u_0-u\left(0,t\right)\right)=0,\quad{}u\left(l,t\right)=0,&0\le{}t\le{}T\end{cases}
-$$
+(1) 按**定理 6.2** 的 (2), 取 $a(z)=G(x,z)$, $b(z)=G(y,z)$, 在 $\Omega\setminus(\overline{B_r(x)}\cup\overline{B_r(y)})$ 上用 Green 第二恒等式, 说明外边界项因齐次条件消失, 只剩两个内球面项;
+(2) 算出 $\partial B_r(x)$ 上的积分趋于 $-G(y,x)$, $\partial B_r(y)$ 上的积分趋于 $G(x,y)$, 得对称性;
+(3) 按**定理 6.2** 的 (3), 先由奇点邻域与弱最小值原理得 $G(x,\cdot)\ge0$, 再用 Harnack 不等式排除内部零点;
+(4) 用**命题 6.4** 说明: 由 $G(x,y-t\nu_y)\gt0$ 取 $t\to0^+$ 得 $K\gt0$; 对 $u\equiv1$ 用表示公式 (6.5) 得 $\int K\,\mathrm dS=1$.
 
-的解, 证明: 在 $\left[0,l\right]\times\left[0,T\right]$ 上 $0\le{}u\left(x,t\right)\le{}u_0$.
-
-### 解答 3.2
-
-一, 上界 $u\le{}u_0$.
-
-先令 $z=u-u_0$. 则 $z_t-z_{xx}=0$ 且 $z_x\left(0,t\right)=u_x\left(0,t\right)=b\left(u\left(0,t\right)-u_0\right)=bz\left(0,t\right)$. 又 $z\left(x,0\right)=-u_0<0$, $z\left(l,t\right)=-u_0<0$.
-
-再由**定理 3.2.1 (弱极值原理)**, $z$ 在 $\overline{Q}_T$ 上的最大值在 $\partial_pQ_T$ 上达到. 若最大值点在 $\left\{t=0\right\}$ 或 $\left\{x=l\right\}$ 上, 则该值等于 $-u_0<0$. 若最大值点在某 $\left(0,t_0\right)$, $0<{}t_0\le{}T$ 处取到, 则对一切 $x\in\left[0,l\right]$
-
-$$
-z\left(x,t_0\right)\le{}z\left(0,t_0\right),
-$$
-
-即固定 $t_0$ 时 $x\mapsto{}z\left(x,t_0\right)$ 在 $x=0$ 处取最大, 而 $z_x\left(0,t_0\right)$ 存在 (由题设 $u_x$ 在闭区域上连续), 故
-
-$$
-z_x\left(0,t_0\right)\le0.\tag{A}
-$$
-
-接着由边界条件 $z_x\left(0,t_0\right)=bz\left(0,t_0\right)$ 与 $b>0$, 由 (A) 得 $z\left(0,t_0\right)\le0$. 于是无论如何
-
-$$
-\max_{\overline{Q}_T}z\le0,\quad\text{即}\;u\le{}u_0\;\text{于}\;\left[0,l\right]\times\left[0,T\right].
-$$
-
-二, 下界 $u\ge0$.
-
-然后若 $u$ 在 $\overline{Q}_T$ 上取到负值, 记其最小值 $m<0$, 由**定理 3.2.1 (弱极值原理)** (对 $u$) 最小值在 $\partial_pQ_T$ 上达到. 在 $\left\{t=0\right\}$ 与 $\left\{x=l\right\}$ 上 $u=0$, 故最小值只能在某点 $\left(0,t_0\right)$, $0<{}t_0\le{}T$ 处取到.
-
-此时对一切 $x\in\left[0,l\right]$ 有 $u\left(x,t_0\right)\ge{}u\left(0,t_0\right)$, 故 $x\mapsto{}u\left(x,t_0\right)$ 在 $x=0$ 处取最小, $u_x\left(0,t_0\right)\ge0$. 但边界条件给出
-
-$$
-u_x\left(0,t_0\right)=b\left(u\left(0,t_0\right)-u_0\right).
-$$
-
-由 $u\left(0,t_0\right)=m<0$ 与 $u_0>0$ 得 $u\left(0,t_0\right)-u_0<-u_0<0$, 故 $u_x\left(0,t_0\right)<0$, 这与 $u_x\left(0,t_0\right)\ge0$ 矛盾.
-
-故 $u$ 在 $\overline{Q}_T$ 上不取负值, $u\ge0$. 结合上面的不等式即得 $0\le{}u\left(x,t\right)\le{}u_0$.
-
-## 习题 3.3 (Cauchy 问题解的唯一性与稳定性)
-
-详细叙述并证明定理 3.2.6.
-
-### 解答 3.3
-
-先叙述. 设 $a>0$, $T>0$, $\mathbb{R}_T=\mathbb{R}^{n}\times\left(0,T\right]$. 考虑 Cauchy 问题
-
-$$
-\begin{cases}u_t-a^{2}\Delta{}u=f\left(x,t\right),&\left(x,t\right)\in\mathbb{R}_T,\\u\left(x,0\right)=\varphi\left(x\right),&x\in\mathbb{R}^{n}.\end{cases}\tag{A}
-$$
-
-定理 3.2.6 的内容是下列两条:
-
-(1) 唯一性: 若 $f\in{}L^{\infty}\left(\mathbb{R}_T\right)$, $\varphi\in{}L^{\infty}\left(\mathbb{R}^{n}\right)$, 则 (A) 在 $\mathbb{R}_T$ 上的有界函数类 (即 $u\in{}C^{2,1}\left(\mathbb{R}_T\right)\cap{}C^{0}\left(\overline{\mathbb{R}}_T\right)$ 且 $\sup_{\mathbb{R}_T}\left|u\right|<+\infty$) 中至多有一个解.
-
-(2) 稳定性: 对任意 $\varepsilon>0$, 存在仅依赖于 $\varepsilon$ 与 $T$ 的 $\delta>0$, 使得当
-
-$$
-\sup_{\mathbb{R}_T}\left|f_1-f_2\right|<\delta,\quad\sup_{\mathbb{R}^{n}}\left|\varphi_1-\varphi_2\right|<\delta
-$$
-
-时, 以 $\left(f_1,\varphi_1\right)$, $\left(f_2,\varphi_2\right)$ 为数据的两个有界解 $u_1,u_2$ 满足
-
-$$
-\sup_{\mathbb{R}_T}\left|u_1-u_2\right|<\varepsilon;
-$$
-
-即解在最大模意义下连续依赖于 $f$ 与 $\varphi$.
-
-再证唯一性. 设 $u_1,u_2$ 是 (A) 的两个有界解 ($f,\varphi$ 相同), 记 $w=u_1-u_2$. 由方程的线性, $w$ 有界, 且
-
-$$
-w_t-a^{2}\Delta{}w=0\;\text{于}\;\mathbb{R}_T,\quad{}w\left(x,0\right)=0\;\text{于}\;\mathbb{R}^{n}.\tag{B}
-$$
-
-接着对 (B) 用**定理 3.2.5 (Cauchy 问题的最大模估计)**, 取 $f=0$, $\varphi=0$,
-
-$$
-\sup_{\mathbb{R}_T}\left|w\right|\le{}T\sup_{\mathbb{R}_T}\left|0\right|+\sup_{\mathbb{R}^{n}}\left|0\right|=0,
-$$
-
-故 $w\equiv0$, 即 $u_1=u_2$. 唯一性得证.
-
-然后证稳定性. 设 $u_i$ 是数据 $\left(f_i,\varphi_i\right)$ 的有界解, $i=1,2$, 记 $w=u_1-u_2$. 由线性, $w$ 有界且
-
-$$
-w_t-a^{2}\Delta{}w=f_1-f_2\;\text{于}\;\mathbb{R}_T,\quad{}w\left(x,0\right)=\varphi_1-\varphi_2\;\text{于}\;\mathbb{R}^{n}.
-$$
-
-然后对 $w$ 用**定理 3.2.5 (Cauchy 问题的最大模估计)**,
-
-$$
-\sup_{\mathbb{R}_T}\left|w\right|\le{}T\sup_{\mathbb{R}_T}\left|f_1-f_2\right|+\sup_{\mathbb{R}^{n}}\left|\varphi_1-\varphi_2\right|.\tag{C}
-$$
-
-最后取 $\delta=\frac{\varepsilon}{2\left(T+1\right)}$. 当两个数据的扰动小于 $\delta$ 时, 由 (C)
-
-$$
-\sup_{\mathbb{R}_T}\left|w\right|<{}T\delta+\delta=\left(T+1\right)\frac{\varepsilon}{2\left(T+1\right)}=\frac{\varepsilon}{2}<\varepsilon,
-$$
-
-且该 $\delta$ 只依赖于 $\varepsilon$ 与 $T$. 稳定性得证.
-
-## 习题 3.4 (一阶方程的齐次化原理)
-
-叙述并证明一阶方程 Cauchy 问题
-
-$$
-\begin{cases}u_t+u_x=f\left(x,t\right),&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=0,&-\infty<{}x<+\infty\end{cases}
-$$
-
-的齐次化原理.
-
-### 解答 3.4
-
-先叙述 (齐次化原理, 即 Duhamel 原理). 对任意 $\tau\ge0$, 设 $W\left(x,t;\tau\right)$ 是齐次问题
-
-$$
-\begin{cases}W_t+W_x=0,&t>\tau,-\infty<{}x<+\infty,\\W\left(x,\tau;\tau\right)=f\left(x,\tau\right),&-\infty<{}x<+\infty\end{cases}\tag{A}
-$$
-
-的解. 则原非齐次问题的解可表为
-
-$$
-u\left(x,t\right)=\int_0^{t}W\left(x,t;\tau\right)\,\mathrm{d}\tau.\tag{B}
-$$
-
-先写出 $W$ 的显式. 问题 (A) 是一阶齐次方程, 沿特征线 $x+t=$ 常数 取值不变: 特征线过点 $\left(x,t\right)$ 时与直线 $t=\tau$ 交于 $x-\left(t-\tau\right)$, 故
-
-$$
-W\left(x,t;\tau\right)=f\left(x-\left(t-\tau\right),\tau\right).\tag{C}
-$$
-
-接着验证 (B) 满足初始条件. 由 (B),
-
-$$
-u\left(x,0\right)=\int_0^{0}W\,\mathrm{d}\tau=0.\tag{D}
-$$
-
-然后验证 (B) 满足方程. 由 (C), $W$ 关于 $\left(x,t\right)$ 光滑 (设 $f$ 光滑), 故可用含参量积分的求导公式. 注意积分上限 $t$ 出现于上限与被积函数的第二个自变量中,
-
-$$
-u_t\left(x,t\right)=W\left(x,t;t\right)+\int_0^{t}\frac{\partial{}W}{\partial{}t}\left(x,t;\tau\right)\,\mathrm{d}\tau,\quad{}u_x\left(x,t\right)=\int_0^{t}\frac{\partial{}W}{\partial{}x}\left(x,t;\tau\right)\,\mathrm{d}\tau.
-$$
-
-然后证相加. 由 (C), $W\left(x,t;t\right)=f\left(x,t\right)$; 又 $W$ 是 (A) 的解, 故 $W_t+W_x=0$ 对 $t>\tau$ 成立. 于是
-
-$$
-u_t+u_x=f\left(x,t\right)+\int_0^{t}\left(W_t+W_x\right)\left(x,t;\tau\right)\,\mathrm{d}\tau=f\left(x,t\right).
-$$
-
-结合 (D), (B) 确为原问题的解, 齐次化原理得证.
-
-最后把 (C) 代入 (B), 得解的显式
-
-$$
-u\left(x,t\right)=\int_0^{t}f\left(x-t+\tau,\tau\right)\mathrm{d}\tau.
-$$
-
-## 习题 3.5 (Fourier 变换求带低阶项热方程的形式解)
-
-应用 Fourier 变换求出 Cauchy 问题
-
-$$
-\begin{cases}u_t-a^{2}u_{xx}-bu_x-cu=f\left(x,t\right),&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=\varphi\left(x\right),&-\infty<{}x<+\infty\end{cases}
-$$
-
-的形式解, 其中 $a,b,c$ 是常数.
-
-### 解答 3.5
-
-先对空间变量取 Fourier 变换. 由**定义 3.4.3 (Fourier 变换)**, 记
-
-$$
-\hat{u}\left(\xi,t\right)=\mathcal{F}\left[u\left(\cdot,t\right)\right]\left(\xi\right)=\int_{-\infty}^{+\infty}u\left(x,t\right)\mathrm{e}^{-\mathrm{i}x\xi}\,\mathrm{d}x,\tag{A}
-$$
-
-同样记 $\hat{f},\hat{\varphi}$. 设 $u$ 及其导数在 $x\to\pm\infty$ 时衰减, 由分部积分
-
-$$
-\mathcal{F}\left[u_x\right]=-\int_{-\infty}^{+\infty}u\left(x,t\right)\left(-\mathrm{i}\xi\right)\mathrm{e}^{-\mathrm{i}x\xi}\,\mathrm{d}x=\mathrm{i}\xi\hat{u},\quad\mathcal{F}\left[u_{xx}\right]=\mathrm{i}\xi\cdot\mathrm{i}\xi\hat{u}=-\xi^{2}\hat{u}.\tag{B}
-$$
-
-再证化为常微分方程. 对题中方程两端取 Fourier 变换, 用 (B),
-
-$$
-\hat{u}_t+a^{2}\xi^{2}\hat{u}-\mathrm{i}b\xi\hat{u}-c\hat{u}=\hat{f}\left(\xi,t\right),\quad\hat{u}\left(\xi,0\right)=\hat{\varphi}\left(\xi\right),
-$$
-
-即
-
-$$
-\hat{u}_t=\left(c-a^{2}\xi^{2}+\mathrm{i}b\xi\right)\hat{u}+\hat{f}\left(\xi,t\right),\quad\hat{u}\left(\xi,0\right)=\hat{\varphi}\left(\xi\right).\tag{C}
-$$
-
-接着解 (C). 这是一阶线性常微分方程, 用积分因子 $\exp\left(-\left(c-a^{2}\xi^{2}+\mathrm{i}b\xi\right)t\right)$,
-
-$$
-\hat{u}\left(\xi,t\right)=\mathrm{e}^{\left(c-a^{2}\xi^{2}+\mathrm{i}b\xi\right)t}\hat{\varphi}\left(\xi\right)+\int_0^{t}\mathrm{e}^{\left(c-a^{2}\xi^{2}+\mathrm{i}b\xi\right)\left(t-\tau\right)}\hat{f}\left(\xi,\tau\right)\,\mathrm{d}\tau.\tag{D}
-$$
-
-准备反演所需的两条事实. (i) 由 Gauss 积分 $\int_{-\infty}^{+\infty}\mathrm{e}^{-A\xi^{2}}\mathrm{e}^{\mathrm{i}\xi{}z}\,\mathrm{d}\xi=\sqrt{\frac{\pi}{A}}\mathrm{e}^{-\frac{z^{2}}{4A}}$ ($A>0$),
-
-$$
-\mathcal{F}^{-1}\left[\mathrm{e}^{-a^{2}\xi^{2}t}\right]\left(x\right)=\frac{1}{2\pi}\int_{-\infty}^{+\infty}\mathrm{e}^{-a^{2}t\xi^{2}}\mathrm{e}^{\mathrm{i}x\xi}\,\mathrm{d}\xi=\frac{1}{2a\sqrt{\pi{}t}}\mathrm{e}^{-\frac{x^{2}}{4a^{2}t}}=:G\left(x,t\right).\tag{E}
-$$
-
-(ii) 由**定义 3.4.3** 作变量替换 $x+bt=y$,
-
-$$
-\mathcal{F}\left[g\left(\cdot+bt\right)\right]\left(\xi\right)=\int_{-\infty}^{+\infty}g\left(x+bt\right)\mathrm{e}^{-\mathrm{i}x\xi}\,\mathrm{d}x=\mathrm{e}^{\mathrm{i}b\xi{}t}\hat{g}\left(\xi\right),\tag{F}
-$$
-
-即乘因子 $\mathrm{e}^{\mathrm{i}b\xi{}t}$ 相当于把自变量平移 $bt$. 于是
-
-$$
-\mathcal{F}^{-1}\left[\mathrm{e}^{-a^{2}\xi^{2}t+\mathrm{i}b\xi{}t}\hat{\varphi}\right]\left(x\right)=\int_{-\infty}^{+\infty}G\left(x+bt-y,t\right)\varphi\left(y\right)\,\mathrm{d}y,\tag{G}
-$$
-
-这里用了 (E) 与卷积形式 $\mathcal{F}^{-1}\left[\hat{G}\hat{\varphi}\right]\left(x\right)=\int{}G\left(x-y,t\right)\varphi\left(y\right)\mathrm{d}y$ 以及 (F).
-
-反演初值部分的项. 由 (D)(G),
-
-$$
-u_{1}\left(x,t\right)=\mathrm{e}^{ct}\int_{-\infty}^{+\infty}\frac{1}{2a\sqrt{\pi{}t}}\mathrm{e}^{-\frac{\left(x+bt-y\right)^{2}}{4a^{2}t}}\varphi\left(y\right)\,\mathrm{d}y.\tag{H}
-$$
-
-反演源项部分的项. 对 (D) 中积分里的每一项, 把 $\tau$ 视为参数, 用 (G) 并把 $\mathrm{e}^{c\left(t-\tau\right)}$ 提出,
-
-$$
-u_{2}\left(x,t\right)=\int_0^{t}\mathrm{e}^{c\left(t-\tau\right)}\int_{-\infty}^{+\infty}\frac{1}{2a\sqrt{\pi\left(t-\tau\right)}}\mathrm{e}^{-\frac{\left(x+b\left(t-\tau\right)-y\right)^{2}}{4a^{2}\left(t-\tau\right)}}f\left(y,\tau\right)\,\mathrm{d}y\,\mathrm{d}\tau.\tag{I}
-$$
-
-相加即得形式解
-
-$$
-u\left(x,t\right)=\mathrm{e}^{ct}\int_{\mathbb{R}}G\left(x+bt-y,t\right)\varphi\left(y\right)\,\mathrm{d}y+\int_0^{t}\mathrm{e}^{c\left(t-\tau\right)}\int_{\mathbb{R}}G\left(x+b\left(t-\tau\right)-y,t-\tau\right)f\left(y,\tau\right)\,\mathrm{d}y\,\mathrm{d}\tau,
-$$
-
-其中 $G$ 由 (E) 给出. 这就是所求的形式解.
-
-## 习题 3.6 (热方程 Cauchy 问题的求解)
-
-求解 Cauchy 问题
-
-$$
-\begin{cases}u_t-u_{xx}=0,&-\infty<{}x<+\infty,t>0,\\u\left(x,0\right)=\sin{}x,&-\infty<{}x<+\infty.\end{cases}
-$$
-
-### 解答 3.6
-
-先试取分离变量形式 $u\left(x,t\right)=T\left(t\right)\sin{}x$ (初始数据含 $\sin{}x$, 而 $\sin{}x$ 是 $-\partial_x^{2}$ 的特征函数). 代入方程,
-
-$$
-T'\sin{}x+T\sin{}x=\left(T'+T\right)\sin{}x=0,\quad\text{故}\;T'+T=0.
-$$
-
-再解常微分方程得 $T\left(t\right)=A\mathrm{e}^{-t}$, 由初值 $u\left(x,0\right)=\sin{}x$ 定出 $A=1$. 于是
-
-$$
-u\left(x,t\right)=\mathrm{e}^{-t}\sin{}x.\tag{A}
-$$
-
-接着证直接验证. $\partial_tu=-\mathrm{e}^{-t}\sin{}x$, $\partial_x^{2}u=-\mathrm{e}^{-t}\sin{}x$, 故 $\partial_tu-\partial_x^{2}u=0$; 且 $u\left(x,0\right)=\sin{}x$. 所以 (A) 是解.
-
-然后说明解的唯一性. 由 $\left|u\left(x,t\right)\right|\le\mathrm{e}^{-t}\le1$, (A) 属于 $\mathbb{R}_T$ 上的有界函数类, 故由**定理 3.2.6 (Cauchy 问题的唯一性和稳定性)**, 它是有界函数类中唯一的解.
-
-收尾: $u\left(x,t\right)=\mathrm{e}^{-t}\sin{}x$ 就是所求的解. 这与 Poisson 公式给出的结果一致: 由 Poisson 公式,
-$\frac{1}{2\sqrt{\pi{}t}}\int_{\mathbb{R}}\mathrm{e}^{-\frac{\left(x-y\right)^{2}}{4t}}\sin{}y\,\mathrm{d}y=\mathrm{e}^{-t}\sin{}x$.
+> 自测 35 分钟. 核对: 附录 A §6.3.
